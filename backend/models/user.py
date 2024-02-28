@@ -24,3 +24,7 @@ def get_password(username):
 def check_user_exists(username):
     return bool(database.session.query(User._id).
                 filter_by(name=username).first())
+
+def get_user_id_by_username(username):
+    return bool(database.session.query(User._id).
+                filter_by(name=username).first())

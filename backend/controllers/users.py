@@ -24,14 +24,15 @@ def validate_username_available(username):
         raise UserAlreadyExistsError
 
 
-def authenticate_login(username, password):
+def login(username, password):
     validate_user_exists(username)
     validate_password(username, password)
+    return get_user_id_by_username(username)
+    
 
-
-def authenticate_registration(username, password, confirm_password):
-   validate_password_confirmation(password, confirm_password)
-   validate_username_available(username)
-   new_user = User(username, password)
-   database.session.add(new_user)
-   database.session.commit()
+def register(username, password):
+    validate_password_confirmation(password)
+    validate_username_available(username)
+    new_user = User(username, password)
+    database.session.add(new_user)
+    database.session.commit()

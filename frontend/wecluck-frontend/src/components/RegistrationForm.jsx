@@ -7,22 +7,29 @@ const RegistrationForm = ({registrationCallback}) => {
 
     const onSubmit = async (e) => {
         e.preventDefault()
-
-        const data = {
-            username,
-            password,
-            confirmPassword
+        if(password === confirmPassword){
+            const data = {
+                username,
+                password
+            }
+            const url = "http://127.0.0.1:5000/user"
+            const options = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }
+            const response = await fetch(url, options)
+            if (response.status !== 201 && response.status !== 200) {
+                const data = await response.json()
+                registrationCallback(data.message, false)
+            } else {
+                registrationCallback(data.message, true) ///in login page make function which updates paragraph with success or fail and pass here
+            }
+        } else {
+            registrationCallback("Passwords do not match!", false)
         }
-        const url = "http://127.0.0.1:5000/user"
-        const options = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        }
-        const response = await fetch(url, options)
-        registrationCallback(response.json().message, response.status) //need to await response json?
     }
 
     return (

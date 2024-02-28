@@ -18,20 +18,11 @@ def comment():
          return jsonify({"message": error.message}), 500
    elif request.method == 'POST':
       try:
-         username = request.json.get("username")
-         password = request.json.get("password")
-         authenticate_login(username, password)
-      except (PasswordConfirmationError, UserNotFoundError) as error:
-         return jsonify({"message": error.message}), 400
+         user = request.json.get("username")
+         content = request.json.get("content")
+         topic_name = request.json.get("topic")
+         post_comment(user, content, topic_name)
+      except EmptyCommentContentError:
+         return jsonify({"message": "Comment must have content!"}), 400
       else:
-         try:
-            user = request.json.get("username")
-            content = request.json.get("content")
-            topic_name = request.json.get("topic")
-            post_comment(user, content, topic_name)
-         except EmptyCommentContentError:
-            return jsonify({"message": "Comment must have content!"}), 400
-         else:
-            return jsonify({"message": "Comment created!"}), 201
-   else:
-      return jsonify({"message": "Bad request!"}), 400
+         return jsonify({"message": "Comment created!"}), 201
