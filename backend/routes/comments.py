@@ -1,28 +1,16 @@
 from flask import Blueprint, request, jsonify
-from controllers.users import *
-from controllers.comments import *
+import controllers.comments as controller
 from utils.exceptions import *
-
+from middleware.authorization import token_required
 
 comments_blueprint = Blueprint("comments_blueprint", __name__)
 
 
-@comments_blueprint.route('/comment/', methods=['POST', 'GET'])
-def comment():
-   if request.method == 'GET':
-      try:
-         topics = list(map(lambda x: x.to_json(), Topic.query.all()))
-         comments = list(map(lambda x: x.to_json(), Comment.query.all()))
-         return jsonify({"topics": topics, "comments": comments})
-      except Exception as error:
-         return jsonify({"message": error.message}), 500
-   elif request.method == 'POST':
-      try:
-         user = request.json.get("username")
-         content = request.json.get("content")
-         topic_name = request.json.get("topic")
-         post_comment(user, content, topic_name)
-      except EmptyCommentContentError:
-         return jsonify({"message": "Comment must have content!"}), 400
-      else:
-         return jsonify({"message": "Comment created!"}), 201
+@comments_blueprint.route('/comments/', methods=['POST', 'GET'])
+@token_required
+def comment(current_user):
+    if request.method == 'GET':
+        return controller.get_comments()
+        
+    elif request.method == 'POST':
+        return controller.post_comment(current_user)
