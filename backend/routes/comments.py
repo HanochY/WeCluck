@@ -10,7 +10,15 @@ comments_blueprint = Blueprint("comments_blueprint", __name__)
 @token_required
 def comment(current_user):
     if request.method == 'GET':
-        return controller.get_comments()
+        response, code = controller.get_comments()
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        response.headers.add("Access-Control-Allow-Headers", "X-Requested-With")
+        response.headers.add("Access-Control-Allow-Methods", "GET")
+        return response, code
         
     elif request.method == 'POST':
-        return controller.post_comment(current_user)
+        response, code = controller.post_comment(current_user)
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        response.headers.add("Access-Control-Allow-Headers", "X-Requested-With")
+        response.headers.add("Access-Control-Allow-Methods", "POST")
+        return response, code

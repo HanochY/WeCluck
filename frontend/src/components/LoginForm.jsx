@@ -3,23 +3,26 @@ import { useState } from "react";
 const LoginForm = ({loginCallback}) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
 
     const onSubmit = async (e) => {
         e.preventDefault()
-        const url = "http://127.0.0.1:5000/user"
+        const url = "http://127.0.0.1:5000/users/"
         const options = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({
+                "username": username,
+                "password": password
+            })
         }
         const response = await fetch(url, options)
+        const data = await response.json()
         if (response.status !== 201 && response.status !== 200) {
-            const data = await response.json()
             loginCallback(data.message, false)
         } else {
+            sessionStorage.setItem("bearerToken", response.data.token)
             loginCallback(data.message, true) ///in login page make function which updates paragraph with success or fail and pass here
         }
     }
@@ -40,14 +43,6 @@ const LoginForm = ({loginCallback}) => {
                     type="password"
                     id="password"
                     onChange={(e) => setPassword(e.target.value)}
-                />
-            </div>
-            <div>
-                <label htmlFor="confirmPassword">Confirm Password:</label>
-                <input
-                    type="password"
-                    id="confirmPassword"
-                    onChange={(e) => setConfirmPassword(e.target.value)}
                 />
             </div>
             <button type="submit">Register</button>
