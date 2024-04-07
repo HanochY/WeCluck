@@ -20,13 +20,17 @@ def create_topic(name):
     database.session.commit()
     
 
-def get_topic_id_by_name(topic_name):
+def get_topic_id_by_name(name):
     return database.session.query(Topic._id)\
-            .filter_by(name=topic_name).first()[0]
+            .filter_by(name=name).first()[0]
 
-def check_topic_exists(topic_name):
+def check_topic_exists(id):
     return bool(database.session.query(Topic._id).
-                filter_by(name=topic_name).first())
+                filter_by(_id=id).first())
+
+def check_topic_exists_by_name(name):
+    return bool(database.session.query(Topic._id).
+                filter_by(name=name).first())
 
 def get_all_topics():
     return Topic.query.all()

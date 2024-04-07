@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-import LoginForm from '../components/LoginForm';
-import RegistrationForm from '../components/RegistrationForm';
+import TopicAddForm from '../components/TopicAddForm';
+import TopicRemoveButton from '../components/TopicRemoveButton';
+import TopicList from '../components/TopicList';
 
-function LoginPage() {
+function TopicPage() {
     const [messageBox, setMessageBox] = useState("")
-    const redirectToHomepage = (message) => {
+    const redirectToCommentPage = (message) => {
             setMessageBox(message)
     }
     return (
@@ -20,4 +21,4 @@ function LoginPage() {
     )
 }
 
-export default LoginPage
+export default TopicPage

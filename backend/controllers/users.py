@@ -25,7 +25,7 @@ def login():
         user = request.json
         username = user['username']
         password = user['password']
-        uid = get_user_id_by_username(username) #add input validation in controler
+        uid = get_user_id_by_name(username) #add input validation in controler
         print(uid)
         # validate input
         #if not validate_email_and_password(data.get('email'), data.get('password')): return dict(message='Invalid data', data=None, error=is_validated), 400
@@ -33,27 +33,27 @@ def login():
         validate_password(username, password)
     except UserNotFoundError as error:
         return jsonify({
-                "message": "Login declined!",
-                "data": None,
-                "error": str(error)
+                'message': 'Login declined!',
+                'data': None,
+                'error': str(error)
             }), 404
     except Exception as error:
         return jsonify(
             {
-                "message": "Login failed!",
-                "data": None,
-                "error": str(error)
+                'message': 'Login failed!',
+                'data': None,
+                'error': str(error)
             }), 500
     else:
-        user["token"] = jwt.encode(
-            {"user_id": uid},
-            app.config["SECRET_KEY"],
-            algorithm="HS256"
+        user['token'] = jwt.encode(
+            {'user_id': uid},
+            app.config['SECRET_KEY'],
+            algorithm='HS256'
         )
         return jsonify({
-            "message": "Successfully fetched token",
-            "data": user,
-            "error": None
+            'message': 'Successfully fetched token',
+            'data': user,
+            'error': None
         }), 200
     
     
@@ -67,19 +67,20 @@ def register():
         create_user(username, password)
     except UserAlreadyExistsError as error:
         return jsonify({
-            "message": "Registration declined!",
-            "data": None,
-            "error": str(error)
+            'message': 'Registration declined!',
+            'data': None,
+            'error': str(error)
         }), 400
     except Exception as error:
+        print(error)
         return jsonify({
-            "message": "Registration failed!",
-            "data": None,
-            "error": str(error)
+            'message': 'Registration failed!',
+            'data': None,
+            'error': str(error)
         }), 500
     else:
         return jsonify({
-            "message": "Successfully registered new user",
-            "data": user,
-            "error": None
+            'message': 'Successfully registered new user',
+            'data': user,
+            'error': None
         }), 201

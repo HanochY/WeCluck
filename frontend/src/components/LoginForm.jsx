@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const LoginForm = ({loginCallback}) => {
+const LoginForm = ({successCallback, failureCallback}) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -20,10 +20,10 @@ const LoginForm = ({loginCallback}) => {
         const response = await fetch(url, options)
         const data = await response.json()
         if (response.status !== 201 && response.status !== 200) {
-            loginCallback(data.message, false)
+            failureCallback(data.error)
         } else {
             sessionStorage.setItem("bearerToken", response.data.token)
-            loginCallback(data.message, true) ///in login page make function which updates paragraph with success or fail and pass here
+            successCallback(data.message) ///in login page make function which updates paragraph with success or fail and pass here
         }
     }
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const RegistrationForm = ({successCallback, failureCallback}) => {
+const TopicAddForm = ({successCallback, failureCallback}) => {
     const [newUsername, setNewUsername] = useState("");
     const [newPassword, setNewPassword] = useState("");
     const [confirmNewPassword, setConfirmNewPassword] = useState("");
@@ -10,7 +10,7 @@ const RegistrationForm = ({successCallback, failureCallback}) => {
         if(newPassword !== confirmNewPassword){
             registrationCallback("Passwords do not match!", false)
         } else {
-            const url = "http://127.0.0.1:5000/users/"
+            const url = "http://127.0.0.1:5000/comments/"
             const options = {
                 method: "POST",
                 headers: {
@@ -65,4 +65,4 @@ const RegistrationForm = ({successCallback, failureCallback}) => {
     );
 };
 
-export default RegistrationForm
+export default TopicAddForm
