@@ -7,7 +7,6 @@ preflight_blueprint = Blueprint('preflight_blueprint', __name__)
 @preflight_blueprint.before_app_request
 def handle_preflight():
     if request.method == 'OPTIONS':
-        print('c')
         response = Response()
         response.headers.add('X-Content-Type-Options', '*')
         response.headers.add('Access-Control-Allow-Origin', '*')

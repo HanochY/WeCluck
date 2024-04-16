@@ -18,7 +18,7 @@ def read_token(request):
 
 def get_user_from_token(token):
     token_data = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=['HS256'])
-    user = get_user_by_id(token_data['user_id'])
+    user = read_user(_id=token_data['user_id'])
     if user:
         return user
     else:

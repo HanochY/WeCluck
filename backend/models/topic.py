@@ -14,23 +14,18 @@ class Topic(database.Model):
         data = vars(self)
         data.pop('_sa_instance_state')
         return data
-def create_topic(name):
-    new_topic = Topic(name)
-    database.session.add(new_topic)
-    database.session.commit()
     
+    def create(self):
+        database.session.add(self)
+        database.session.commit()
 
-def get_topic_id_by_name(name):
-    return database.session.query(Topic._id)\
-            .filter_by(name=name).first()[0]
+def read_topics(**kwargs):
+    query = database.session.query(Topic)
+    if kwargs:
+        return query.filter_by(**kwargs).all()
+    else:
+        return query.all()
 
-def check_topic_exists(id):
-    return bool(database.session.query(Topic._id).
-                filter_by(_id=id).first())
-
-def check_topic_exists_by_name(name):
-    return bool(database.session.query(Topic._id).
-                filter_by(name=name).first())
-
-def get_all_topics():
-    return Topic.query.all()
+def read_topic(**kwargs):
+    topics = read_topics(**kwargs)
+    return topics[0] if topics else None

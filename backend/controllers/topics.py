@@ -3,15 +3,12 @@ from utils.exceptions import *
 from models.topic import *
 
 
-def validate_topic(name):
-    if check_topic_exists_by_name(name):
-        raise TopicAlreadyExistsError
-    
 def post_topic():
     try:
-        name = request.json.get('name')
-        validate_topic(name)
-        create_topic(name)
+        requested_new_topic = request.json
+        if read_topic(name=requested_new_topic['name']):
+            raise TopicAlreadyExistsError
+        Topic(**requested_new_topic).create()
     except TopicAlreadyExistsError as error:
         return jsonify({
                 'message': 'Failed to post topic!', 
@@ -33,8 +30,7 @@ def post_topic():
 
 def get_topics():
     try:
-        topics = list(map(lambda topic: topic.to_dict(), get_all_topics()))
-        
+        topics = list(map(lambda topic: topic.to_dict(), read_topics()))   
     except Exception as error:
         return jsonify({
                 'message': 'Failed to fetch topics!', 

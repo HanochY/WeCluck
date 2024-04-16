@@ -8,7 +8,7 @@ comments_blueprint = Blueprint('comments_blueprint', __name__)
 
 @comments_blueprint.route('/comments/', methods=['POST', 'GET'])
 @token_required
-def comment(current_user):
+def comments(current_user):
     if request.method == 'GET':
         response, code = controller.get_comments()
         return response, code

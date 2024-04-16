@@ -15,21 +15,18 @@ class User(database.Model):
         data.pop('_sa_instance_state')
         return data
 
-def create_user(name, password):
-    new_user = User(name, password)
-    database.session.add(new_user)
-    database.session.commit()
+    def create(self):
+        database.session.add(self)
+        database.session.commit()
     
-def get_password(name):
-    return database.session.query(User.password)\
-            .filter_by(name=name).first()[0]
 
-def check_user_exists(name):
-    return bool(database.session.query(User._id).
-                filter_by(name=name).first())
+def read_users(**kwargs):
+    query = database.session.query(User)
+    if kwargs:
+        return query.filter_by(**kwargs).all()
+    else:
+        return query.all()
 
-def get_user_id_by_name(name):
-    return database.session.query(User._id).filter_by(name=name).first()[0]
-
-def get_user_by_id(id):
-    return database.session.query(User).filter_by(_id=id).first()
+def read_user(**kwargs):
+    users = read_users(**kwargs)
+    return users[0] if users else None

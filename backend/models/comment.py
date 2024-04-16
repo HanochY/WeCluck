@@ -21,11 +21,18 @@ class Comment(database.Model):
         data.pop('_sa_instance_state')
         return data
     
-def create_comment(uid, content, topic_id):
-    new_comment = Comment(uid, content, topic_id)
-    database.session.add(new_comment)
-    database.session.commit()
-   
-def get_all_comments():
-    return Comment.query.all()
+    def create(self):
+        database.session.add(self)
+        database.session.commit()
     
+
+def read_comments(**kwargs):
+    query = database.session.query(Comment)
+    if kwargs:
+        return query.filter_by(**kwargs).all()
+    else:
+        return query.all()
+
+def read_comment(**kwargs):
+    comments = read_comments(**kwargs)
+    return comments[0] if comments else None

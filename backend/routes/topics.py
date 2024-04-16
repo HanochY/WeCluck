@@ -8,7 +8,7 @@ topics_blueprint = Blueprint('topics_blueprint', __name__)
 
 @topics_blueprint.route('/topics/', methods=['POST', 'GET'])
 @token_required
-def topic(current_user):
+def topics(current_user):
     if request.method == 'GET':
         response, code = controller.get_topics()
         return response, code

@@ -6,12 +6,7 @@ from utils.exceptions import *
 users_blueprint = Blueprint('users_blueprint', __name__)
 
 
-@users_blueprint.route('/users/', methods=['GET', 'POST'])
+@users_blueprint.route('/users/', methods=['POST'])
 def users():
-    if request.method == 'GET':
-        response, code = controller.login()
-        return response, code
-    
-    elif request.method == 'POST':
-        response, code = controller.register()
-        return response, code #add input validation in controler
+    response, code = controller.register()
+    return response, code #add input validation in controler
