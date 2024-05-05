@@ -1,11 +1,9 @@
 from pydantic_settings import BaseSettings
-from enum import auto
-from strenum import StrEnum
 
-from config.environment import Environment
+from utils.enums.db_vendors import DBVendor
+from utils.enums.environments import Environment
 
-class DBVendor(StrEnum):
-    sqlite: str = auto()
+
 
 class DBConfig(BaseSettings):
     vendor: str

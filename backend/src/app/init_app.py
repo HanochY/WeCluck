@@ -17,5 +17,4 @@ app.register_blueprint(topics_blueprint)
 app.secret_key = config.app.secret_key
 app.config['SQLALCHEMY_DATABASE_URI'] = f'{config.db.vendor}:///{config.db.name}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = config.app.track_modifications
-
-    
+app.config['']

@@ -3,17 +3,18 @@ import secrets
 
 from pydantic_settings import BaseSettings
 
-from config.environment import Environment
+from utils.enums.environments import Environment
 
 
 class AppConfig(BaseSettings):
-    ip: str = "localhost"
+    host: str = "localhost"
     port: int = 5000
     environment: str = Environment.integration
+    track_modifications: str = True
     workers: int = os.cpu_count() * 2 + 1
+    threaded: bool = False
     allowed_origins: list[str] = [
-        f"http://{ip}",
+        f"http://{host}",
         "http://localhost:5173",
     ]
-    track_modifications: bool = False
     secret_key: str = secrets.token_urlsafe(32)
