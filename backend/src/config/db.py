@@ -12,7 +12,6 @@ class DBConfig(BaseSettings):
     name: str
     username: str
     password: str
-    
 
 
 class IntegrationDBConfig(DBConfig):
