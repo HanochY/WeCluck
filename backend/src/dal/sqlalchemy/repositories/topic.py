@@ -1,10 +1,10 @@
-from dal.base import Repository
+from dal.base import BaseRepository
 from dal.sqlalchemy.entities.topic import TopicEntity as Topic
 from app.db_manager import db_manager
 
 database = db_manager.database
 
-class TopicRepository(Repository):
+class TopicRepository(BaseRepository):
 
     @staticmethod
     async def add(**data):

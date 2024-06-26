@@ -1,10 +1,10 @@
-from dal.base import Repository
+from dal.base import BaseRepository
 from dal.sqlalchemy.entities.user import UserEntity as User
 from app.db_manager import db_manager
 
 database = db_manager.database
 
-class UserRepository(Repository):
+class UserRepository(BaseRepository):
     
     @staticmethod
     async def add(**data):

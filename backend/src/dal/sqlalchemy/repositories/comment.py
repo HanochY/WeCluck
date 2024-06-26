@@ -1,10 +1,10 @@
-from dal.base import Repository
+from dal.base import BaseRepository
 from dal.sqlalchemy.entities.comment import CommentEntity as Comment
 from app.db_manager import db_manager
 
 database = db_manager.database
 
-class CommentRepository(Repository):
+class CommentRepository(BaseRepository):
     
     @staticmethod
     async def add(**data):
