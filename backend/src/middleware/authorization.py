@@ -3,7 +3,7 @@ import jwt
 from utils.exceptions import *
 from flask import request
 from flask import current_app
-from models.user import *
+from models.user import UserModel
 
 
 def read_token(request):
@@ -16,9 +16,10 @@ def read_token(request):
     else:
         raise AuthorizationHeaderNotFoundError
 
-def get_user_from_token(token):
+async def get_user_from_token(token):
     token_data = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=['HS256'])
-    user = read_user(_id=token_data['user_id'])
+    print(token_data['user_id'])
+    user = await UserModel().get_user_by_id(int(token_data['user_id']))
     if user:
         return user
     else:
@@ -26,7 +27,7 @@ def get_user_from_token(token):
 
 def token_required(f):
     @wraps(f)
-    def decorated(*args, **kwargs):
+    async def decorated(*args, **kwargs):
         try:
             token = read_token(request) # Bearer <token> -> <token>
         except (TokenNotFoundError, AuthorizationHeaderNotFoundError) as error:
@@ -36,7 +37,7 @@ def token_required(f):
                 'error': str(error)
             }, 401
         try:
-            current_user = get_user_from_token(token)
+            current_user = await get_user_from_token(token)
         except InvalidTokenError as error:
             return {
                 'message': 'Authentication failed!',
@@ -44,6 +45,6 @@ def token_required(f):
                 'error': str(error)
             }, 401
 
-        return f(current_user, *args, **kwargs)
+        return await f(current_user, *args, **kwargs)
 
     return decorated

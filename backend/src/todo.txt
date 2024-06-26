@@ -1,0 +1,8 @@
+make generic entity objects
+add recommended metadata columns
+enforce generic entity (object) and new data (pydantic typed dict) compatibility (common ancestor)
+improve login mechanism to api token
+add input validaion
+[try] switch an orm
+develop wecluck to something not retarded
+refactor w fastapi

@@ -29,7 +29,17 @@ class IntegrationAppConfig(AppConfig):
     secret_key: str = secrets.token_urlsafe(32)
 
 class ProductionAppConfig(AppConfig):
-    pass
+    host: str = "localhost"
+    port: int = 5000
+    environment: str = Environment.production
+    track_modifications: bool = True
+    debug: bool = True
+    threaded: bool = False
+    allowed_origins: list[str] = [
+        f"http://{host}",
+        "http://localhost:5173",
+    ]
+    secret_key: str = secrets.token_urlsafe(32)
 
 APP_CONFIGS = {
     Environment.integration: IntegrationAppConfig(),

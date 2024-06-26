@@ -18,7 +18,7 @@ class IntegrationDBConfig(DBConfig):
     vendor: str = DBVendor.sqlite
     host: str = ""
     port: str = ""
-    name: str = "integration-KoolKluckerDB.sqlite3"
+    name: str = "integration-KoolKluckerDB2.sqlite3"
     username: str = ""
     password: str = ""
 

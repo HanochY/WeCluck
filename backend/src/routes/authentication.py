@@ -1,12 +1,12 @@
-from flask import Blueprint, request, jsonify
-import controllers.login as controller
+from flask import Blueprint
+from controllers.authentication import AuthenticationController
 from utils.exceptions import *
-
 
 authentication_blueprint = Blueprint('authentication_blueprint', __name__)
 
+controller = AuthenticationController()
 
 @authentication_blueprint.route('/auth/', methods=['POST'])
-def authenticate():
-    response, code = controller.authenticate()
+async def authenticate():
+    response, code = await controller.authenticate()
     return response, code

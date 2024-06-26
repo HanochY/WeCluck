@@ -2,11 +2,11 @@ from flask import Flask
 from flask_cors import CORS
 
 from config.manager import config
-from routes.comments import comments_blueprint
-from routes.users import users_blueprint
-from routes.preflight import preflight_blueprint
+from routes.user import users_blueprint
+from routes.topic import topics_blueprint
 from routes.authentication import authentication_blueprint
-from routes.topics import topics_blueprint
+from routes.comment import comments_blueprint
+from routes.preflight import preflight_blueprint
 
 
 app = Flask(__name__)
