@@ -1,4 +1,4 @@
-from dal.sqlalchemy.base import BaseEntity
+from dal.sqlalchemy.entities.base import BaseEntity
 from app.db_manager import db_manager
 
 database = db_manager.database

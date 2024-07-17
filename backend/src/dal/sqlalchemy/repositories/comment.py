@@ -5,6 +5,7 @@ from app.db_manager import db_manager
 database = db_manager.database
 
 class CommentRepository(BaseRepository):
+    entity = Comment
     
     @staticmethod
     async def add(**data):

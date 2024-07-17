@@ -1,4 +1,4 @@
-from dal.sqlalchemy.base import BaseEntity
+from dal.sqlalchemy.entities.base import BaseEntity
 from datetime import datetime
 from app.db_manager import db_manager
 from dal.sqlalchemy.entities.topic import TopicEntity

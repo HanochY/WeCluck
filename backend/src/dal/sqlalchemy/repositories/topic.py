@@ -5,7 +5,8 @@ from app.db_manager import db_manager
 database = db_manager.database
 
 class TopicRepository(BaseRepository):
-
+    entity = Topic
+    
     @staticmethod
     async def add(**data):
         topic = Topic(**data)

@@ -1,23 +1,20 @@
 from abc import ABC, abstractmethod
 
 class BaseRepository(ABC):
-
-    @staticmethod
+    entity: type
+        
     @abstractmethod
-    def add(**data):
+    def add(self, **data):
         ...
 
-    @staticmethod
     @abstractmethod
-    def get(**filter):
+    def get(self, **filter):
         ...
         
-    @staticmethod
     @abstractmethod
-    def edit(id: int, **new_data):
+    def edit(self, id: int, **new_data):
         ...
 
-    @staticmethod
     @abstractmethod
-    def remove(id: int):
+    def remove(self, id: int):
         ...

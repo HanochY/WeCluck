@@ -5,6 +5,7 @@ from app.db_manager import db_manager
 database = db_manager.database
 
 class UserRepository(BaseRepository):
+    entity = User
     
     @staticmethod
     async def add(**data):
