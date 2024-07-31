@@ -1,4 +1,4 @@
-from dal.base import BaseRepository
+from backend.src.dal.base_repository import BaseRepository
 from dal.sqlalchemy.entities.user import UserEntity as User
 from app.db_manager import db_manager
 

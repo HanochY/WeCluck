@@ -1,4 +1,4 @@
-from dal.base import BaseRepository
+from backend.src.dal.base_repository import BaseRepository
 from dal.sqlalchemy.entities.topic import TopicEntity as Topic
 from app.db_manager import db_manager
 

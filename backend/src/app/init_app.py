@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 
+
 from config.manager import config
 from routes.user import users_blueprint
 from routes.topic import topics_blueprint
@@ -19,6 +20,6 @@ app.secret_key = config.app.secret_key
 app.config['SQLALCHEMY_DATABASE_URI'] = f'{config.db.vendor}:///{config.db.name}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = config.app.track_modifications
 app.config['DEBUG'] = config.app.debug
-app.config['SERVER_NAME'] = f'{config.app.host}:{config.app.port}'
+app.config['SERVER_NAME'] = f'{config.app.url}'
 app.config['THREADED'] = config.app.threaded
 CORS(app, origins=config.app.allowed_origins)
