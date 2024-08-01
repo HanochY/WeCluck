@@ -1,7 +1,7 @@
 from models.user import UserModel
 from utils.exceptions import *
 from flask import request, jsonify, current_app
-from config.manager import config
+from backend.src.config.provider import config
 import jwt
 
 class AuthenticationController:

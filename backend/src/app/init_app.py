@@ -2,7 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 
 
-from config.manager import config
+from config.provider import config
 from routes.user import users_blueprint
 from routes.topic import topics_blueprint
 from routes.authentication import authentication_blueprint

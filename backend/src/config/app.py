@@ -1,57 +1,31 @@
+import os
 import secrets
+from typing import Annotated
 
+from pydantic import AnyUrl, field_validator, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import HttpUrl, AnyUrl, field_validator
 
 from utils.enums.environments import Environment
 
+class AppSettings(BaseSettings):
+    model_config = SettingsConfigDict(env_file='.env',
+                                      env_prefix='BACKEND_',
+                                      env_ignore_empty=True,
+                                      extra="ignore")
 
-class AppConfig(BaseSettings):
-    url: HttpUrl
-    environment: str
-    track_modifications: bool
-    debug: bool
-    threaded: bool
-    allowed_origins: list[AnyUrl]
-    secret_key: str
+    ADDRESS: str = "0.0.0.0"
+    PORT: int = 5000
+    TRACK_MODIFICATIONS: bool = False
+    ALLOWED_ORIGINS: list[AnyUrl]
+    ENVIRONMENT: Annotated[Environment, Field(validate_default=True)] = Environment.DEVELOPMENT
+    WORKER_COUNT: int = os.cpu_count() * 2 + 1
+    SECRET_KEY: str = secrets.token_urlsafe(32)
+    ACCESS_TOKEN_EXPIRE_SECONDS: int = 604800 # 7 Days
     
-    @field_validator("environment")
+    @field_validator('ENVIRONMENT')
     @classmethod
-    def parse_environment(cls, environment) -> str:
-        match type(environment).__name__:
-            case str.__name__:
-                return Environment(environment.lower())
-            case Environment.__name__:
-                return environment
-            case _:
-                raise ValueError(environment)
-'''
-class IntegrationAppConfig = AppConfig(
-    url = "http://localhost:5000"
-    environment = Environment.integration
-    track_modifications = True
-    debug = True
-    threaded = False
-    allowed_origins = [
-        "http://localhost",
-        "http://localhost:5173",
-    ]
-    secret_key = secrets.token_urlsafe(32)
-
-class ProductionAppConfig(AppConfig):
-    url = "http://localhost:5000"
-    environment: str = Environment.production
-    track_modifications: bool = True
-    debug: bool = True
-    threaded: bool = False
-    allowed_origins: list[str] = [
-        "http://localhost",
-        "http://localhost:5173",
-    ]
-    secret_key: str = secrets.token_urlsafe(32)
-
-APP_CONFIGS = {
-    Environment.integration: IntegrationAppConfig(),
-    Environment.production: ProductionAppConfig()
-}
-'''
+    def must_be_environment(cls, v: Environment | str) -> Environment:
+        if isinstance(v, Environment):
+            return v
+        elif isinstance(v, str):
+            return Environment(v.upper())
