@@ -1,7 +1,6 @@
 from models.user import UserModel
 from utils.exceptions import *
 from flask import request, jsonify, current_app
-from backend.src.config.provider import config
 import jwt
 
 class AuthenticationController:
@@ -12,7 +11,7 @@ class AuthenticationController:
         model = self.model
         try:
             requested_user = request.json
-            user = (await model.get_users_by_filter(**requested_user))[0] #add input validation in controler
+            user = (await model.get_users_by_filter(**requested_user))[0] 
             if not user:
                 if await model.get_users_by_filter(name=requested_user['name']):
                     raise WrongPasswordError

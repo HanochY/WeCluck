@@ -13,14 +13,32 @@ class AppSettings(BaseSettings):
                                       env_ignore_empty=True,
                                       extra="ignore")
 
-    ADDRESS: str = "0.0.0.0"
-    PORT: int = 5000
-    TRACK_MODIFICATIONS: bool = False
-    ALLOWED_ORIGINS: list[AnyUrl]
     ENVIRONMENT: Annotated[Environment, Field(validate_default=True)] = Environment.DEVELOPMENT
-    WORKER_COUNT: int = os.cpu_count() * 2 + 1
-    SECRET_KEY: str = secrets.token_urlsafe(32)
-    ACCESS_TOKEN_EXPIRE_SECONDS: int = 604800 # 7 Days
+    ADDRESS: str
+    PORT: int
+    TRACK_MODIFICATIONS: bool
+    DEBUG: bool
+    ALLOWED_ORIGINS: list[AnyUrl]
+    THREAD_COUNT: int
+    SECRET_KEY: str
+    ACCESS_TOKEN_EXPIRE_SECONDS: int
+    if ENVIRONMENT == Environment.DEVELOPMENT:
+        ADDRESS = "localhost"
+        PORT = 5000
+        TRACK_MODIFICATIONS = True
+        DEBUG = True
+        ALLOWED_ORIGINS = ["http://localhost", "http://localhost:5173", "https://localhost", "https://localhost:5173"]
+        THREAD_COUNT = 1
+        SECRET_KEY = secrets.token_urlsafe(32)
+        ACCESS_TOKEN_EXPIRE_SECONDS = 604800 # 7 Days
+    elif ENVIRONMENT == Environment.PRODUCTION:
+        ADDRESS = "0.0.0.0"
+        PORT = 443
+        TRACK_MODIFICATIONS = False
+        DEBUG = False
+        THREAD_COUNT = os.cpu_count() * 2 + 1
+        SECRET_KEY = secrets.token_urlsafe(32)
+        ACCESS_TOKEN_EXPIRE_SECONDS = 604800 # 7 Days
     
     @field_validator('ENVIRONMENT')
     @classmethod

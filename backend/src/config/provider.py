@@ -1,8 +1,8 @@
 from functools import lru_cache
 
-from app import AppSettings
-from db import DBSettings
-from metadata import Metadata
+from config.app import AppSettings
+from config.db import DBSettings
+from config.metadata import Metadata
 
 
 class ConfigProvider:

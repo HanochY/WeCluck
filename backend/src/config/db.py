@@ -11,11 +11,10 @@ class DBSettings(BaseSettings):
                                       env_prefix='DB_',
                                       env_ignore_empty=True,
                                       extra="ignore")
-    PATH: str = r"C:\Users\Administrator\Desktop\WeCluck\backend\src\instance\integration-KoolKluckerDB2.sqlite3"
     SERVER: str = "localhost"
-    PORT: int
-    USER: str
-    PASSWORD: str
+    PORT: int | None = None
+    USER: str | None = None
+    PASSWORD: str | None = None
     NAME: str = "integration-KoolKluckerDB2.sqlite3"
 
     @computed_field
@@ -26,6 +25,6 @@ class DBSettings(BaseSettings):
     
     @computed_field
     @property
-    def LOCAL_SQLITE3_DATABASE_URI(self) -> str:
-        uri = f"sqlite:///{self.PATH}"
+    def SQLITE_DATABASE_URI(self) -> str:
+        uri = f"sqlite:///{self.NAME}"
         return uri

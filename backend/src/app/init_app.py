@@ -2,7 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 
 
-from config.provider import config
+from config.provider import ConfigProvider
 from routes.user import users_blueprint
 from routes.topic import topics_blueprint
 from routes.authentication import authentication_blueprint
@@ -16,10 +16,14 @@ app.register_blueprint(users_blueprint)
 app.register_blueprint(preflight_blueprint)
 app.register_blueprint(authentication_blueprint)
 app.register_blueprint(topics_blueprint)
-app.secret_key = config.app.secret_key
-app.config['SQLALCHEMY_DATABASE_URI'] = f'{config.db.vendor}:///{config.db.name}'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = config.app.track_modifications
-app.config['DEBUG'] = config.app.debug
-app.config['SERVER_NAME'] = f'{config.app.url}'
-app.config['THREADED'] = config.app.threaded
-CORS(app, origins=config.app.allowed_origins)
+
+app_settings = ConfigProvider.app_settings()
+db_settings = ConfigProvider.db_settings()
+
+app.secret_key = app_settings.SECRET_KEY
+app.config['SQLALCHEMY_DATABASE_URI'] = db_settings.SQLITE_DATABASE_URI
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = app_settings.TRACK_MODIFICATIONS
+app.config['DEBUG'] = app_settings.DEBUG
+app.config['SERVER_NAME'] = f"{app_settings.ADDRESS}:{app_settings.PORT}"
+app.config['THREADED'] = app_settings.THREAD_COUNT > 1
+#CORS(app, origins=app_settings.ALLOWED_ORIGINS)

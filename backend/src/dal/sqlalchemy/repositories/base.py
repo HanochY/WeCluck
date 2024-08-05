@@ -1,4 +1,4 @@
-from backend.src.dal.base_repository import BaseRepository
+from dal.base_repository import BaseRepository
 from app.db_manager import db_manager
 
 database = db_manager.database
