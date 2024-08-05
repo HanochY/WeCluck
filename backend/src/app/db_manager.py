@@ -1,13 +1,12 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from sqlmodel import SQLModel, create_engine
 
-from models import *
+from config.provider import ConfigProvider
+from dal.sqlalchemy.entities.comment import CommentEntity
+from dal.sqlalchemy.entities.topic import TopicEntity
+from dal.sqlalchemy.entities.user import UserEntity
 
-class DBManager:
-    database = SQLAlchemy()
+db_settings = ConfigProvider.db_settings()
 
-    def init_db(self, app: Flask):
-        self.database.init_app(app)
-        self.database.create_all()
-
-db_manager = DBManager()
+def init_db():
+    engine = create_engine(db_settings.SQLITE_DATABASE_URI)
+    SQLModel.metadata.create_all(engine)

@@ -1,5 +1,5 @@
-from flask import Flask
-from flask_cors import CORS
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 
 from config.provider import ConfigProvider
@@ -10,15 +10,29 @@ from routes.comment import comments_blueprint
 from routes.preflight import preflight_blueprint
 
 
-app = Flask(__name__)
+@asynccontextmanager
+async def lifespan(instance: FastAPI):
+    _ = instance
+    await init_db()
+    yield
+    
+app_settings = ConfigProvider.app_settings()
+app_metadata = ConfigProvider.app_metadata()
+
+app = FastAPI(root_path="/api",
+              title=app_metadata.PROJECT_NAME,
+              description=app_metadata.PROJECT_DESCRIPTION,
+              version=app_metadata.VERSION,
+              lifespan=lifespan,
+              responses={404: {"description": "Not found"}})
+
 app.register_blueprint(comments_blueprint)
 app.register_blueprint(users_blueprint)
 app.register_blueprint(preflight_blueprint)
 app.register_blueprint(authentication_blueprint)
 app.register_blueprint(topics_blueprint)
 
-app_settings = ConfigProvider.app_settings()
-db_settings = ConfigProvider.db_settings()
+
 
 app.secret_key = app_settings.SECRET_KEY
 app.config['SQLALCHEMY_DATABASE_URI'] = db_settings.SQLITE_DATABASE_URI

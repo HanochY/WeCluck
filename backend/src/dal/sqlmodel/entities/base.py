@@ -1,5 +1,6 @@
+from sqlmodel import SQLModel
 
-class BaseEntity():
+class BaseEntity(SQLModel):
     def __init__(self, **attributes):
         for name, value in attributes.items():
             if hasattr(self, name) and name != 'id':
