@@ -7,15 +7,12 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class DBSettings(BaseSettings):
-    model_config = SettingsConfigDict(env_file='.env',
-                                      env_prefix='DB_',
-                                      env_ignore_empty=True,
-                                      extra="ignore")
+    
     SERVER: str = "localhost"
-    PORT: int | None = None
-    USER: str | None = None
-    PASSWORD: str | None = None
-    NAME: str = "integration-KoolKluckerDB2.sqlite3"
+    PORT: int | None
+    USER: str | None
+    PASSWORD: str | None
+    NAME: str
 
     @computed_field
     @property
@@ -28,3 +25,10 @@ class DBSettings(BaseSettings):
     def SQLITE_DATABASE_URI(self) -> str:
         uri = f"sqlite:///{self.NAME}"
         return uri
+
+class ForumDBSettings(DBSettings):
+    model_config = SettingsConfigDict(env_file='.env',
+                                      env_prefix='FORUM_DB_',
+                                      env_ignore_empty=True,
+                                      extra="ignore")
+    NAME: r"development-forum.sqlite3"

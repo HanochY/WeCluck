@@ -8,11 +8,6 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from utils.enums.environments import Environment
 
 class AppSettings(BaseSettings):
-    model_config = SettingsConfigDict(env_file='.env',
-                                      env_prefix='BACKEND_',
-                                      env_ignore_empty=True,
-                                      extra="ignore")
-
     ENVIRONMENT: Annotated[Environment, Field(validate_default=True)] = Environment.DEVELOPMENT
     ADDRESS: str
     PORT: int
@@ -24,7 +19,6 @@ class AppSettings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_SECONDS: int
     if ENVIRONMENT == Environment.DEVELOPMENT:
         ADDRESS = "localhost"
-        PORT = 5000
         TRACK_MODIFICATIONS = True
         DEBUG = True
         ALLOWED_ORIGINS = ["http://localhost", "http://localhost:5173", "https://localhost", "https://localhost:5173"]
@@ -33,7 +27,7 @@ class AppSettings(BaseSettings):
         ACCESS_TOKEN_EXPIRE_SECONDS = 604800 # 7 Days
     elif ENVIRONMENT == Environment.PRODUCTION:
         ADDRESS = "0.0.0.0"
-        PORT = 443
+
         TRACK_MODIFICATIONS = False
         DEBUG = False
         THREAD_COUNT = os.cpu_count() * 2 + 1
@@ -47,3 +41,12 @@ class AppSettings(BaseSettings):
             return v
         elif isinstance(v, str):
             return Environment(v.upper())
+        
+            
+
+class ForumSettings(AppSettings):
+    model_config = SettingsConfigDict(env_file='.env',
+                                      env_prefix='FORUM_BACKEND_',
+                                      env_ignore_empty=True,
+                                      extra="ignore")
+    PORT = 5000

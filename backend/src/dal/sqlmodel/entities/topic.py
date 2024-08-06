@@ -1,6 +1,6 @@
 from dal.sqlalchemy.entities.base import BaseEntity
 from datetime import datetime
-from app.db_manager import db_manager
+from backend.src.dbs.db_manager import db_manager
 
 database = db_manager.database
 

@@ -8,12 +8,12 @@ from config.metadata import Metadata
 class ConfigProvider:
     @staticmethod
     @lru_cache(maxsize=1)
-    def app_settings() -> AppSettings:
+    def forum_settings() -> AppSettings:
         return AppSettings()
 
     @staticmethod
     @lru_cache(maxsize=1)
-    def db_settings() -> DBSettings:
+    def forum_db_settings() -> DBSettings:
         return DBSettings()
 
     @staticmethod

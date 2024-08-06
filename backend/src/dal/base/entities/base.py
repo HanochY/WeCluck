@@ -1,6 +1,6 @@
-from typing_extensions import TypedDict
+from pydantic import BaseModel
 from datetime import datetime
-class BaseEntity(TypedDict):
+class BaseEntity(BaseModel):
     id: int
     created_at: datetime
     created_by: str
