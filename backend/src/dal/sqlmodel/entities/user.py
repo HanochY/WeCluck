@@ -1,9 +1,9 @@
-from dal.sqlalchemy.entities.base import BaseEntity
-from backend.src.dbs.db_manager import db_manager
-
-database = db_manager.database
-
-class UserEntity(BaseEntity, db_manager.database.Model):
-    id = database.Column('id', database.Integer, primary_key=True)
-    name = database.Column(database.String(32))
-    password = database.Column(database.String(32))
+from base.entities.user import BaseUser
+from metadata import Metadata
+from sqlmodel import SQLModel, Field
+from typing import Union
+    
+class User(SQLModel, BaseUser, Metadata, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    username: str
+    password: str

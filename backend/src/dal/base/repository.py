@@ -4,17 +4,17 @@ class BaseRepository(ABC):
     entity: type
         
     @abstractmethod
-    def add(self, **data):
+    def add(self, *args, **kwargs):
         ...
 
     @abstractmethod
-    def get(self, **filter):
+    def find(self, *args, **kwargs):
         ...
         
     @abstractmethod
-    def edit(self, id: int, **new_data):
+    def edit(self, *args, **kwargs):
         ...
 
     @abstractmethod
-    def remove(self, id: int):
+    def remove(self, *args, **kwargs):
         ...
