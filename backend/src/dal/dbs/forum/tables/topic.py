@@ -1,4 +1,4 @@
-from base.entities.topic import BaseTopic
+from entities.topic import BaseTopic
 from metadata import Metadata
 from sqlmodel import SQLModel, Field 
     

@@ -1,9 +1,9 @@
 from sqlmodel import SQLModel, create_engine
 
 from config.provider import ConfigProvider
-from dal.sqlalchemy.entities.comment import CommentEntity
-from dal.sqlalchemy.entities.topic import TopicEntity
-from dal.sqlalchemy.entities.user import UserEntity
+from tables.comment import Comment
+from tables.topic import Topic
+from tables.user import User
 
 forum_settings = ConfigProvider.forum_db_settings()
 

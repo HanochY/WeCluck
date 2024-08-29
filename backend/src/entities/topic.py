@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+
 class TopicBase(BaseModel):
     uid: int
     title: str

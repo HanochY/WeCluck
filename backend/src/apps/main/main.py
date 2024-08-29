@@ -1,19 +1,20 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from contextlib import asynccontextmanager
 
 from config.provider import ConfigProvider
-from routes.user import users_blueprint
-from routes.topic import topics_blueprint
-from routes.authentication import authentication_blueprint
-from routes.comment import comments_blueprint
-from routes.preflight import preflight_blueprint
+from src.dal.dbs.forum.db_manager import init_forum_db
+from api.routes.user import users_blueprint
+from api.routes.topic import topics_blueprint
+from api.routes.authentication import authentication_blueprint
+from api.routes.comment import comments_blueprint
+from api.routes.preflight import preflight_blueprint
 
 
 @asynccontextmanager
 async def lifespan(instance: FastAPI):
     _ = instance
-    await init_db()
+    await init_forum_db()
     yield
     
 app_settings = ConfigProvider.app_settings()

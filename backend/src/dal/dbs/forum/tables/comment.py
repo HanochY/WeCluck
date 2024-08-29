@@ -1,4 +1,4 @@
-from base.entities.comment import BaseComment
+from entities.comment import BaseComment
 from metadata import Metadata
 from sqlmodel import SQLModel, Field 
     
