@@ -1,6 +1,6 @@
-from flask import Blueprint, request, Response
+from fastapi import APIRouter, Depends
 
-
+router = APIRouter(prefix="/comments", tags=["comments"])
 preflight_blueprint = Blueprint('preflight_blueprint', __name__)
 
 

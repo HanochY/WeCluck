@@ -1,19 +1,21 @@
-from flask import Blueprint, request
+from fastapi import APIRouter, Depends
 from controllers.topic import TopicController
 from utils.exceptions import *
 from middleware.authorization import token_required
 
-topics_blueprint = Blueprint('topics_blueprint', __name__)
+router = APIRouter(prefix="/topics", tags=["topics"])
 
 controller = TopicController()
 
-@topics_blueprint.route('/topics/', methods=['POST', 'GET'])
+@router.get('/')
 @token_required
 async def topics(current_user):
-    if request.method == 'GET':
         response, code = await controller.get_topics()
         return response, code
-        
-    elif request.method == 'POST':
+
+
+@router.post('/')
+@token_required
+async def topics(current_user):
         response, code = await controller.post_topic()
         return response, code

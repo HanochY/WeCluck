@@ -10,7 +10,10 @@ class SQLModelRepository(BaseRepository):
             session (Session): DB Session. This enables concurrency.
         """
         self.session = session
-        
+    
+    async def commit(self):
+        self.session.commit()
+    
     async def add(self, Table: SQLModel, **data) -> None:
         """Add <data> to <Table>
 
@@ -20,7 +23,6 @@ class SQLModelRepository(BaseRepository):
         """
         entity = Table(**data)
         self.session.add(entity)
-        self.session.commit()
         
     async def find(self, 
                    Table: SQLModel, 
@@ -62,7 +64,6 @@ class SQLModelRepository(BaseRepository):
         for attribute, value in data.items():
             setattr(entity, attribute, value)
         self.session.add(entity)
-        self.session.commit()
 
     async def remove(self, 
                      Table: SQLModel, 
@@ -78,4 +79,5 @@ class SQLModelRepository(BaseRepository):
         entity = result.one()
         if entity:
             self.session.delete(result)
-            self.session.commit()
+    
+    

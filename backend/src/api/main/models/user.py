@@ -1,6 +1,6 @@
 from typing import TYPE_CHECKING
 
-from dal.sqlalchemy.repositories.user import UserRepository
+from backend.src.dal.repositories.sqlmodel import UserRepository
 
 
 class UserModel:

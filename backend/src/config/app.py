@@ -16,7 +16,8 @@ class AppSettings(BaseSettings):
     ALLOWED_ORIGINS: list[AnyUrl]
     THREAD_COUNT: int
     SECRET_KEY: str
-    ACCESS_TOKEN_EXPIRE_SECONDS: int
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
+    ACCESS_TOKEN_ALGORITHM: str
     if ENVIRONMENT == Environment.DEVELOPMENT:
         ADDRESS = "localhost"
         TRACK_MODIFICATIONS = True
@@ -24,16 +25,16 @@ class AppSettings(BaseSettings):
         ALLOWED_ORIGINS = ["http://localhost", "http://localhost:5173", "https://localhost", "https://localhost:5173"]
         THREAD_COUNT = 1
         SECRET_KEY = secrets.token_urlsafe(32)
-        ACCESS_TOKEN_EXPIRE_SECONDS = 604800 # 7 Days
+        ACCESS_TOKEN_EXPIRE_MINUTES = 7200 # 5 Days
+        ACCESS_TOKEN_ALGORITHM = "HS256"
     elif ENVIRONMENT == Environment.PRODUCTION:
         ADDRESS = "0.0.0.0"
-
         TRACK_MODIFICATIONS = False
         DEBUG = False
         THREAD_COUNT = os.cpu_count() * 2 + 1
         SECRET_KEY = secrets.token_urlsafe(32)
-        ACCESS_TOKEN_EXPIRE_SECONDS = 604800 # 7 Days
-    
+        ACCESS_TOKEN_EXPIRE_MINUTES = 30
+        ACCESS_TOKEN_ALGORITHM = "HS256"
     @field_validator('ENVIRONMENT')
     @classmethod
     def must_be_environment(cls, v: Environment | str) -> Environment:
