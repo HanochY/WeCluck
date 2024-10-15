@@ -3,29 +3,26 @@ from sqlmodel import Session, SQLModel, select
 from sqlalchemy import ColumnExpressionArgument
 
 class SQLModelRepository(BaseRepository):
-    def __init__(self, session: Session):
+    def __init__(self, Model: SQLModel):
         """New Repository.
 
         Args:
             session (Session): DB Session. This enables concurrency.
         """
-        self.session = session
+        self.Model = Model
     
-    async def commit(self):
-        self.session.commit()
-    
-    async def add(self, Table: SQLModel, **data) -> None:
+    async def add(self, session: Session, **data) -> None:
         """Add <data> to <Table>
 
         Args:
             Table (SQLModel): Type corresponing with a table in the connected DB.
             **data (kwargs): Data of the new entity.
         """
-        entity = Table(**data)
-        self.session.add(entity)
+        entity = self.Model(**data)
+        session.add(entity)
         
     async def find(self, 
-                   Table: SQLModel, 
+                   session: Session,
                    *filter: ColumnExpressionArgument[bool], 
                    offset: int | None = None,
                    limit: int | None = None) -> list[SQLModel]:
@@ -41,32 +38,32 @@ class SQLModelRepository(BaseRepository):
         Returns:
             list[SQLModel]: Query result.
         """
-        statement = select(Table)
+        statement = select(self.Model)
         if filter:
             statement = statement.where(*filter)
         if offset:
             statement = statement.offset(offset)
         if limit: 
             statement = statement.limit(limit)
-        entities = self.session.exec(statement).all()
+        entities = session.exec(statement).all()
         return entities
     
-    async def edit(self, Table: SQLModel, id: int, **data) -> None:
+    async def edit(self, session: Session, id: int, **data) -> None:
         """Update <id> in <Table> with <data> 
 
         Args:
             Table (SQLModel): Type corresponing with a table in the connected DB.
             id (int): ID of desired object.
         """
-        statement = select(Table).where(Table.id == id)
-        result = self.session.exec(statement)
+        statement = select(self.Model).where(self.Model.id == id)
+        result = session.exec(statement)
         entity = result.one()
         for attribute, value in data.items():
             setattr(entity, attribute, value)
-        self.session.add(entity)
+        session.add(entity)
 
-    async def remove(self, 
-                     Table: SQLModel, 
+    async def remove(self,
+                     session: Session,
                      id: int) -> None:
         """Remove <id> from <Table>
 
@@ -74,10 +71,10 @@ class SQLModelRepository(BaseRepository):
             Table (SQLModel): Type corresponing with a table in the connected DB.
             id (int): ID of desired object.
         """
-        statement = select(Table).where(Table.id == id)
-        result = self.session.exec(statement)
+        statement = select(self.Model).where(self.Model.id == id)
+        result = session.exec(statement)
         entity = result.one()
         if entity:
-            self.session.delete(result)
+            session.delete(result)
     
     

@@ -2,6 +2,7 @@ from jwt import DecodeError, InvalidTokenError
 from pydantic import BaseModel
 from src.utils.jwts import encode_jwt, decode_jwt
 from src.config.provider import ConfigProvider
+from fastapi.security import OAuth2PasswordBearer
 
 app_settings = ConfigProvider.forum_settings()
 SECRET_KEY = app_settings.SECRET_KEY
@@ -9,10 +10,13 @@ ACCESS_TOKEN_EXPIRE_MINUTES = app_settings.ACCESS_TOKEN_EXPIRE_MINUTES
 ALGORITHM = "HS256"
 TOKEN_TYPE_BEARER = "bearer"
 
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 class FastAPIToken(BaseModel):
-    access_token: str
+    token_value: str
     token_type: str
+    def __init__(self, value):
+        self.token_value = value
 
 class FastAPIBearerToken(FastAPIToken):
     token_type = TOKEN_TYPE_BEARER

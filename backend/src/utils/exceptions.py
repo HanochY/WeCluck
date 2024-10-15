@@ -1,53 +1,15 @@
-ERROR_MESSAGE_USER_NOT_FOUND = 'User does not exist!'
-ERROR_MESSAGE_TOPIC_NOT_FOUND = 'Topic does not exist!'
-ERROR_MESSAGE_WRONG_PASSWORD = 'Incorrect password!'
-ERROR_MESSAGE_TOPIC_ALREADY_EXISTS = 'Topic already exists!'
-ERROR_MESSAGE_USER_ALREADY_EXISTS = 'User already exists!'
-ERROR_MESSAGE_COMMENT_CONTENT_EMPTY = 'Comment empty!'
-ERROR_MESSAGE_TOPIC_NAME_EMPTY = 'Topic name not defined!'
-ERROR_MESSAGE_TOKEN_NOT_FOUND = 'Token not found in authorization header!'
-ERROR_MESSAGE_INVALID_TOKEN = 'Token not found in authorization header!'
-ERROR_MESSAGE_AUTHORIZATION_HEADER_NOT_FOUND = 'Authorization header not found!'
+class ObjectNotFoundError(Exception):
+    def __init__(self, object_name='Object'):
+       self.message = f'{object_name} does not exist!'
 
-class UserNotFoundError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_USER_NOT_FOUND
+class ObjectAlreadyExistsError(Exception):
+    def __init__(self, object_name='Object'):
+       self.message = f'{object_name} already exists!'
 
-class TopicNotFoundError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_TOPIC_NOT_FOUND
+class ObjectEmptyError(Exception):
+    def __init__(self, object_name='Object'):
+       self.message = f'{object_name} is empty!'
 
-class TopicAlreadyExistsError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_TOPIC_ALREADY_EXISTS
-
-class WrongPasswordError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_WRONG_PASSWORD
-
-
-class UserAlreadyExistsError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_USER_ALREADY_EXISTS
-
-
-class EmptyCommentContentError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_COMMENT_CONTENT_EMPTY
-
-
-class EmptyTopicNameError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_TOPIC_NAME_EMPTY
-
-class TokenNotFoundError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_TOKEN_NOT_FOUND
-
-class InvalidTokenError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_INVALID_TOKEN
-
-class AuthorizationHeaderNotFoundError(Exception):
-    def __init__(self):
-       self.message = ERROR_MESSAGE_AUTHORIZATION_HEADER_NOT_FOUND
+class ObjectUnnamedError(Exception):
+    def __init__(self, object_name='Object'):
+       self.message = f'{object_name} is unnamed!'

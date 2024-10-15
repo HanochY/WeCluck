@@ -1,21 +1,21 @@
 from fastapi import APIRouter, Depends
 from controllers.comment import CommentController
 from utils.exceptions import *
-from middleware.authorization import token_required
+from entities.comment import CommentCreate, CommentRead, CommentUpdate
+from typing_extensions import Annotated
+
 
 router = APIRouter(prefix="/comments", tags=["comments"])
 
 controller = CommentController()
 
 @router.post('/')
-@token_required
-async def post_comment(current_user):
+async def post_comment(comment: CommentCreate):
     response, code = await controller.post_comment(current_user)
     return response, code
     
     
 @router.get('/')
-@token_required
-async def post_comment():
+async def get_comment(comment: Annotated[CommentRead, Depends]):
     response, code = await controller.get_comments()
     return response, code

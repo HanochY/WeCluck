@@ -5,5 +5,5 @@ from sqlmodel import SQLModel, Field
     
 class User(SQLModel, BaseUser, Metadata, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    username: str
+    name: str
     password: str
