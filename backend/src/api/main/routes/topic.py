@@ -1,21 +1,30 @@
 from fastapi import APIRouter, Depends
-from controllers.topic import TopicController
+from controllers.crud import Controller
 from utils.exceptions import *
-from middleware.authorization import token_required
+from entities.topic import TopicBase, TopicCreate, TopicRead, TopicUpdate
+from dal.dbs.forum.models.topic import Topic
+from typing_extensions import Annotated
 
-router = APIRouter(prefix="/topics", tags=["topics"])
+router = APIRouter(prefix="/topic", tags=["topic"])
 
-controller = TopicController()
+controller = Controller(Topic)
 
-@router.get('/')
-@token_required
-async def topics(current_user):
-        response, code = await controller.get_topics()
-        return response, code
+@router.post('/', status_code=201)
+async def create_topic(topic: Annotated[TopicCreate, Depends]):
+    response = await controller.create(topic)
+    return response
+        
+@router.get('/', status_code=200, response_model=TopicBase)
+async def read_topic(filter: Annotated[TopicRead, Depends]):
+    response = await controller.read(filter)
+    return response
 
+@router.put('/', status_code=200)
+async def update_topic(update: Annotated[TopicUpdate, Depends]):
+    response = await controller.update(update)
+    return response
 
-@router.post('/')
-@token_required
-async def topics(current_user):
-        response, code = await controller.post_topic()
-        return response, code
+@router.delete('/', status_code=204)
+async def delete_topic(id: int):
+    response = await controller.delete(id)
+    return response

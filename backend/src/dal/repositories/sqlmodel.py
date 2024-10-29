@@ -11,15 +11,18 @@ class SQLModelRepository(BaseRepository):
         """
         self.Model = Model
     
-    async def add(self, session: Session, **data) -> None:
+    async def add(self, session: Session, **data) -> int:
         """Add <data> to <Table>
 
         Args:
             Table (SQLModel): Type corresponing with a table in the connected DB.
             **data (kwargs): Data of the new entity.
+        Returns:
+            id (int): Generated ID of the new entity.
         """
         entity = self.Model(**data)
         session.add(entity)
+        return entity.id
         
     async def find(self, 
                    session: Session,
