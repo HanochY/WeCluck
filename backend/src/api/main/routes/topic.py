@@ -1,8 +1,10 @@
 from fastapi import APIRouter, Depends
+from fastapi_filter import FilterDepends
 from controllers.crud import Controller
 from utils.exceptions import *
-from entities.topic import TopicBase, TopicCreate, TopicRead, TopicUpdate
+from entities.topic import TopicBase, TopicCreate, TopicUpdate
 from dal.dbs.forum.models.topic import Topic
+from dal.dbs.forum.models.filters.topic import TopicFilter
 from typing_extensions import Annotated
 
 router = APIRouter(prefix="/topic", tags=["topic"])
@@ -15,7 +17,7 @@ async def create_topic(topic: Annotated[TopicCreate, Depends]):
     return response
         
 @router.get('/', status_code=200, response_model=TopicBase)
-async def read_topic(filter: Annotated[TopicRead, Depends]):
+async def read_topic(filter: Annotated[TopicFilter, FilterDepends]):
     response = await controller.read(filter)
     return response
 

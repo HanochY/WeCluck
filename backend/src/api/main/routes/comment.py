@@ -1,8 +1,10 @@
 from fastapi import APIRouter, Depends
+from fastapi_filter import FilterDepends
 from controllers.crud import Controller
 from utils.exceptions import *
-from entities.comment import CommentBase, CommentCreate, CommentRead, CommentUpdate
+from entities.comment import CommentBase, CommentCreate, CommentUpdate
 from dal.dbs.forum.models.comment import Comment
+from dal.dbs.forum.models.filters.comment import CommentFilter
 from typing_extensions import Annotated
 
 router = APIRouter(prefix="/comment", tags=["comment"])
@@ -15,7 +17,7 @@ async def create_comment(comment: Annotated[CommentCreate, Depends]):
     return response
         
 @router.get('/', status_code=200, response_model=CommentBase)
-async def read_comment(filter: Annotated[CommentRead, Depends]):
+async def read_comment(filter: Annotated[CommentFilter, FilterDepends]):
     response = await controller.read(filter)
     return response
 
