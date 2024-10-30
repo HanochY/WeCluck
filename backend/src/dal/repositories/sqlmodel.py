@@ -1,6 +1,7 @@
 from repositories.base import BaseRepository
 from sqlmodel import Session, SQLModel, select
 from sqlalchemy import ColumnExpressionArgument
+from fastapi_filter.contrib.sqlalchemy import Filter
 
 class SQLModelRepository(BaseRepository):
     def __init__(self, Model: SQLModel):
@@ -26,15 +27,13 @@ class SQLModelRepository(BaseRepository):
         
     async def find(self, 
                    session: Session,
-                   *filter: ColumnExpressionArgument[bool], 
+                   filter: Filter, 
                    offset: int | None = None,
                    limit: int | None = None) -> list[SQLModel]:
         """Filter <Table> with <filter>, offset by <offset>, limit by <limit>
 
         Args:
             Table (SQLModel): Type corresponing with a table in the connected DB.
-            *filter (*ColumnExpressionArgument): SQLModel bool-like object.
-            e.g. Building.floor <= 3, Building.color == 'white', ...
             offset (int | None, optional): SQL adjacent parameter. Defaults to None.
             limit (int | None, optional): SQL adjacent parameter. Defaults to None.
 
@@ -43,7 +42,7 @@ class SQLModelRepository(BaseRepository):
         """
         statement = select(self.Model)
         if filter:
-            statement = statement.where(*filter)
+            statement = filter.filter(statement)
         if offset:
             statement = statement.offset(offset)
         if limit: 
