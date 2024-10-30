@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 from fastapi_filter import FilterDepends
 from controllers.crud import Controller
 from utils.exceptions import *
-from entities.user import UserBase, UserCreate, UserUpdate
+from entities.user import UserPublic, UserCreate, UserUpdate
 from dal.dbs.forum.models.user import User
 from dal.dbs.forum.models.filters.user import UserFilter
 from typing_extensions import Annotated
@@ -16,8 +16,8 @@ async def create_user(user: Annotated[UserCreate, Depends]):
     response = await controller.create(user)
     return response
         
-@router.get('/', status_code=200, response_model=UserBase)
-async def read_user(filter: Annotated[UserFilter, FilterDepends]):
+@router.get('/', status_code=200, response_model=UserPublic)
+async def read_user_public(filter: Annotated[UserFilter, FilterDepends]):
     response = await controller.read(filter)
     return response
 
