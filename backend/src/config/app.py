@@ -59,4 +59,4 @@ class ForumSettings(AppSettings):
                                       env_prefix='FORUM_BACKEND_',
                                       env_ignore_empty=True,
                                       extra="ignore")
-    PORT = 5000
+    PORT: int = 5000

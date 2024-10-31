@@ -9,9 +9,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class DBSettings(BaseSettings):
     
     SERVER: str = "localhost"
-    PORT: int | None
-    USER: str | None
-    PASSWORD: str | None
+    PORT: int | None = None
+    USER: str | None = None
+    PASSWORD: str | None = None
     NAME: str
 
     @computed_field
@@ -31,4 +31,4 @@ class ForumDBSettings(DBSettings):
                                       env_prefix='FORUM_DB_',
                                       env_ignore_empty=True,
                                       extra="ignore")
-    NAME: r"development-forum.sqlite3"
+    NAME: str = r"development-forum.sqlite3"
