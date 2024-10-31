@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
+from pydantic import BaseModel
 
 class BaseRepository(ABC):
-    entity: type
+    entity: BaseModel
         
     @abstractmethod
     def add(self, *args, **kwargs):
