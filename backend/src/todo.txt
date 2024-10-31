@@ -9,8 +9,8 @@ add permissions
 switch ID to UUID
 add input validaion
 
-compare w https://fastapi.tiangolo.com/tutorial, https://sqlmodel.tiangolo.com/tutorial
-compare w Shahar https://github.com/ShaharBand/sentinel/blob/main/backend/src
+ideas from https://fastapi.tiangolo.com/tutorial, https://sqlmodel.tiangolo.com/tutorial
+ideas from Shahar https://github.com/ShaharBand/sentinel/blob/main/backend/src
 
 add beanie/mongoengine
 implement the skeleton to a project
