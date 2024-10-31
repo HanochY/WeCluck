@@ -1,4 +1,4 @@
-from repositories.base import BaseRepository
+from dal.repositories.base import BaseRepository
 from sqlmodel import Session, SQLModel, select
 from sqlalchemy import ColumnExpressionArgument
 from fastapi_filter.contrib.sqlalchemy import Filter

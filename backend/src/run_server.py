@@ -1,16 +1,16 @@
 import uvicorn
 
-from src.config.provider import ConfigProvider
-from src.utils.enums import Environment
+from config.provider import ConfigProvider
+from utils.enums.environments import Environment
 
 def run_server():
     forum_settings = ConfigProvider.forum_settings()
     uvicorn.run(
-        "api.app:app",
-        host=forum_settings.DOMAIN,
+        "api.main.app:app",
+        host=forum_settings.ADDRESS,
         port=forum_settings.PORT,
         reload=(forum_settings.ENVIRONMENT == Environment.DEVELOPMENT),
-        workers=forum_settings.THREAD_COUNT if not dev_environment else None
+        workers=forum_settings.THREAD_COUNT
     )
 
 

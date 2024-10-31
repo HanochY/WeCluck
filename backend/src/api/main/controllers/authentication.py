@@ -3,17 +3,17 @@ from datetime import timedelta
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 
-from src.utils.passwords import verify_password
-from src.api.main.security.tokens import (
+from utils.passwords import verify_password
+from api.main.security.tokens import (
     FastAPIBearerToken,
     encode_access_token,
     decode_access_token,
     oauth2_scheme,
 )
-from src.entities.user import UserRead
-from src.dal.repositories.sqlmodel import SQLModelRepository, Session
-from src.dal.dbs.forum.db_manager import get_db_session
-from dal.dbs.forum.models.user import User
+from entities.user import UserRead
+from dal.repositories.sqlmodel import SQLModelRepository, Session
+from dal.db_managers.forum.db_manager import get_db_session
+from dal.models.user import User
 from config.provider import ConfigProvider
 
 

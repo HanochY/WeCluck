@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends
 
-import controllers.authentication as controller
-from src.api.main.security.tokens import FastAPIBearerToken
+from api.main.controllers.authentication import AuthenticationController
+from api.main.security.tokens import FastAPIBearerToken
 
 
 router = APIRouter(prefix="/token", tags=["token"])
-
+controller = AuthenticationController()
 
 @router.post("/")
 async def login_token(token: FastAPIBearerToken = 

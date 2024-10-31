@@ -44,13 +44,16 @@ class AppSettings(BaseSettings):
     
     @field_validator('ALLOWED_ORIGINS', mode="before")
     @classmethod
-    def str_to_url_list(cls, v: str) -> list[AnyUrl]:
-        return json.loads(v)
+    def str_to_url_list(cls, v: str | list[AnyUrl]) -> list[AnyUrl]:
+        if isinstance(v, str):
+            return json.loads(v)
+        else:
+            return v
     
     @field_validator('ALLOWED_ORIGINS', mode="after")
     @classmethod
     def strip_urls(cls, v: list[AnyUrl]) -> list[AnyUrl]:
-        return [i.strip("/") for i in v]
+        return [AnyUrl(str(i).strip("/")) for i in v]
         
             
 

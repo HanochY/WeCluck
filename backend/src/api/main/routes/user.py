@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends
 from fastapi_filter import FilterDepends
-from controllers.crud import Controller
+from api.main.controllers.crud import Controller
 from utils.exceptions import *
 from entities.user import UserPublic, UserCreate, UserUpdate
-from dal.dbs.forum.models.user import User
-from dal.dbs.forum.models.filters.user import UserFilter
+from dal.models.user import User
+from dal.models.filters.user import UserFilter
 from typing_extensions import Annotated
 
 router = APIRouter(prefix="/user", tags=["user"])

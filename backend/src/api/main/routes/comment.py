@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends
 from fastapi_filter import FilterDepends
-from controllers.crud import Controller
+from api.main.controllers.crud import Controller
 from utils.exceptions import *
 from entities.comment import CommentBase, CommentCreate, CommentUpdate
-from dal.dbs.forum.models.comment import Comment
-from dal.dbs.forum.models.filters.comment import CommentFilter
+from dal.models.comment import Comment
+from dal.models.filters.comment import CommentFilter
 from typing_extensions import Annotated
 
 router = APIRouter(prefix="/comment", tags=["comment"])
