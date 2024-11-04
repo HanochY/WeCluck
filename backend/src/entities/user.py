@@ -12,11 +12,11 @@ class UserPrivate(UserPublic):
 class UserCreate(UserBase):
     password: str
     
-class UserRead(UserBase):
+class UserRead(BaseModel):
     id: int | None
     name: str | None
     password: str | None
 
-class UserUpdate(UserBase):
+class UserUpdate(BaseModel):
     name: str | None
     password: str | None
