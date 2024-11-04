@@ -16,7 +16,7 @@ async def create_comment(comment: Annotated[CommentCreate, Depends]):
     response = await controller.create(comment)
     return response
         
-@router.get('/', status_code=200, response_model=CommentBase)
+@router.get('/', status_code=200, response_model=list[CommentBase])
 async def read_comment(filter: Annotated[CommentFilter, FilterDepends]):
     response = await controller.read(filter)
     return response

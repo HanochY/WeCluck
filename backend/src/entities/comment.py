@@ -8,7 +8,11 @@ class CommentBase(BaseModel):
 class CommentCreate(CommentBase):
     pass
 class CommentRead(CommentBase):
-    id: int
+    id: int | None
+    uid: int | None
+    title: str | None
+    content: str | None
+    topic_id: int | None
 
 class CommentUpdate(CommentBase):
     uid: int | None

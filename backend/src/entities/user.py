@@ -13,7 +13,9 @@ class UserCreate(UserBase):
     password: str
     
 class UserRead(UserBase):
-    id: int
+    id: int | None
+    name: str | None
+    password: str | None
 
 class UserUpdate(UserBase):
     name: str | None

@@ -7,8 +7,6 @@ from api.main.routes.user import router as user_router
 from api.main.routes.topic import router as topic_router
 from api.main.routes.authentication import router as authentication_router
 from api.main.routes.comment import router as comment_router
-#from routes.preflight import preflight_blueprint
-
     
 app_settings = ConfigProvider.forum_settings()
 app_metadata = ConfigProvider.metadata()

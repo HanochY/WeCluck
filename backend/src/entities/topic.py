@@ -8,7 +8,10 @@ class TopicBase(BaseModel):
 class TopicCreate(TopicBase):
     pass
 class TopicRead(TopicBase):
-    id: int
+    id: int | None
+    uid: int | None
+    title: str | None
+    content: str | None
 
 class TopicUpdate(TopicBase):
     uid: int | None
