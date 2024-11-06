@@ -2,8 +2,7 @@ from pydantic import BaseModel
 
 class TopicBase(BaseModel):
     uid: int
-    title: str
-    content: str
+    name: str
     class Config:
         orm_mode = True
 
@@ -12,10 +11,8 @@ class TopicCreate(TopicBase):
 class TopicRead(BaseModel):
     id: int | None
     uid: int | None
-    title: str | None
-    content: str | None
+    name: str | None
 
 class TopicUpdate(BaseModel):
     uid: int | None
-    title: str | None
-    content: str | None
+    name: str | None
