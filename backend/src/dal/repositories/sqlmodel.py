@@ -1,15 +1,9 @@
 from dal.repositories.base import BaseRepository
 from sqlmodel import Session, SQLModel, select
 from sqlalchemy import ColumnExpressionArgument
-from fastapi_filter.contrib.sqlalchemy import Filter
 
 class SQLModelRepository(BaseRepository):
     def __init__(self, Model: SQLModel):
-        """New Repository.
-
-        Args:
-            session (Session): DB Session. This enables concurrency.
-        """
         self.Model = Model
     
     async def add(self, session: Session, **data) -> int:
@@ -22,12 +16,12 @@ class SQLModelRepository(BaseRepository):
             id (int): Generated ID of the new entity.
         """
         entity = self.Model(**data)
-        session.add(entity)
+        await session.add(entity)
         return entity.id
         
     async def find(self, 
+                   filter: ColumnExpressionArgument, 
                    session: Session,
-                   filter: Filter, 
                    offset: int | None = None,
                    limit: int | None = None) -> list[SQLModel]:
         """Filter <Table> with <filter>, offset by <offset>, limit by <limit>
@@ -42,12 +36,12 @@ class SQLModelRepository(BaseRepository):
         """
         statement = select(self.Model)
         if filter:
-            statement = filter.filter(statement)
+            statement = statement.where(filter)
         if offset:
             statement = statement.offset(offset)
         if limit: 
             statement = statement.limit(limit)
-        entities = session.exec(statement).all()
+        entities = await session.exec(statement)
         return entities
     
     async def edit(self, session: Session, id: int, **data) -> None:
@@ -62,7 +56,7 @@ class SQLModelRepository(BaseRepository):
         entity = result.one()
         for attribute, value in data.items():
             setattr(entity, attribute, value)
-        session.add(entity)
+        await session.add(entity)
 
     async def remove(self,
                      session: Session,
@@ -77,6 +71,6 @@ class SQLModelRepository(BaseRepository):
         result = session.exec(statement)
         entity = result.one()
         if entity:
-            session.delete(result)
+            await session.delete(result)
     
     

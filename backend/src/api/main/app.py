@@ -7,6 +7,7 @@ from api.main.routes.user import router as user_router
 from api.main.routes.topic import router as topic_router
 from api.main.routes.authentication import router as authentication_router
 from api.main.routes.comment import router as comment_router
+
     
 app_settings = ConfigProvider.forum_settings()
 app_metadata = ConfigProvider.metadata()

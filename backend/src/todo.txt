@@ -3,6 +3,27 @@ add recommended metadata columns V
 enforce generic entity (object) and new data compatibility (common ancestor) V
 refactor w fastapi V
 
+make model subclass of entity
+....
+class entity:
+    class base:
+        a: type
+        b: type
+    class public:
+        a: type
+    class update:
+        id: int
+        a: type
+        b: type
+....
+class sqlmodelentity(entity)
+    class table(self.base, sqlmodel)
+....
+import sqlmodelentity as entity
+....
+to make repos for type-safe db actions
+connectors for logic between them
+
 fix the config structure
 add logging
 add permissions
@@ -13,4 +34,5 @@ ideas from https://fastapi.tiangolo.com/tutorial, https://sqlmodel.tiangolo.com/
 ideas from Shahar https://github.com/ShaharBand/sentinel/blob/main/backend/src
 
 add beanie/mongoengine
+add graphql app
 implement the skeleton to a project

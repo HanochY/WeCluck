@@ -4,6 +4,8 @@ class TopicBase(BaseModel):
     uid: int
     title: str
     content: str
+    class Config:
+        orm_mode = True
 
 class TopicCreate(TopicBase):
     pass

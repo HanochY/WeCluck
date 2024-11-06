@@ -4,6 +4,8 @@ class CommentBase(BaseModel):
     title: str
     content: str
     topic_id: int
+    class Config:
+        orm_mode = True
 
 class CommentCreate(CommentBase):
     pass
