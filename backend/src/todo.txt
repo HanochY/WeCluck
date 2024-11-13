@@ -2,25 +2,9 @@ make generic entity objects V
 add recommended metadata columns V
 enforce generic entity (object) and new data compatibility (common ancestor) V
 refactor w fastapi V
+make model subclass of entityV
 
-make model subclass of entity
-....
-class entity:
-    class base:
-        a: type
-        b: type
-    class public:
-        a: type
-    class update:
-        id: int
-        a: type
-        b: type
-....
-class sqlmodelentity(entity)
-    class table(self.base, sqlmodel)
-....
-import sqlmodelentity as entity
-....
+MAKE ENTITIES TYPEDDICTS
 to make repos for type-safe db actions
 connectors for logic between them
 
