@@ -1,22 +1,23 @@
 from pydantic import BaseModel
-class CommentBase(BaseModel):
-    uid: int
-    title: str
-    content: str
-    topic_id: int
-    class Config:
-        orm_mode = True
+class Comment:
+    class Base(BaseModel):
+        uid: int
+        title: str
+        content: str
+        topic_id: int
 
-class CommentCreate(CommentBase):
-    pass
-class CommentRead(BaseModel):
-    id: int | None
-    uid: int | None
-    title: str | None
-    content: str | None
-    topic_id: int | None
-class CommentUpdate(BaseModel):
-    uid: int | None
-    title: str | None
-    content: str | None
-    topic_id: int | None
+    class Create(Base):
+        pass
+    
+    class Read(BaseModel):
+        id: int | None
+        uid: int | None
+        title: str | None
+        content: str | None
+        topic_id: int | None
+        
+    class Update(BaseModel):
+        uid: int | None
+        title: str | None
+        content: str | None
+        topic_id: int | None
