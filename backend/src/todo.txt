@@ -24,8 +24,13 @@ import sqlmodelentity as entity
 to make repos for type-safe db actions
 connectors for logic between them
 
+join enty as object
+async db
+fix async (use yeild)
+rsa
 fix the config structure
 add logging
+
 add permissions
 switch ID to UUID
 add input validaion
