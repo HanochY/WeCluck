@@ -1,24 +1,26 @@
 from pydantic import BaseModel
 
-class UserBase(BaseModel):
-    name: str
-    class Config:
-        orm_mode = True
+class User:
+    class Base(BaseModel):
+        name: str
+        class Config:
+            orm_mode = True
+        
+    class Public(Base):
+        id: int
+        
+    class Private(Public):
+        password: str
     
-class UserPublic(UserBase):
-    id: int
+    class Create(Base):
+        password: str
+        
+    class Read(BaseModel):
+        id: int | None
+        name: str | None
+        password: str | None
     
-class UserPrivate(UserPublic):
-    password: str
-
-class UserCreate(UserBase):
-    password: str
+    class Update(BaseModel):
+        name: str | None
+        password: str | None
     
-class UserRead(BaseModel):
-    id: int | None
-    name: str | None
-    password: str | None
-
-class UserUpdate(BaseModel):
-    name: str | None
-    password: str | None
