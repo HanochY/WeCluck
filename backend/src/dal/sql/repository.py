@@ -1,4 +1,4 @@
-from dal.repositories.base import BaseRepository
+from dal._schema.repository import BaseRepository
 from sqlmodel import Session, SQLModel, select
 from sqlalchemy import ColumnExpressionArgument
 

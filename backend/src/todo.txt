@@ -26,6 +26,7 @@ connectors for logic between them
 
 join enty as object
 async db
+if type checking???
 fix async (use yeild)
 rsa
 fix the config structure
