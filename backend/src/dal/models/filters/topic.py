@@ -1,7 +1,0 @@
-from fastapi_filter.contrib.sqlalchemy import Filter
-from entities.topic import TopicRead
-from dal.models.topic import Topic
-
-class TopicFilter(Filter, TopicRead):
-    class Constants(Filter.Constants):
-        model = Topic
