@@ -1,6 +1,5 @@
 from pydantic import BaseModel 
 from datetime import datetime 
-from typing import TypeAlias
 
 class Metadata(BaseModel):
     is_deleted: bool 
@@ -10,5 +9,3 @@ class Metadata(BaseModel):
     modified_by: str
     deleted_at: datetime | None
     deleted_by: str | None
-    
-MetadataModel: TypeAlias = Metadata

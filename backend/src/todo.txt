@@ -23,6 +23,8 @@ add input validaion
 ideas from https://fastapi.tiangolo.com/tutorial, https://sqlmodel.tiangolo.com/tutorial
 ideas from Shahar https://github.com/ShaharBand/sentinel/blob/main/backend/src
 
+clean code, annotation
+
 add beanie/mongoengine
 add graphql app
 implement the skeleton to a project

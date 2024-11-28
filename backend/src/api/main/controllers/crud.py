@@ -1,6 +1,6 @@
 from utils.exceptions import *
-from dal.repositories.sqlmodel import SQLModelRepository, SQLModel
-from dal.db_managers.forum.db_manager import get_db_session
+from dal.sql.repository import SQLModelRepository, SQLModel
+from dal.sql.forum.db_manager import get_db_session
 from fastapi import HTTPException, status
 
 class Controller:

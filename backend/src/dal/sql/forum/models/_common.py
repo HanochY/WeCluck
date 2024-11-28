@@ -1,8 +1,8 @@
 from sqlmodel import SQLModel, Field
 from datetime import datetime
-from backend.src.dal._schema.metadata import Metadata as MetadataGlobal
+from dal._schema.metadata import Metadata as MetadataGlobal
 
-class Metadata(SQLModel, MetadataGlobal):
+class SQLModelCommon(SQLModel, MetadataGlobal):
     is_deleted: bool = Field(default=False)
     created_at: datetime = Field(default=datetime.now) 
     created_by: str

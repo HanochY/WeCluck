@@ -15,8 +15,4 @@ def run_server():
 
 
 if __name__ == "__main__":
-    from entities.join import join
-    from entities.comment import CommentRead
-    from entities.topic import TopicRead
-    print(join(CommentRead, TopicRead, 'topic_id').model_fields)
-    #run_server()
+    run_server()
