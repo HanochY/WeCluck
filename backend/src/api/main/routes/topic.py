@@ -1,28 +1,25 @@
 from fastapi import APIRouter, Depends
-from fastapi_filter import FilterDepends
 from api.main.controllers.crud import Controller
 from utils.exceptions import *
-from entities.topic import TopicBase, TopicCreate, TopicUpdate
-from dal.models.topic import Topic
-from dal.models.filters.topic import TopicFilter
+from dal.sql.forum.models.topic import Topic, TopicTable
 from typing_extensions import Annotated
 
 router = APIRouter(prefix="/topic", tags=["topic"])
 
-controller = Controller(Topic)
+controller = Controller(TopicTable)
 
 @router.post('/', status_code=201)
-async def create_topic(topic: Annotated[TopicCreate, Depends]):
+async def create_topic(topic: Annotated[Topic.Create, Depends]):
     response = await controller.create(topic)
     return response
         
-@router.get('/', status_code=200, response_model=TopicBase)
-async def read_topic(filter: Annotated[TopicFilter, FilterDepends]):
-    response = await controller.read(filter)
+@router.get('/', status_code=200, response_model=Topic.Model.Public)
+async def read_all_topics():
+    response = await controller.read()
     return response
 
 @router.put('/', status_code=200)
-async def update_topic(update: Annotated[TopicUpdate, Depends]):
+async def update_topic(update: Annotated[Topic.Model.Update, Depends]):
     response = await controller.update(update)
     return response
 

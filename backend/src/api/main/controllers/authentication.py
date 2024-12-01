@@ -10,10 +10,9 @@ from api.main.security.tokens import (
     decode_access_token,
     oauth2_scheme,
 )
-from entities.user import UserRead
-from dal.repositories.sqlmodel import SQLModelRepository, Session
-from dal.db_managers.forum.db_manager import get_db_session
-from dal.models.user import User
+from dal.sql.forum.models.user import User, UserTable
+from dal.sql.repository import SQLModelRepository, Session
+from dal.sql.forum.db_manager import get_db_session
 from config.provider import ConfigProvider
 
 
@@ -21,7 +20,7 @@ app_settings = ConfigProvider.forum_settings()
 
 class AuthenticationController:
     
-    repository = SQLModelRepository(Model=User)
+    repository = SQLModelRepository(Model=UserTable)
     
     async def get_user(self, uid: int, session: Session) -> User:
         user = await self.repository.find(User.id == uid, session=session)[0]

@@ -16,6 +16,9 @@ rsa
 fix the config structure
 add logging
 
+??merge db specific with db generic??
+??pass typeddicts as init args to repo??
+
 add permissions
 switch ID to UUID
 add input validaion

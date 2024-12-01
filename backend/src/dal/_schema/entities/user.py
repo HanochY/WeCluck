@@ -1,33 +1,45 @@
-from dal._schema.entities._base import BaseEntity
+from dal._schema.entities._validator import validate
 from pydantic import BaseModel
-from typing import Type
+from typing import TypedDict
 
-class Common(BaseModel):
-    name: str | None
+class User:
+    class Public:
+        id: int
+        name: str
+
+    class Private:
+        id: int
+        name: str
+        password: str
+
+    class Create:
+        name: str
+        password: str
+
+    class Update:
+        name: str | None
+        password: str | None
+        
+    class Model:
+
+        class Public(BaseModel, super.Public):
+            pass
+
+        class Private(BaseModel, super.Private):
+            pass
+
+        class Create(BaseModel, super.Create):
+            pass
+
+        class Update(BaseModel, super.Update):
+            pass
     
-class Public(Common):
-    id: int
-    name: str
-    
-class Private(Common):
-    id: int
-    name: str
-    password: str
+    class TypedDict:
+        class Create(TypedDict, super.Create):
+            pass
 
-class Create(Common):
-    name: str
-    password: str
-    
-class Read(Common):
-    id: int | None
-    password: str | None
+        class Update(TypedDict, super.Update):
+            pass
 
-class Update(Common):
-    password: str | None
 
-class User(BaseEntity):
-    _base = Common
-    private = Private
-    public = Public
-    create: Type = Create
-    update = Update
+    #validate(...)

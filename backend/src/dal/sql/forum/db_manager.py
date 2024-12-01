@@ -1,9 +1,9 @@
 from sqlmodel import SQLModel, Session, create_engine
 
 from config.provider import ConfigProvider
-from dal.sql.forum.models.comment import Comment
-from dal.sql.forum.models.topic import Topic
-from dal.sql.forum.models.user import User
+from dal.sql.forum.models.comment import CommentTable
+from dal.sql.forum.models.topic import TopicTable
+from dal.sql.forum.models.user import UserTable
 
 forum_db_settings = ConfigProvider.forum_db_settings()
 engine = create_engine(forum_db_settings.SQLITE_DATABASE_URI)

@@ -1,19 +1,13 @@
 from dal._schema.repository import BaseRepository
-from dal._schema.entities._base import BaseEntity
 from sqlmodel import Session, SQLModel, select
 from sqlalchemy import ColumnExpressionArgument
+from sql.forum.models._common import SQLModelCommon
 from typing import Type
-
+from datetime import datetime
 class SQLModelRepository(BaseRepository):
-    entity: Type[BaseEntity]    
-    add_kwargs: dict
-    edit_kwargs: dict
-    
-    def __init__(self, Entity: BaseEntity):
-        super.__init__(Entity)
-        self.Model = Entity.db_model
+    Model: Type[SQLModelCommon]
         
-    async def add(self, session: Session, **add_kwargs) -> int:
+    async def create(self, session: Session, author_id: int, **data) -> int:
         """Add <data> to <Table>
 
         Args:
@@ -22,25 +16,19 @@ class SQLModelRepository(BaseRepository):
         Returns:
             id (int): Generated ID of the new entity.
         """
-        entity = self.Model(**add_kwargs)
+        entity = self.Model(**data)
+        entity.created_at = datetime.now()
+        entity.created_by = author_id
+        entity.modified_at = datetime.now()
+        entity.modified_by = author_id
         await session.add(entity)
         return entity.id
         
-    async def find(self, 
+    async def read(self, 
                    filter: ColumnExpressionArgument, 
                    session: Session,
-                   offset: int | None = None,
-                   limit: int | None = None) -> list[SQLModel | tuple[SQLModel]]:
-        """Filter <Table> with <filter>, offset by <offset>, limit by <limit>
-
-        Args:
-            Table (SQLModel): Type corresponing with a table in the connected DB.
-            offset (int | None, optional): SQL adjacent parameter. Defaults to None.
-            limit (int | None, optional): SQL adjacent parameter. Defaults to None.
-
-        Returns:
-            list[SQLModel]: Query result.
-        """
+                   offset: int | None = None, 
+                   limit: int | None = None) -> list[SQLModelCommon | tuple[SQLModelCommon]]:
         statement = select(self.Model)
         if filter:
             statement = statement.where(filter)
@@ -51,33 +39,30 @@ class SQLModelRepository(BaseRepository):
         entities = await session.exec(statement)
         return entities
     
-    async def edit(self, session: Session, **edit_kwargs) -> None:
-        """Update <id> in <Table> with <data> 
-
-        Args:
-            Table (SQLModel): Type corresponing with a table in the connected DB.
-            id (int): ID of desired object.
-        """
+    async def update(self, session: Session, author_id: int, **new_data) -> None:
         statement = select(self.Model).where(self.Model.id == id)
         result = session.exec(statement)
         entity = result.one()
-        for attribute, value in edit_kwargs.items():
+        for attribute, value in new_data.items():
             setattr(entity, attribute, value)
+        entity.modified_at = datetime.now()
+        entity.modified_by = author_id
         await session.add(entity)
 
-    async def remove(self,
-                     session: Session,
-                     id: int) -> None:
-        """Remove <id> from <Table>
-
-        Args:
-            Table (SQLModel): Type corresponing with a table in the connected DB.
-            id (int): ID of desired object.
-        """
+    async def delete(self, session: Session, author_id: int, id: int) -> None:
+        statement = select(self.Model).where(self.Model.id == id)
+        result = session.exec(statement)
+        entity = result.one()
+        if entity:
+            entity.deleted_at = datetime.now()
+            entity.deleted_by = author_id
+            entity.is_deleted = True
+            await session.add(entity)
+            
+    async def hard_delete(self, session: Session, id: int) -> None:
         statement = select(self.Model).where(self.Model.id == id)
         result = session.exec(statement)
         entity = result.one()
         if entity:
             await session.delete(result)
-    
     

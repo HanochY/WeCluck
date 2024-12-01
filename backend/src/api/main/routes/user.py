@@ -1,26 +1,26 @@
 from fastapi import APIRouter, Depends
-from fastapi_filter import FilterDepends
 from api.main.controllers.crud import Controller
 from utils.exceptions import *
-from dal._schema.entities.user import User
+from dal.sql.forum.models.user import User, UserTable
 from typing_extensions import Annotated
-from typing import Type
-
-UserCreate = Type(User.create)
-UserUpdate = NewType("UserCreate", User.update)
 
 
 router = APIRouter(prefix="/user", tags=["user"])
 
-controller = Controller()
+controller = Controller(UserTable)
 
 @router.post('/', status_code=201)
-async def create_user(user: Annotated[UserCreate, Depends]):
+async def create_user(user: Annotated[User.Model.Create, Depends]):
     response = await controller.create(user)
     return response
 
+@router.get('/all', status_code=200, response_model=User.Model.Public)
+async def read_all_users():
+    response = await controller.read()
+    return response
+
 @router.put('/', status_code=200)
-async def update_user(update: Annotated[UserUpdate, Depends]):
+async def update_user(update: Annotated[User.Model.Update, Depends]):
     response = await controller.update(update)
     return response
 
