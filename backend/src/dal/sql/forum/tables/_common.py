@@ -3,6 +3,7 @@ from datetime import datetime
 from dal._schema.metadata import Metadata as MetadataGlobal
 
 class SQLModelCommon(SQLModel, MetadataGlobal):
+    id: int | None = Field(default=None, primary_key=True)
     is_deleted: bool = Field(default=False)
     created_at: datetime = Field(default=datetime.now) 
     created_by: str

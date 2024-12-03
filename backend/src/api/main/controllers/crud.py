@@ -8,31 +8,42 @@ class Controller:
     def __init__(self, Model: SQLModel):
         self.repository = SQLModelRepository(Model=Model)
     
-    async def create(self, object):
+    async def create(self, **new_data):
         try:
             with await get_db_session() as session:
-                id = await self.repository.add(**object, session=session)
-        except TypeError:
+                object = await self.repository.create(session=session, author_id=0, uid=0, **new_data)
+                session.commit()
+                session.refresh(object)
+                
+        except TypeError as e:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Item not found")
-        return id or None
+        
+        return object.id or None
     
-    async def read(self, id):
+    async def read_by_id(self, id):
         try:
             with await get_db_session() as session:
-                id = await self.repository.find(id==id, session=session)
-        except TypeError:
+                object = await self.repository.read(id==id, session=session)
+        except TypeError as e:
+            print(e)
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Item not found")
-        return id or None
+        return object or None
     
+    async def read_all(self):
+        try:
+            with await get_db_session() as session:
+                objects = await self.repository.read(session=session)
+        except TypeError as e:
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Item not found")
+        return objects or None
     
-    
-    async def update(self, id, object):
+    async def update(self, id, **new_data):
         with await get_db_session() as session:
-            user = await self.repository.edit(**object, id=id, session=session)
+            user = await self.repository.update(id=id, session=session, **new_data)
         return user or None
     
     async def delete(self, id):
         with await get_db_session() as session:
-            user = await self.repository.remove(id=id, session=session)
+            user = await self.repository.delete(id=id, session=session)
         return user or None
     

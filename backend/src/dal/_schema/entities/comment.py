@@ -3,7 +3,7 @@ from utils.field_injection import inject_fields
 from pydantic import BaseModel
 from typing import TypedDict
 
-class TypedDict:
+class TypedDicts:
     class Public(TypedDict):
         id: int
         uid: int
@@ -19,7 +19,6 @@ class TypedDict:
         topic_id: int
 
     class Create(TypedDict):
-        uid: int
         title: str
         content: str
         topic_id: int
@@ -30,17 +29,17 @@ class TypedDict:
         content: str | None
         topic_id: int | None
 
-class Model:
-    @inject_fields(TypedDict.Public)
+class Models:
+    @inject_fields(TypedDicts.Public)
     class Public(BaseModel):
         pass
-    @inject_fields(TypedDict.Private)
+    @inject_fields(TypedDicts.Private)
     class Private(BaseModel):
         pass
-    @inject_fields(TypedDict.Create)
+    @inject_fields(TypedDicts.Create)
     class Create(BaseModel):
         pass
-    @inject_fields(TypedDict.Update)
+    @inject_fields(TypedDicts.Update)
     class Update(BaseModel):
         pass
 

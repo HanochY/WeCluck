@@ -10,7 +10,8 @@ from api.main.security.tokens import (
     decode_access_token,
     oauth2_scheme,
 )
-from dal.sql.forum.models.user import User, UserTable
+from dal.sql.forum.tables.user import UserModels
+from dal.sql.forum.tables.user import User
 from dal.sql.repository import SQLModelRepository, Session
 from dal.sql.forum.db_manager import get_db_session
 from config.provider import ConfigProvider
@@ -20,17 +21,17 @@ app_settings = ConfigProvider.forum_settings()
 
 class AuthenticationController:
     
-    repository = SQLModelRepository(Model=UserTable)
+    repository = SQLModelRepository(Model=User)
     
-    async def get_user(self, uid: int, session: Session) -> User:
+    async def get_user(self, uid: int, session: Session) -> UserModels.Public:
         user = await self.repository.find(User.id == uid, session=session)[0]
         return user or None
 
-    async def find_user_by_username(self, username: str, session: Session) -> User:
+    async def find_user_by_username(self, username: str, session: Session) -> UserModels.Public:
         user = await self.repository.find(User.name == username, session=session)[0]
         return user or None
 
-    async def get_current_user(self, token: str = Depends(oauth2_scheme)) -> UserRead:
+    async def get_current_user(self, token: str = Depends(oauth2_scheme)) -> UserModels.Public:
         decoded_token_uid = await decode_access_token(token)
         with await get_db_session() as session:
             user = await self.get_user(User.id == decoded_token_uid, session)
@@ -39,7 +40,7 @@ class AuthenticationController:
                                 detail="Authentication failed invalid credentials")
         return user
 
-    async def login_for_access_token(self, form_data: OAuth2PasswordRequestForm = Depends()):
+    async def authenticate_for_access_token(self, form_data: OAuth2PasswordRequestForm = Depends()):
         with await get_db_session() as session:
             user = await self.find_user_by_username(form_data.username, session)
         if user:
