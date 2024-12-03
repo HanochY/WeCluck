@@ -16,7 +16,7 @@ class SQLModelRepository(BaseRepository):
         entity.created_by = author_id
         entity.modified_at = datetime.now()
         entity.modified_by = author_id
-        session.add(entity)
+        await session.add(entity)
         print('aa')
         return entity
         
@@ -33,35 +33,34 @@ class SQLModelRepository(BaseRepository):
             statement = statement.offset(offset)
         if limit: 
             statement = statement.limit(limit)
-        entities = session.exec(statement)
-        print(entities)
-        return entities
+        entities = await session.execute(statement)
+        return entities.scalars().all()
     
     async def update(self, session: Session, author_id: int, **new_data) -> SQLModelCommon:
         statement = select(self.Model).where(self.Model.id == id)
-        result = session.exec(statement)
+        result = await session.exec(statement)
         entity = result.one()
         for attribute, value in new_data.items():
             setattr(entity, attribute, value)
         entity.modified_at = datetime.now()
         entity.modified_by = author_id
-        session.add(entity)
+        await session.add(entity)
 
     async def delete(self, session: Session, author_id: int, id: int) -> SQLModelCommon:
         statement = select(self.Model).where(self.Model.id == id)
-        result = session.exec(statement)
+        result = await session.exec(statement)
         entity = result.one()
         if entity:
             entity.deleted_at = datetime.now()
             entity.deleted_by = author_id
             entity.is_deleted = True
-            session.add(entity)
+            await session.add(entity)
         return entity
             
     async def hard_delete(self, session: Session, id: int) -> None:
         statement = select(self.Model).where(self.Model.id == id)
-        result = session.exec(statement)
+        result = await session.exec(statement)
         entity = result.one()
         if entity:
-            session.delete(result)
+            await session.delete(result)
     

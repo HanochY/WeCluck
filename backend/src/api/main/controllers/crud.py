@@ -10,7 +10,7 @@ class Controller:
     
     async def create(self, **new_data):
         try:
-            with await get_db_session() as session:
+            async with get_db_session() as session:
                 object = await self.repository.create(session=session, author_id=0, uid=0, **new_data)
                 session.commit()
                 session.refresh(object)
@@ -22,7 +22,7 @@ class Controller:
     
     async def read_by_id(self, id):
         try:
-            with await get_db_session() as session:
+            async with get_db_session() as session:
                 object = await self.repository.read(id==id, session=session)
         except TypeError as e:
             print(e)
@@ -31,19 +31,21 @@ class Controller:
     
     async def read_all(self):
         try:
-            with await get_db_session() as session:
+            async with get_db_session() as session:
                 objects = await self.repository.read(session=session)
         except TypeError as e:
+            print(e)
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Item not found")
-        return objects or None
+        print(objects)
+        return objects
     
     async def update(self, id, **new_data):
-        with await get_db_session() as session:
+        async with get_db_session() as session:
             user = await self.repository.update(id=id, session=session, **new_data)
         return user or None
     
     async def delete(self, id):
-        with await get_db_session() as session:
+        async with get_db_session() as session:
             user = await self.repository.delete(id=id, session=session)
         return user or None
     
