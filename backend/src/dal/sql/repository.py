@@ -1,7 +1,7 @@
 from dal._schema.repository import BaseRepository
-from sqlmodel import Session, SQLModel, select
+from sqlmodel import Session, select
 from sqlalchemy import ColumnExpressionArgument
-from sql.forum.models._common import SQLModelCommon
+from dal.sql.forum.models._common import SQLModelCommon
 from typing import Type
 from datetime import datetime
 class SQLModelRepository(BaseRepository):

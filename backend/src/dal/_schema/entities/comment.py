@@ -1,54 +1,48 @@
 from dal._schema.entities._validator import validate
+from utils.field_injection import inject_fields
 from pydantic import BaseModel
 from typing import TypedDict
 
-class Comment:
-    class Public:
+class TypedDict:
+    class Public(TypedDict):
         id: int
         uid: int
         title: str
         content: str
         topic_id: int
 
-    class Private:
+    class Private(TypedDict):
         id: int
         uid: int
         title: str
         content: str
         topic_id: int
 
-    class Create:
+    class Create(TypedDict):
         uid: int
         title: str
         content: str
         topic_id: int
 
-    class Update:
+    class Update(TypedDict):
         uid: int | None
         title: str | None
         content: str | None
         topic_id: int | None
 
-    class Model:
-        class Public(BaseModel, super.Public):
-            pass
-
-        class Private(BaseModel, super.Private):
-            pass
-
-        class Create(BaseModel, super.Create):
-            pass
-
-        class Update(BaseModel, super.Update):
-            pass
-    
-    class TypedDict:
-        
-        class Create(TypedDict, super.Create):
-            pass
-
-        class Update(TypedDict, super.Update):
-            pass
+class Model:
+    @inject_fields(TypedDict.Public)
+    class Public(BaseModel):
+        pass
+    @inject_fields(TypedDict.Private)
+    class Private(BaseModel):
+        pass
+    @inject_fields(TypedDict.Create)
+    class Create(BaseModel):
+        pass
+    @inject_fields(TypedDict.Update)
+    class Update(BaseModel):
+        pass
 
 
-    #validate(...)
+#validate(...)

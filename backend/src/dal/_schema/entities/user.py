@@ -1,8 +1,9 @@
 from dal._schema.entities._validator import validate
+from utils.field_injection import inject_fields
 from pydantic import BaseModel
 from typing import TypedDict
 
-class User:
+class TypedDict:
     class Public:
         id: int
         name: str
@@ -20,26 +21,19 @@ class User:
         name: str | None
         password: str | None
         
-    class Model:
-
-        class Public(BaseModel, super.Public):
-            pass
-
-        class Private(BaseModel, super.Private):
-            pass
-
-        class Create(BaseModel, super.Create):
-            pass
-
-        class Update(BaseModel, super.Update):
-            pass
-    
-    class TypedDict:
-        class Create(TypedDict, super.Create):
-            pass
-
-        class Update(TypedDict, super.Update):
-            pass
+class Model:
+    @inject_fields(TypedDict.Public)
+    class Public(BaseModel):
+        pass
+    @inject_fields(TypedDict.Private)
+    class Private(BaseModel):
+        pass
+    @inject_fields(TypedDict.Create)
+    class Create(BaseModel):
+        pass
+    @inject_fields(TypedDict.Update)
+    class Update(BaseModel):
+        pass
 
 
-    #validate(...)
+#validate(...)
