@@ -7,8 +7,8 @@ from dal.sql.forum.tables.comment import Comment
 from dal.sql.forum.tables.topic import Topic
 from dal.sql.forum.tables.user import User
 
-forum_db_settings = ConfigProvider.forum_db_settings()
-DATABASE_URL = forum_db_settings.SQLITE_DATABASE_URI.replace("sqlite://", "sqlite+aiosqlite://")
+forum_db_settings = ConfigProvider.forum_db_settings(production=False)
+DATABASE_URL = forum_db_settings.URI.replace("sqlite://", "sqlite+aiosqlite://")
 engine = create_async_engine(DATABASE_URL)
 
 AsyncSessionLocal = sessionmaker(bind=engine, 

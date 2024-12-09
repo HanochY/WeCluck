@@ -1,21 +1,28 @@
 from functools import lru_cache
+from config.apps._schema import AppSettings
+from config.dbs._schema import DBSettings
 
-from config.app import ForumSettings, AppSettings
-from config.db import ForumDBSettings, DBSettings
+from config.apps.main import MainApp
+from config.apps.main import MainApp
+from config.dbs.forum import ForumDB
+from config.dbs.forum import ForumDB
 from config.metadata import Metadata
 
 
-class ConfigProvider:
+class ConfigProvider():
+    
     @staticmethod
     @lru_cache(maxsize=1)
-    def forum_settings() -> AppSettings:
-        return ForumSettings()
+    def main_app_settings(production: bool = False) -> AppSettings:
+        if production: return MainApp.Production()
+        else: return MainApp.Development()
 
     @staticmethod
     @lru_cache(maxsize=1)
-    def forum_db_settings() -> DBSettings:
-        return ForumDBSettings()
-
+    def forum_db_settings(production: bool = False) -> DBSettings:
+        if production: return ForumDB.Production() 
+        else: return ForumDB.Development()
+    
     @staticmethod
     @lru_cache(maxsize=1)
     def metadata() -> Metadata:

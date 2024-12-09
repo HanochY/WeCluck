@@ -4,16 +4,12 @@ enforce generic entity (object) and new data compatibility (common ancestor) V
 refactor w fastapi V
 make model subclass of entityV
 
-MAKE ENTITIES TYPEDDICTS
-to make repos for type-safe db actions
-connectors for logic between them
-
-join enty as object
-async db
-if type checking???
-fix async (use yeild)
-rsa
-fix the config structure
+MAKE ENTITIES TYPEDDICTS V
+async db V
+if type checking - saves memory X
+fix async (use yeild) V
+rsa X
+fix the config structure V
 add logging
 
 ??merge db specific with db generic??

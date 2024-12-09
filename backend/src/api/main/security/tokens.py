@@ -4,10 +4,10 @@ from utils.jwts import encode_jwt, decode_jwt
 from config.provider import ConfigProvider
 from fastapi.security import OAuth2PasswordBearer
 
-app_settings = ConfigProvider.forum_settings()
+app_settings = ConfigProvider.main_app_settings(production=False)
 SECRET_KEY = app_settings.SECRET_KEY
 ACCESS_TOKEN_EXPIRE_MINUTES = app_settings.ACCESS_TOKEN_EXPIRE_MINUTES
-ALGORITHM = "HS256"
+ALGORITHM = app_settings.ACCESS_TOKEN_ALGORITHM
 TOKEN_TYPE_BEARER = "bearer"
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
