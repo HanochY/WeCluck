@@ -1,22 +1,23 @@
 from typing import Dict, Callable
 from pydantic import Field, BaseModel
 from pydantic_settings import BaseSettings
-from loggers.filters.default import SensitiveDataFilter
+from config.loggers.filters.default import SensitiveDataFilter
 class Formatter(BaseModel):
     instantiator: str = Field(alias="()", default="uvicorn.logging.DefaultFormatter")
     fmt: str = "[%(levelname)s] - %(asctime)s - %(name)s - %(message)s"
 
 class Filter(BaseModel):
     instantiator: Callable = Field(alias="()", default=SensitiveDataFilter)
-
-class ConsoleHandler(BaseModel):
+class Handler(BaseModel): 
+    pass
+class ConsoleHandler(Handler):
     class_: str = Field(alias="class", default="logging.StreamHandler")
     formatter: str = "default_formatter"
     level: str = "DEBUG"
     stream: str = "ext://sys.stdout"
     filters: list[str] = ["default_filter"]
 
-class FileHandler(BaseModel):
+class FileHandler(Handler):
     formatter: str = "default"
     class_: str = Field(alias="class", 
                         default="logging.handlers.RotatingFileHandler")
@@ -24,9 +25,7 @@ class FileHandler(BaseModel):
     filename: str = "log.log"
     mode: str = "a"
     
-class Handler(BaseModel): 
-    console: ConsoleHandler 
-    file: FileHandler
+
     
 class Logger(BaseModel):
     handlers: list[str]

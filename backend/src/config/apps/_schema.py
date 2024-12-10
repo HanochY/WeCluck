@@ -6,7 +6,6 @@ from pydantic import AnyUrl, field_validator, Field
 from pydantic_settings import BaseSettings
 
 from utils.enums.environments import Environment
-from config.apps.loggers.main import LoggingSettings
 
 class AppSettings(BaseSettings):
     ENVIRONMENT: Annotated[Environment, Field(validate_default=True)]
@@ -19,7 +18,6 @@ class AppSettings(BaseSettings):
     SECRET_KEY: str
     ACCESS_TOKEN_EXPIRE_MINUTES: int
     ACCESS_TOKEN_ALGORITHM: str
-    LOGGING_SETTINGS: LoggingSettings
     
     @field_validator('ENVIRONMENT', mode="before")
     @classmethod

@@ -1,4 +1,4 @@
-from dal._schema.entities.comment import Models as CommentModels
+from dal._schema.resources.comment import Models as CommentModels
 from dal.sql.forum.tables._common import SQLModelCommon
 from sqlmodel import Field
 

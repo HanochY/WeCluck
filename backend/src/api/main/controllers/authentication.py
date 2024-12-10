@@ -17,7 +17,7 @@ from dal.sql.forum.db_manager import get_db_session
 from config.provider import ConfigProvider
 
 
-app_settings = ConfigProvider.forum_settings()
+app_settings = ConfigProvider.main_app_settings()
 
 class AuthenticationController:
     

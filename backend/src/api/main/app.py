@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from contextlib import asynccontextmanager
+import logging
 
 from config.provider import ConfigProvider
 from api.main.routes.user import router as user_router
@@ -9,7 +9,7 @@ from api.main.routes.authentication import router as authentication_router
 from api.main.routes.comment import router as comment_router
 
     
-app_settings = ConfigProvider.forum_settings()
+app_settings = ConfigProvider.main_app_settings()
 app_metadata = ConfigProvider.metadata()
 
 app = FastAPI(root_path="/api",

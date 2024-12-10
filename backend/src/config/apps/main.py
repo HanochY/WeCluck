@@ -6,7 +6,7 @@ from pydantic import AnyUrl, Field
 from pydantic_settings import SettingsConfigDict
 from config.apps._schema import AppSettings
 from utils.enums.environments import Environment
-from config.apps.loggers.main import LoggingSettings
+from config.loggers.main import LoggingSettings
 
 
 
@@ -26,7 +26,6 @@ class MainApp:
         SECRET_KEY: str = secrets.token_urlsafe(32)
         ACCESS_TOKEN_EXPIRE_MINUTES: int = 7200 # 5 Days
         ACCESS_TOKEN_ALGORITHM: str = "HS256"
-        LOGGING_SETTINGS = LoggingSettings()
 
     class Production(AppSettings):
         model_config = SettingsConfigDict(env_file='.env',
@@ -42,4 +41,3 @@ class MainApp:
         SECRET_KEY: str = secrets.token_urlsafe(32)
         ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
         ACCESS_TOKEN_ALGORITHM: str = "HS256"
-        LOGGING_SETTINGS = LoggingSettings()

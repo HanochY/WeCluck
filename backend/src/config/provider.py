@@ -7,6 +7,7 @@ from config.apps.main import MainApp
 from config.dbs.forum import ForumDB
 from config.dbs.forum import ForumDB
 from config.metadata import Metadata
+from config.loggers.main import LoggingSettings
 
 
 class ConfigProvider():
@@ -27,3 +28,8 @@ class ConfigProvider():
     @lru_cache(maxsize=1)
     def metadata() -> Metadata:
         return Metadata()
+    
+    @staticmethod
+    @lru_cache(maxsize=1)
+    def logging_settings() -> LoggingSettings:
+        return LoggingSettings()

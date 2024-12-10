@@ -1,4 +1,4 @@
-from dal._schema.entities._validator import validate
+from dal._schema.resources._validator import validate
 from utils.field_injection import inject_fields
 from pydantic import BaseModel
 from typing import TypedDict
