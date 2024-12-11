@@ -4,7 +4,7 @@ from config.dbs._schema import DBSettings
 
 from config.apps.main import MainApp
 from config.dbs.forum import ForumDB
-from config.loggers.main import Logging
+from config.loggers.main import LOGGING_CONFIG
 from config.metadata import Metadata
 
 
@@ -29,6 +29,5 @@ class ConfigProvider():
     
     @staticmethod
     @lru_cache(maxsize=1)
-    def logging_settings(production: bool = False):
-        if production: return Logging.Production() 
-        else: return Logging.Development()
+    def logging_settings():
+        return LOGGING_CONFIG

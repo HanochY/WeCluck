@@ -1,4 +1,6 @@
 from dal._schema.logs.uvicorn import UvicornLog
+from dal._schema.logs.request import RequestLog 
+from dal._schema.logs.error import ErrorLog
 from fastapi.requests import Request
 from fastapi.responses import Response
 from starlette.middleware.base import BaseHTTPMiddleware
@@ -8,16 +10,18 @@ from starlette.middleware.base import BaseHTTPMiddleware
 import logging
 import json
 
-logger = logging.getLogger("uvicorn")
-
-async def generate_log(request: Request, response: Response) -> UvicornLog:
-    return UvicornLog(
-        client_addr= request.client.host,
+logger = logging.getLogger()
+async def generate_fastapi_request_log(request: Request) -> RequestLog:
+    return RequestLog(
         method = request.method,
-        full_path= str(request.url),
-        http_version= request.scope['http_version'],
-        status_code= int(response.status_code),
+        route = request['path'],
+        ip = request.client.host,
+        url = str(request.url),
+        host = request.url.hostname,
+        body = str((await request.body()).decode('utf-8')) or '',
+        headers = dict(request.headers.items())
     )
+
 class LoggingMiddleware(BaseHTTPMiddleware):
 
    # def __init__(self, app):
@@ -25,14 +29,19 @@ class LoggingMiddleware(BaseHTTPMiddleware):
         
     async def dispatch(self, request: Request, call_next):
         try:
+
+            log = await generate_fastapi_request_log(request)
+            print('a')
+            logger.info(json.loads(log.model_dump_json()))
+            print(log.model_dump())
             response = await call_next(request)
-            log = await generate_log(request, response)
-            logger.info("%s %s %s %s %d", *log.model_dump().values())
+            
+            
             return response
     #        response_body = ""
     #        if response.headers.get("content-type") == "application/json":
     #            response_body = [chunk async for chunk in response.body_iterator]
     #            response.body_iterator = iterate_in_threadpool(iter(response_body))
         except Exception as e:
-            logger.error(json.loads(UvicornLog(error_message=str(e)).model_dump_json()))
+            logger.error("%s %s", *ErrorLog(error_message=str(e)).model_dump().values())
             

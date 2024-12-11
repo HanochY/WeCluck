@@ -1,0 +1,716 @@
+[DEBUG] - 2024-12-11 17:07:35,656 - aiosqlite - executing <function connect.<locals>.connector at 0x000002C9575145E0>
+[DEBUG] - 2024-12-11 17:07:35,657 - aiosqlite - operation <function connect.<locals>.connector at 0x000002C9575145E0> completed
+[DEBUG] - 2024-12-11 17:07:35,658 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002C9574EE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000002C9572620C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:07:35,658 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002C9574EE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000002C9572620C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:07:35,666 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002C9574EE4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:07:35,667 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002C9574EE4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:07:35,668 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002C9574EE4D0>)
+[DEBUG] - 2024-12-11 17:07:35,668 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002C9574EE4D0>) completed
+[DEBUG] - 2024-12-11 17:07:35,669 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002C9574C7940>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:07:35,669 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002C9574C7940>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:07:35,670 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002C9574C7940>)
+[DEBUG] - 2024-12-11 17:07:35,670 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002C9574C7940>) completed
+[DEBUG] - 2024-12-11 17:07:35,671 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002C9574C7940>)
+[DEBUG] - 2024-12-11 17:07:35,671 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002C9574C7940>) completed
+[DEBUG] - 2024-12-11 17:07:35,672 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C9574EE4D0>)
+[DEBUG] - 2024-12-11 17:07:35,672 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C9574EE4D0>) completed
+[DEBUG] - 2024-12-11 17:07:35,677 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002C9574EE4D0>)
+[DEBUG] - 2024-12-11 17:07:35,678 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002C9574EE4D0>) completed
+[DEBUG] - 2024-12-11 17:07:35,679 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002C95753E340>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:07:35,680 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002C95753E340>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:07:35,682 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002C95753E340>)
+[DEBUG] - 2024-12-11 17:07:35,682 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002C95753E340>) completed
+[DEBUG] - 2024-12-11 17:07:35,683 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002C95753E340>)
+[DEBUG] - 2024-12-11 17:07:35,683 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002C95753E340>) completed
+[DEBUG] - 2024-12-11 17:07:35,684 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C9574EE4D0>)
+[DEBUG] - 2024-12-11 17:07:35,685 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C9574EE4D0>) completed
+[DEBUG] - 2024-12-11 17:07:35,685 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C9574EE4D0>)
+[DEBUG] - 2024-12-11 17:07:35,686 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C9574EE4D0>) completed
+[DEBUG] - 2024-12-11 17:07:35,687 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x000002C9574EE4D0>)
+[DEBUG] - 2024-12-11 17:07:35,687 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x000002C9574EE4D0>) completed
+[INFO] - 2024-12-11 17:07:35,688 - root - 127.0.0.1 GET http://localhost:5000/comment/all 1.1 200
+[DEBUG] - 2024-12-11 17:09:54,271 - aiosqlite - executing <function connect.<locals>.connector at 0x000002C957512F20>
+[DEBUG] - 2024-12-11 17:09:54,273 - aiosqlite - operation <function connect.<locals>.connector at 0x000002C957512F20> completed
+[DEBUG] - 2024-12-11 17:09:54,273 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002C95751D8A0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000002C9572620C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:09:54,274 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002C95751D8A0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000002C9572620C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:09:54,275 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002C95751D8A0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:09:54,276 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002C95751D8A0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:09:54,277 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002C95751D8A0>)
+[DEBUG] - 2024-12-11 17:09:54,277 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002C95751D8A0>) completed
+[DEBUG] - 2024-12-11 17:09:54,278 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002C95753F0C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:09:54,279 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002C95753F0C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:09:54,279 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002C95753F0C0>)
+[DEBUG] - 2024-12-11 17:09:54,280 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002C95753F0C0>) completed
+[DEBUG] - 2024-12-11 17:09:54,280 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002C95753F0C0>)
+[DEBUG] - 2024-12-11 17:09:54,281 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002C95753F0C0>) completed
+[DEBUG] - 2024-12-11 17:09:54,282 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C95751D8A0>)
+[DEBUG] - 2024-12-11 17:09:54,282 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C95751D8A0>) completed
+[DEBUG] - 2024-12-11 17:09:54,283 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C95751D8A0>)
+[DEBUG] - 2024-12-11 17:09:54,283 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002C95751D8A0>) completed
+[DEBUG] - 2024-12-11 17:09:54,284 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x000002C95751D8A0>)
+[DEBUG] - 2024-12-11 17:09:54,284 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x000002C95751D8A0>) completed
+[INFO] - 2024-12-11 17:09:54,285 - root - 127.0.0.1 GET http://localhost:5000/comment/all 1.1 200
+[DEBUG] - 2024-12-11 17:11:28,710 - aiosqlite - executing <function connect.<locals>.connector at 0x00000247BBA645E0>
+[DEBUG] - 2024-12-11 17:11:28,711 - aiosqlite - operation <function connect.<locals>.connector at 0x00000247BBA645E0> completed
+[DEBUG] - 2024-12-11 17:11:28,711 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000247BBA3E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000247BB7B20C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:11:28,712 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000247BBA3E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000247BB7B20C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:11:28,713 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000247BBA3E4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:11:28,714 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000247BBA3E4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:11:28,714 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000247BBA3E4D0>)
+[DEBUG] - 2024-12-11 17:11:28,715 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000247BBA3E4D0>) completed
+[DEBUG] - 2024-12-11 17:11:28,715 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000247BBA17A40>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:11:28,716 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000247BBA17A40>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:11:28,716 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000247BBA17A40>)
+[DEBUG] - 2024-12-11 17:11:28,717 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000247BBA17A40>) completed
+[DEBUG] - 2024-12-11 17:11:28,717 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000247BBA17A40>)
+[DEBUG] - 2024-12-11 17:11:28,718 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000247BBA17A40>) completed
+[DEBUG] - 2024-12-11 17:11:28,718 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000247BBA3E4D0>)
+[DEBUG] - 2024-12-11 17:11:28,719 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000247BBA3E4D0>) completed
+[DEBUG] - 2024-12-11 17:11:28,724 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000247BBA3E4D0>)
+[DEBUG] - 2024-12-11 17:11:28,724 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000247BBA3E4D0>) completed
+[DEBUG] - 2024-12-11 17:11:28,725 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000247BBA8E440>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:11:28,726 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000247BBA8E440>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:11:28,727 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000247BBA8E440>)
+[DEBUG] - 2024-12-11 17:11:28,727 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000247BBA8E440>) completed
+[DEBUG] - 2024-12-11 17:11:28,728 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000247BBA8E440>)
+[DEBUG] - 2024-12-11 17:11:28,729 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000247BBA8E440>) completed
+[DEBUG] - 2024-12-11 17:11:28,730 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000247BBA3E4D0>)
+[DEBUG] - 2024-12-11 17:11:28,730 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000247BBA3E4D0>) completed
+[DEBUG] - 2024-12-11 17:11:28,731 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000247BBA3E4D0>)
+[DEBUG] - 2024-12-11 17:11:28,731 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000247BBA3E4D0>) completed
+[DEBUG] - 2024-12-11 17:11:28,733 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x00000247BBA3E4D0>)
+[DEBUG] - 2024-12-11 17:11:28,733 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x00000247BBA3E4D0>) completed
+[INFO] - 2024-12-11 17:11:28,734 - root - {'client_addr': IPv4Address('127.0.0.1'), 'method': <HttpMethod.GET: 'GET'>, 'full_path': Url('http://localhost:5000/comment/all'), 'http_version': '1.1', 'status_code': 200}
+[DEBUG] - 2024-12-11 17:12:09,854 - aiosqlite - executing <function connect.<locals>.connector at 0x0000022E7D5F45E0>
+[DEBUG] - 2024-12-11 17:12:09,855 - aiosqlite - operation <function connect.<locals>.connector at 0x0000022E7D5F45E0> completed
+[DEBUG] - 2024-12-11 17:12:09,856 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000022E7D5CE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000022E7D3420C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:12:09,856 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000022E7D5CE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000022E7D3420C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:12:09,857 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000022E7D5CE4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:12:09,858 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000022E7D5CE4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:12:09,859 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000022E7D5CE4D0>)
+[DEBUG] - 2024-12-11 17:12:09,859 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000022E7D5CE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:09,860 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000022E7D5A79C0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:12:09,861 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000022E7D5A79C0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:12:09,861 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000022E7D5A79C0>)
+[DEBUG] - 2024-12-11 17:12:09,861 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000022E7D5A79C0>) completed
+[DEBUG] - 2024-12-11 17:12:09,862 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000022E7D5A79C0>)
+[DEBUG] - 2024-12-11 17:12:09,863 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000022E7D5A79C0>) completed
+[DEBUG] - 2024-12-11 17:12:09,863 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000022E7D5CE4D0>)
+[DEBUG] - 2024-12-11 17:12:09,864 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000022E7D5CE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:09,868 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000022E7D5CE4D0>)
+[DEBUG] - 2024-12-11 17:12:09,869 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000022E7D5CE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:09,870 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000022E7D61E3C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:12:09,871 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000022E7D61E3C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:12:09,872 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000022E7D61E3C0>)
+[DEBUG] - 2024-12-11 17:12:09,873 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000022E7D61E3C0>) completed
+[DEBUG] - 2024-12-11 17:12:09,873 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000022E7D61E3C0>)
+[DEBUG] - 2024-12-11 17:12:09,874 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000022E7D61E3C0>) completed
+[DEBUG] - 2024-12-11 17:12:09,875 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000022E7D5CE4D0>)
+[DEBUG] - 2024-12-11 17:12:09,875 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000022E7D5CE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:09,876 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000022E7D5CE4D0>)
+[DEBUG] - 2024-12-11 17:12:09,876 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000022E7D5CE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:09,877 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000022E7D5CE4D0>)
+[DEBUG] - 2024-12-11 17:12:09,878 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000022E7D5CE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:55,601 - aiosqlite - executing <function connect.<locals>.connector at 0x00000229C5AF45E0>
+[DEBUG] - 2024-12-11 17:12:55,602 - aiosqlite - operation <function connect.<locals>.connector at 0x00000229C5AF45E0> completed
+[DEBUG] - 2024-12-11 17:12:55,603 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000229C5ACE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000229C58420C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:12:55,603 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000229C5ACE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000229C58420C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:12:55,604 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000229C5ACE4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:12:55,605 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000229C5ACE4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:12:55,605 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000229C5ACE4D0>)
+[DEBUG] - 2024-12-11 17:12:55,606 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000229C5ACE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:55,607 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000229C5AA79C0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:12:55,607 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000229C5AA79C0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:12:55,608 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000229C5AA79C0>)
+[DEBUG] - 2024-12-11 17:12:55,608 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000229C5AA79C0>) completed
+[DEBUG] - 2024-12-11 17:12:55,609 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000229C5AA79C0>)
+[DEBUG] - 2024-12-11 17:12:55,609 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000229C5AA79C0>) completed
+[DEBUG] - 2024-12-11 17:12:55,610 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000229C5ACE4D0>)
+[DEBUG] - 2024-12-11 17:12:55,611 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000229C5ACE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:55,616 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000229C5ACE4D0>)
+[DEBUG] - 2024-12-11 17:12:55,617 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000229C5ACE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:55,618 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000229C5B1E3C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:12:55,619 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000229C5B1E3C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:12:55,620 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000229C5B1E3C0>)
+[DEBUG] - 2024-12-11 17:12:55,620 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000229C5B1E3C0>) completed
+[DEBUG] - 2024-12-11 17:12:55,621 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000229C5B1E3C0>)
+[DEBUG] - 2024-12-11 17:12:55,622 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000229C5B1E3C0>) completed
+[DEBUG] - 2024-12-11 17:12:55,623 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000229C5ACE4D0>)
+[DEBUG] - 2024-12-11 17:12:55,623 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000229C5ACE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:55,625 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000229C5ACE4D0>)
+[DEBUG] - 2024-12-11 17:12:55,626 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000229C5ACE4D0>) completed
+[DEBUG] - 2024-12-11 17:12:55,627 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x00000229C5ACE4D0>)
+[DEBUG] - 2024-12-11 17:12:55,627 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x00000229C5ACE4D0>) completed
+[INFO] - 2024-12-11 17:12:55,628 - root - 127.0.0.1 GET http://localhost:5000/comment/all 1.1 200 6
+[DEBUG] - 2024-12-11 17:17:59,408 - aiosqlite - executing <function connect.<locals>.connector at 0x00000278E495CFE0>
+[DEBUG] - 2024-12-11 17:17:59,409 - aiosqlite - operation <function connect.<locals>.connector at 0x00000278E495CFE0> completed
+[DEBUG] - 2024-12-11 17:17:59,410 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000278E493E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000278E46A20C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:17:59,410 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000278E493E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000278E46A20C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:17:59,411 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000278E493E4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:17:59,412 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000278E493E4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:17:59,413 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000278E493E4D0>)
+[DEBUG] - 2024-12-11 17:17:59,413 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000278E493E4D0>) completed
+[DEBUG] - 2024-12-11 17:17:59,414 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000278E4911F40>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:17:59,414 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000278E4911F40>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:17:59,415 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000278E4911F40>)
+[DEBUG] - 2024-12-11 17:17:59,416 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000278E4911F40>) completed
+[DEBUG] - 2024-12-11 17:17:59,416 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000278E4911F40>)
+[DEBUG] - 2024-12-11 17:17:59,417 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000278E4911F40>) completed
+[DEBUG] - 2024-12-11 17:17:59,418 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000278E493E4D0>)
+[DEBUG] - 2024-12-11 17:17:59,418 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000278E493E4D0>) completed
+[DEBUG] - 2024-12-11 17:17:59,424 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000278E493E4D0>)
+[DEBUG] - 2024-12-11 17:17:59,425 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000278E493E4D0>) completed
+[DEBUG] - 2024-12-11 17:17:59,426 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000278E4984940>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:17:59,427 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000278E4984940>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:17:59,428 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000278E4984940>)
+[DEBUG] - 2024-12-11 17:17:59,428 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000278E4984940>) completed
+[DEBUG] - 2024-12-11 17:17:59,429 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000278E4984940>)
+[DEBUG] - 2024-12-11 17:17:59,429 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000278E4984940>) completed
+[DEBUG] - 2024-12-11 17:17:59,430 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000278E493E4D0>)
+[DEBUG] - 2024-12-11 17:17:59,431 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000278E493E4D0>) completed
+[DEBUG] - 2024-12-11 17:17:59,431 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000278E493E4D0>)
+[DEBUG] - 2024-12-11 17:17:59,432 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000278E493E4D0>) completed
+[DEBUG] - 2024-12-11 17:17:59,432 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x00000278E493E4D0>)
+[DEBUG] - 2024-12-11 17:17:59,433 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x00000278E493E4D0>) completed
+[DEBUG] - 2024-12-11 17:19:16,293 - aiosqlite - executing <function connect.<locals>.connector at 0x000001B6FF07CE00>
+[DEBUG] - 2024-12-11 17:19:16,294 - aiosqlite - operation <function connect.<locals>.connector at 0x000001B6FF07CE00> completed
+[DEBUG] - 2024-12-11 17:19:16,295 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B6FF05A4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001B6FEDC20C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:19:16,296 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B6FF05A4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001B6FEDC20C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:19:16,296 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B6FF05A4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:19:16,297 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B6FF05A4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:19:16,298 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B6FF05A4D0>)
+[DEBUG] - 2024-12-11 17:19:16,298 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B6FF05A4D0>) completed
+[DEBUG] - 2024-12-11 17:19:16,299 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B6FF0340C0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:19:16,299 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B6FF0340C0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:19:16,300 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B6FF0340C0>)
+[DEBUG] - 2024-12-11 17:19:16,301 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B6FF0340C0>) completed
+[DEBUG] - 2024-12-11 17:19:16,301 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B6FF0340C0>)
+[DEBUG] - 2024-12-11 17:19:16,302 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B6FF0340C0>) completed
+[DEBUG] - 2024-12-11 17:19:16,303 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B6FF05A4D0>)
+[DEBUG] - 2024-12-11 17:19:16,304 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B6FF05A4D0>) completed
+[DEBUG] - 2024-12-11 17:19:16,309 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B6FF05A4D0>)
+[DEBUG] - 2024-12-11 17:19:16,310 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B6FF05A4D0>) completed
+[DEBUG] - 2024-12-11 17:19:16,310 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B6FF09FDC0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:19:16,311 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B6FF09FDC0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:19:16,312 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B6FF09FDC0>)
+[DEBUG] - 2024-12-11 17:19:16,313 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B6FF09FDC0>) completed
+[DEBUG] - 2024-12-11 17:19:16,313 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B6FF09FDC0>)
+[DEBUG] - 2024-12-11 17:19:16,314 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B6FF09FDC0>) completed
+[DEBUG] - 2024-12-11 17:19:16,315 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B6FF05A4D0>)
+[DEBUG] - 2024-12-11 17:19:16,316 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B6FF05A4D0>) completed
+[DEBUG] - 2024-12-11 17:19:16,316 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B6FF05A4D0>)
+[DEBUG] - 2024-12-11 17:19:16,317 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B6FF05A4D0>) completed
+[DEBUG] - 2024-12-11 17:19:16,318 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x000001B6FF05A4D0>)
+[DEBUG] - 2024-12-11 17:19:16,318 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x000001B6FF05A4D0>) completed
+[DEBUG] - 2024-12-11 17:21:34,749 - aiosqlite - executing <function connect.<locals>.connector at 0x00000225F4FFD080>
+[DEBUG] - 2024-12-11 17:21:34,750 - aiosqlite - operation <function connect.<locals>.connector at 0x00000225F4FFD080> completed
+[DEBUG] - 2024-12-11 17:21:34,751 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000225F4FDE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000225F4D420C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:21:34,753 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000225F4FDE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000225F4D420C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:21:34,753 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000225F4FDE4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:21:34,754 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000225F4FDE4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:21:34,754 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000225F4FDE4D0>)
+[DEBUG] - 2024-12-11 17:21:34,754 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000225F4FDE4D0>) completed
+[DEBUG] - 2024-12-11 17:21:34,755 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000225F4FB5FC0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:21:34,755 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000225F4FB5FC0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:21:34,757 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000225F4FB5FC0>)
+[DEBUG] - 2024-12-11 17:21:34,758 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000225F4FB5FC0>) completed
+[DEBUG] - 2024-12-11 17:21:34,758 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000225F4FB5FC0>)
+[DEBUG] - 2024-12-11 17:21:34,759 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000225F4FB5FC0>) completed
+[DEBUG] - 2024-12-11 17:21:34,759 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000225F4FDE4D0>)
+[DEBUG] - 2024-12-11 17:21:34,760 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000225F4FDE4D0>) completed
+[DEBUG] - 2024-12-11 17:21:34,765 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000225F4FDE4D0>)
+[DEBUG] - 2024-12-11 17:21:34,765 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000225F4FDE4D0>) completed
+[DEBUG] - 2024-12-11 17:21:34,765 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000225F50249C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:21:34,767 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000225F50249C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:21:34,768 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000225F50249C0>)
+[DEBUG] - 2024-12-11 17:21:34,768 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000225F50249C0>) completed
+[DEBUG] - 2024-12-11 17:21:34,769 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000225F50249C0>)
+[DEBUG] - 2024-12-11 17:21:34,769 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000225F50249C0>) completed
+[DEBUG] - 2024-12-11 17:21:34,771 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000225F4FDE4D0>)
+[DEBUG] - 2024-12-11 17:21:34,771 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000225F4FDE4D0>) completed
+[DEBUG] - 2024-12-11 17:21:34,772 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000225F4FDE4D0>)
+[DEBUG] - 2024-12-11 17:21:34,772 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000225F4FDE4D0>) completed
+[DEBUG] - 2024-12-11 17:21:34,772 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x00000225F4FDE4D0>)
+[DEBUG] - 2024-12-11 17:21:34,774 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x00000225F4FDE4D0>) completed
+[ERROR] - 2024-12-11 17:21:34,774 - root - {'req_id': '20518af9-0637-4711-bbcd-95960d1f7501', 'error_message': 'Expecting value: line 1 column 1 (char 0)'}
+[DEBUG] - 2024-12-11 17:24:26,217 - aiosqlite - executing <function connect.<locals>.connector at 0x000002DA6D17D080>
+[DEBUG] - 2024-12-11 17:24:26,218 - aiosqlite - operation <function connect.<locals>.connector at 0x000002DA6D17D080> completed
+[DEBUG] - 2024-12-11 17:24:26,219 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002DA6D15E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000002DA6CEC20C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:24:26,220 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002DA6D15E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000002DA6CEC20C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:24:26,221 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002DA6D15E4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:24:26,221 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000002DA6D15E4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:24:26,222 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002DA6D15E4D0>)
+[DEBUG] - 2024-12-11 17:24:26,222 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002DA6D15E4D0>) completed
+[DEBUG] - 2024-12-11 17:24:26,223 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002DA6D135FC0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:24:26,223 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002DA6D135FC0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:24:26,224 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002DA6D135FC0>)
+[DEBUG] - 2024-12-11 17:24:26,224 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002DA6D135FC0>) completed
+[DEBUG] - 2024-12-11 17:24:26,225 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002DA6D135FC0>)
+[DEBUG] - 2024-12-11 17:24:26,225 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002DA6D135FC0>) completed
+[DEBUG] - 2024-12-11 17:24:26,226 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002DA6D15E4D0>)
+[DEBUG] - 2024-12-11 17:24:26,226 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002DA6D15E4D0>) completed
+[DEBUG] - 2024-12-11 17:24:26,231 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002DA6D15E4D0>)
+[DEBUG] - 2024-12-11 17:24:26,232 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000002DA6D15E4D0>) completed
+[DEBUG] - 2024-12-11 17:24:26,233 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002DA6D1A49C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:24:26,234 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000002DA6D1A49C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:24:26,235 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002DA6D1A49C0>)
+[DEBUG] - 2024-12-11 17:24:26,236 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000002DA6D1A49C0>) completed
+[DEBUG] - 2024-12-11 17:24:26,237 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002DA6D1A49C0>)
+[DEBUG] - 2024-12-11 17:24:26,237 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000002DA6D1A49C0>) completed
+[DEBUG] - 2024-12-11 17:24:26,238 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002DA6D15E4D0>)
+[DEBUG] - 2024-12-11 17:24:26,239 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002DA6D15E4D0>) completed
+[DEBUG] - 2024-12-11 17:24:26,239 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002DA6D15E4D0>)
+[DEBUG] - 2024-12-11 17:24:26,240 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000002DA6D15E4D0>) completed
+[DEBUG] - 2024-12-11 17:24:26,240 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x000002DA6D15E4D0>)
+[DEBUG] - 2024-12-11 17:24:26,241 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x000002DA6D15E4D0>) completed
+[ERROR] - 2024-12-11 17:24:26,242 - root - d37bd13b-867e-4dbc-94cc-6b003cc5411b Expecting value: line 1 column 1 (char 0)
+[DEBUG] - 2024-12-11 17:25:43,396 - aiosqlite - executing <function connect.<locals>.connector at 0x0000028C8F85D080>
+[DEBUG] - 2024-12-11 17:25:43,397 - aiosqlite - operation <function connect.<locals>.connector at 0x0000028C8F85D080> completed
+[DEBUG] - 2024-12-11 17:25:43,398 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000028C8F83E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000028C8F5A20C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:25:43,398 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000028C8F83E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000028C8F5A20C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:25:43,399 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000028C8F83E4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:25:43,400 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000028C8F83E4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:25:43,401 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000028C8F83E4D0>)
+[DEBUG] - 2024-12-11 17:25:43,401 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000028C8F83E4D0>) completed
+[DEBUG] - 2024-12-11 17:25:43,402 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000028C8F816040>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:25:43,402 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000028C8F816040>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:25:43,403 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000028C8F816040>)
+[DEBUG] - 2024-12-11 17:25:43,403 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000028C8F816040>) completed
+[DEBUG] - 2024-12-11 17:25:43,404 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000028C8F816040>)
+[DEBUG] - 2024-12-11 17:25:43,404 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000028C8F816040>) completed
+[DEBUG] - 2024-12-11 17:25:43,405 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000028C8F83E4D0>)
+[DEBUG] - 2024-12-11 17:25:43,406 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000028C8F83E4D0>) completed
+[DEBUG] - 2024-12-11 17:25:43,414 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000028C8F83E4D0>)
+[DEBUG] - 2024-12-11 17:25:43,415 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000028C8F83E4D0>) completed
+[DEBUG] - 2024-12-11 17:25:43,415 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000028C8F884A40>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:25:43,416 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000028C8F884A40>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:25:43,417 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000028C8F884A40>)
+[DEBUG] - 2024-12-11 17:25:43,418 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000028C8F884A40>) completed
+[DEBUG] - 2024-12-11 17:25:43,418 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000028C8F884A40>)
+[DEBUG] - 2024-12-11 17:25:43,419 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000028C8F884A40>) completed
+[DEBUG] - 2024-12-11 17:25:43,420 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000028C8F83E4D0>)
+[DEBUG] - 2024-12-11 17:25:43,421 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000028C8F83E4D0>) completed
+[DEBUG] - 2024-12-11 17:25:43,421 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000028C8F83E4D0>)
+[DEBUG] - 2024-12-11 17:25:43,422 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000028C8F83E4D0>) completed
+[DEBUG] - 2024-12-11 17:25:43,423 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000028C8F83E4D0>)
+[DEBUG] - 2024-12-11 17:25:43,423 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000028C8F83E4D0>) completed
+[ERROR] - 2024-12-11 17:25:43,424 - root - e0da1435-7a7f-4c79-bb48-e64da8ed33c3 Expecting value: line 1 column 1 (char 0)
+[DEBUG] - 2024-12-11 17:26:33,686 - aiosqlite - executing <function connect.<locals>.connector at 0x0000025EE332D080>
+[DEBUG] - 2024-12-11 17:26:33,687 - aiosqlite - operation <function connect.<locals>.connector at 0x0000025EE332D080> completed
+[DEBUG] - 2024-12-11 17:26:33,688 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000025EE330E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000025EE30720C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:26:33,689 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000025EE330E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000025EE30720C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:26:33,690 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000025EE330E4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:26:33,691 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000025EE330E4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:26:33,691 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000025EE330E4D0>)
+[DEBUG] - 2024-12-11 17:26:33,692 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000025EE330E4D0>) completed
+[DEBUG] - 2024-12-11 17:26:33,693 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000025EE32E5FC0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:26:33,693 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000025EE32E5FC0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:26:33,694 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000025EE32E5FC0>)
+[DEBUG] - 2024-12-11 17:26:33,694 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000025EE32E5FC0>) completed
+[DEBUG] - 2024-12-11 17:26:33,695 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000025EE32E5FC0>)
+[DEBUG] - 2024-12-11 17:26:33,695 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000025EE32E5FC0>) completed
+[DEBUG] - 2024-12-11 17:26:33,696 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000025EE330E4D0>)
+[DEBUG] - 2024-12-11 17:26:33,696 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000025EE330E4D0>) completed
+[DEBUG] - 2024-12-11 17:26:33,701 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000025EE330E4D0>)
+[DEBUG] - 2024-12-11 17:26:33,702 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000025EE330E4D0>) completed
+[DEBUG] - 2024-12-11 17:26:33,703 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000025EE33549C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:26:33,704 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000025EE33549C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:26:33,705 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000025EE33549C0>)
+[DEBUG] - 2024-12-11 17:26:33,705 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000025EE33549C0>) completed
+[DEBUG] - 2024-12-11 17:26:33,705 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000025EE33549C0>)
+[DEBUG] - 2024-12-11 17:26:33,706 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000025EE33549C0>) completed
+[DEBUG] - 2024-12-11 17:26:33,707 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000025EE330E4D0>)
+[DEBUG] - 2024-12-11 17:26:33,707 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000025EE330E4D0>) completed
+[DEBUG] - 2024-12-11 17:26:33,708 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000025EE330E4D0>)
+[DEBUG] - 2024-12-11 17:26:33,708 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000025EE330E4D0>) completed
+[DEBUG] - 2024-12-11 17:26:33,709 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000025EE330E4D0>)
+[DEBUG] - 2024-12-11 17:26:33,709 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000025EE330E4D0>) completed
+[ERROR] - 2024-12-11 17:26:33,710 - root - 0edd62d1-c3ea-4062-a3f6-4f8fe116183d Expecting value: line 1 column 1 (char 0)
+[DEBUG] - 2024-12-11 17:28:27,114 - aiosqlite - executing <function connect.<locals>.connector at 0x0000021713A3D080>
+[DEBUG] - 2024-12-11 17:28:27,116 - aiosqlite - operation <function connect.<locals>.connector at 0x0000021713A3D080> completed
+[DEBUG] - 2024-12-11 17:28:27,117 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000021713A1E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000217137820C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:28:27,117 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000021713A1E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000217137820C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:28:27,118 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000021713A1E4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:28:27,119 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000021713A1E4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:28:27,120 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000021713A1E4D0>)
+[DEBUG] - 2024-12-11 17:28:27,120 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000021713A1E4D0>) completed
+[DEBUG] - 2024-12-11 17:28:27,121 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000217139F5FC0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:28:27,122 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000217139F5FC0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:28:27,123 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000217139F5FC0>)
+[DEBUG] - 2024-12-11 17:28:27,123 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000217139F5FC0>) completed
+[DEBUG] - 2024-12-11 17:28:27,124 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000217139F5FC0>)
+[DEBUG] - 2024-12-11 17:28:27,124 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000217139F5FC0>) completed
+[DEBUG] - 2024-12-11 17:28:27,125 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000021713A1E4D0>)
+[DEBUG] - 2024-12-11 17:28:27,125 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000021713A1E4D0>) completed
+[DEBUG] - 2024-12-11 17:28:27,131 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000021713A1E4D0>)
+[DEBUG] - 2024-12-11 17:28:27,131 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000021713A1E4D0>) completed
+[DEBUG] - 2024-12-11 17:28:27,132 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000021713A649C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:28:27,133 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000021713A649C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:28:27,134 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000021713A649C0>)
+[DEBUG] - 2024-12-11 17:28:27,134 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000021713A649C0>) completed
+[DEBUG] - 2024-12-11 17:28:27,135 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000021713A649C0>)
+[DEBUG] - 2024-12-11 17:28:27,135 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000021713A649C0>) completed
+[DEBUG] - 2024-12-11 17:28:27,136 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000021713A1E4D0>)
+[DEBUG] - 2024-12-11 17:28:27,137 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000021713A1E4D0>) completed
+[DEBUG] - 2024-12-11 17:28:27,137 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000021713A1E4D0>)
+[DEBUG] - 2024-12-11 17:28:27,138 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000021713A1E4D0>) completed
+[DEBUG] - 2024-12-11 17:28:27,138 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000021713A1E4D0>)
+[DEBUG] - 2024-12-11 17:28:27,139 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000021713A1E4D0>) completed
+[ERROR] - 2024-12-11 17:28:27,140 - root - 3363ee8c-d7b1-4a27-8d14-319bbe18d3ba Expecting value: line 1 column 1 (char 0)
+[DEBUG] - 2024-12-11 17:29:16,557 - aiosqlite - executing <function connect.<locals>.connector at 0x000001F209DBD080>
+[DEBUG] - 2024-12-11 17:29:16,558 - aiosqlite - operation <function connect.<locals>.connector at 0x000001F209DBD080> completed
+[DEBUG] - 2024-12-11 17:29:16,559 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001F209D9E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001F209B020C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:29:16,560 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001F209D9E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001F209B020C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:29:16,560 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001F209D9E4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:29:16,561 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001F209D9E4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:29:16,562 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001F209D9E4D0>)
+[DEBUG] - 2024-12-11 17:29:16,562 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001F209D9E4D0>) completed
+[DEBUG] - 2024-12-11 17:29:16,563 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001F209D76040>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:29:16,564 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001F209D76040>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:29:16,564 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001F209D76040>)
+[DEBUG] - 2024-12-11 17:29:16,565 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001F209D76040>) completed
+[DEBUG] - 2024-12-11 17:29:16,566 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F209D76040>)
+[DEBUG] - 2024-12-11 17:29:16,566 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F209D76040>) completed
+[DEBUG] - 2024-12-11 17:29:16,567 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001F209D9E4D0>)
+[DEBUG] - 2024-12-11 17:29:16,567 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001F209D9E4D0>) completed
+[DEBUG] - 2024-12-11 17:29:16,572 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001F209D9E4D0>)
+[DEBUG] - 2024-12-11 17:29:16,573 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001F209D9E4D0>) completed
+[DEBUG] - 2024-12-11 17:29:16,573 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001F209DE4A40>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:29:16,575 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001F209DE4A40>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:29:16,576 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001F209DE4A40>)
+[DEBUG] - 2024-12-11 17:29:16,577 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001F209DE4A40>) completed
+[DEBUG] - 2024-12-11 17:29:16,577 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F209DE4A40>)
+[DEBUG] - 2024-12-11 17:29:16,578 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001F209DE4A40>) completed
+[DEBUG] - 2024-12-11 17:29:16,579 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001F209D9E4D0>)
+[DEBUG] - 2024-12-11 17:29:16,579 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001F209D9E4D0>) completed
+[DEBUG] - 2024-12-11 17:29:16,580 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001F209D9E4D0>)
+[DEBUG] - 2024-12-11 17:29:16,580 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001F209D9E4D0>) completed
+[DEBUG] - 2024-12-11 17:29:16,581 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x000001F209D9E4D0>)
+[DEBUG] - 2024-12-11 17:29:16,581 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x000001F209D9E4D0>) completed
+[ERROR] - 2024-12-11 17:29:16,582 - root - ab69525d-7fc8-48f0-be9e-6b7eb6a6fd28 Expecting value: line 1 column 1 (char 0)
+[DEBUG] - 2024-12-11 17:30:27,539 - aiosqlite - executing <function connect.<locals>.connector at 0x000001B96FDCD080>
+[DEBUG] - 2024-12-11 17:30:27,540 - aiosqlite - operation <function connect.<locals>.connector at 0x000001B96FDCD080> completed
+[DEBUG] - 2024-12-11 17:30:27,541 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B96FDAA4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001B96FB120C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:30:27,541 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B96FDAA4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001B96FB120C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:30:27,542 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B96FDAA4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:30:27,542 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B96FDAA4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:30:27,543 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B96FDAA4D0>)
+[DEBUG] - 2024-12-11 17:30:27,543 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B96FDAA4D0>) completed
+[DEBUG] - 2024-12-11 17:30:27,544 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B96FD86040>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:30:27,545 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B96FD86040>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:30:27,545 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B96FD86040>)
+[DEBUG] - 2024-12-11 17:30:27,546 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B96FD86040>) completed
+[DEBUG] - 2024-12-11 17:30:27,547 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B96FD86040>)
+[DEBUG] - 2024-12-11 17:30:27,547 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B96FD86040>) completed
+[DEBUG] - 2024-12-11 17:30:27,548 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDAA4D0>)
+[DEBUG] - 2024-12-11 17:30:27,548 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDAA4D0>) completed
+[DEBUG] - 2024-12-11 17:30:27,554 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B96FDAA4D0>)
+[DEBUG] - 2024-12-11 17:30:27,555 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B96FDAA4D0>) completed
+[DEBUG] - 2024-12-11 17:30:27,556 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B96FDF4A40>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:30:27,557 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B96FDF4A40>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:30:27,558 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B96FDF4A40>)
+[DEBUG] - 2024-12-11 17:30:27,558 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B96FDF4A40>) completed
+[DEBUG] - 2024-12-11 17:30:27,559 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B96FDF4A40>)
+[DEBUG] - 2024-12-11 17:30:27,559 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B96FDF4A40>) completed
+[DEBUG] - 2024-12-11 17:30:27,561 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDAA4D0>)
+[DEBUG] - 2024-12-11 17:30:27,561 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDAA4D0>) completed
+[DEBUG] - 2024-12-11 17:30:27,562 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDAA4D0>)
+[DEBUG] - 2024-12-11 17:30:27,563 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDAA4D0>) completed
+[DEBUG] - 2024-12-11 17:30:27,563 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x000001B96FDAA4D0>)
+[DEBUG] - 2024-12-11 17:30:27,564 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x000001B96FDAA4D0>) completed
+[ERROR] - 2024-12-11 17:30:27,565 - root - dad15d58-f64b-476e-b0e4-fbd3d55d9571 Expecting value: line 1 column 1 (char 0)
+[DEBUG] - 2024-12-11 17:31:43,148 - aiosqlite - executing <function connect.<locals>.connector at 0x000001B96FE71260>
+[DEBUG] - 2024-12-11 17:31:43,149 - aiosqlite - operation <function connect.<locals>.connector at 0x000001B96FE71260> completed
+[DEBUG] - 2024-12-11 17:31:43,150 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B96FDD67A0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001B96FB120C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:31:43,150 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B96FDD67A0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001B96FB120C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:31:43,151 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B96FDD67A0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:31:43,152 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001B96FDD67A0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:31:43,152 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B96FDD67A0>)
+[DEBUG] - 2024-12-11 17:31:43,153 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001B96FDD67A0>) completed
+[DEBUG] - 2024-12-11 17:31:43,153 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B96FEC0D40>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:31:43,154 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001B96FEC0D40>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:31:43,155 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B96FEC0D40>)
+[DEBUG] - 2024-12-11 17:31:43,155 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001B96FEC0D40>) completed
+[DEBUG] - 2024-12-11 17:31:43,156 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B96FEC0D40>)
+[DEBUG] - 2024-12-11 17:31:43,156 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001B96FEC0D40>) completed
+[DEBUG] - 2024-12-11 17:31:43,157 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDD67A0>)
+[DEBUG] - 2024-12-11 17:31:43,157 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDD67A0>) completed
+[DEBUG] - 2024-12-11 17:31:43,158 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDD67A0>)
+[DEBUG] - 2024-12-11 17:31:43,158 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001B96FDD67A0>) completed
+[DEBUG] - 2024-12-11 17:31:43,159 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x000001B96FDD67A0>)
+[DEBUG] - 2024-12-11 17:31:43,160 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x000001B96FDD67A0>) completed
+[INFO] - 2024-12-11 17:31:43,161 - root - {'req_id': UUID('21ab3254-339d-45aa-96c6-3836cf16aadb'), 'method': <HttpMethod.GET: 'GET'>, 'route': '/comment/all', 'ip': IPv4Address('127.0.0.1'), 'url': Url('http://localhost:5000/comment/all'), 'host': 'localhost', 'body': {}, 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '116d5e9e-4efb-4646-88f9-3e50eb9f1a38', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[DEBUG] - 2024-12-11 17:32:34,210 - aiosqlite - executing <function connect.<locals>.connector at 0x00000163A371D080>
+[DEBUG] - 2024-12-11 17:32:34,211 - aiosqlite - operation <function connect.<locals>.connector at 0x00000163A371D080> completed
+[DEBUG] - 2024-12-11 17:32:34,211 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A36FA4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000163A34620C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:32:34,212 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A36FA4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000163A34620C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:32:34,213 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A36FA4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:32:34,213 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A36FA4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:32:34,214 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A36FA4D0>)
+[DEBUG] - 2024-12-11 17:32:34,214 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A36FA4D0>) completed
+[DEBUG] - 2024-12-11 17:32:34,215 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A36D5F40>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:32:34,216 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A36D5F40>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:32:34,216 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A36D5F40>)
+[DEBUG] - 2024-12-11 17:32:34,217 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A36D5F40>) completed
+[DEBUG] - 2024-12-11 17:32:34,217 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A36D5F40>)
+[DEBUG] - 2024-12-11 17:32:34,218 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A36D5F40>) completed
+[DEBUG] - 2024-12-11 17:32:34,218 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A36FA4D0>)
+[DEBUG] - 2024-12-11 17:32:34,218 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A36FA4D0>) completed
+[DEBUG] - 2024-12-11 17:32:34,223 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A36FA4D0>)
+[DEBUG] - 2024-12-11 17:32:34,224 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A36FA4D0>) completed
+[DEBUG] - 2024-12-11 17:32:34,225 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A3744940>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:32:34,226 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A3744940>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:32:34,227 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A3744940>)
+[DEBUG] - 2024-12-11 17:32:34,227 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A3744940>) completed
+[DEBUG] - 2024-12-11 17:32:34,229 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A3744940>)
+[DEBUG] - 2024-12-11 17:32:34,229 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A3744940>) completed
+[DEBUG] - 2024-12-11 17:32:34,230 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A36FA4D0>)
+[DEBUG] - 2024-12-11 17:32:34,231 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A36FA4D0>) completed
+[DEBUG] - 2024-12-11 17:32:34,231 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A36FA4D0>)
+[DEBUG] - 2024-12-11 17:32:34,232 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A36FA4D0>) completed
+[DEBUG] - 2024-12-11 17:32:34,232 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x00000163A36FA4D0>)
+[DEBUG] - 2024-12-11 17:32:34,233 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x00000163A36FA4D0>) completed
+[INFO] - 2024-12-11 17:32:34,235 - root - {'req_id': 'a649bb02-1bf9-4c80-8611-35fdaff7d771', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': {}, 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '96179e98-492b-4fac-9896-6bf019de9a52', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[DEBUG] - 2024-12-11 17:32:48,455 - aiosqlite - executing <function connect.<locals>.connector at 0x00000163A3733380>
+[DEBUG] - 2024-12-11 17:32:48,456 - aiosqlite - operation <function connect.<locals>.connector at 0x00000163A3733380> completed
+[DEBUG] - 2024-12-11 17:32:48,457 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A3721990>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000163A34620C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:32:48,457 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A3721990>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000163A34620C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:32:48,458 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A3721990>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:32:48,458 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A3721990>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:32:48,459 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A3721990>)
+[DEBUG] - 2024-12-11 17:32:48,459 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A3721990>) completed
+[DEBUG] - 2024-12-11 17:32:48,460 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A3745740>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:32:48,461 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A3745740>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:32:48,461 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A3745740>)
+[DEBUG] - 2024-12-11 17:32:48,462 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A3745740>) completed
+[DEBUG] - 2024-12-11 17:32:48,463 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A3745740>)
+[DEBUG] - 2024-12-11 17:32:48,463 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A3745740>) completed
+[DEBUG] - 2024-12-11 17:32:48,464 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A3721990>)
+[DEBUG] - 2024-12-11 17:32:48,464 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A3721990>) completed
+[DEBUG] - 2024-12-11 17:32:48,465 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A3721990>)
+[DEBUG] - 2024-12-11 17:32:48,465 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A3721990>) completed
+[DEBUG] - 2024-12-11 17:32:48,466 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x00000163A3721990>)
+[DEBUG] - 2024-12-11 17:32:48,467 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x00000163A3721990>) completed
+[ERROR] - 2024-12-11 17:32:48,468 - root - 0706785c-eb9f-43f0-bf17-acc20b9ca8e8 Expecting value: line 1 column 1 (char 0)
+[DEBUG] - 2024-12-11 17:33:19,858 - aiosqlite - executing <function connect.<locals>.connector at 0x00000163A37C53A0>
+[DEBUG] - 2024-12-11 17:33:19,859 - aiosqlite - operation <function connect.<locals>.connector at 0x00000163A37C53A0> completed
+[DEBUG] - 2024-12-11 17:33:19,860 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A37233D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000163A34620C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:33:19,860 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A37233D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000163A34620C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:33:19,861 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A37233D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:33:19,861 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A37233D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:33:19,862 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A37233D0>)
+[DEBUG] - 2024-12-11 17:33:19,863 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A37233D0>) completed
+[DEBUG] - 2024-12-11 17:33:19,863 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A38111C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:33:19,864 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A38111C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:33:19,865 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A38111C0>)
+[DEBUG] - 2024-12-11 17:33:19,865 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A38111C0>) completed
+[DEBUG] - 2024-12-11 17:33:19,866 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A38111C0>)
+[DEBUG] - 2024-12-11 17:33:19,866 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A38111C0>) completed
+[DEBUG] - 2024-12-11 17:33:19,867 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A37233D0>)
+[DEBUG] - 2024-12-11 17:33:19,867 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A37233D0>) completed
+[DEBUG] - 2024-12-11 17:33:19,868 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A37233D0>)
+[DEBUG] - 2024-12-11 17:33:19,868 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A37233D0>) completed
+[DEBUG] - 2024-12-11 17:33:19,869 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x00000163A37233D0>)
+[DEBUG] - 2024-12-11 17:33:19,870 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x00000163A37233D0>) completed
+[ERROR] - 2024-12-11 17:33:19,871 - root - 0706785c-eb9f-43f0-bf17-acc20b9ca8e8 Expecting value: line 1 column 1 (char 0)
+[DEBUG] - 2024-12-11 17:33:32,285 - aiosqlite - executing <function connect.<locals>.connector at 0x00000163A37C5DA0>
+[DEBUG] - 2024-12-11 17:33:32,286 - aiosqlite - operation <function connect.<locals>.connector at 0x00000163A37C5DA0> completed
+[DEBUG] - 2024-12-11 17:33:32,287 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A3818C70>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000163A34620C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:33:32,287 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A3818C70>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x00000163A34620C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:33:32,288 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A3818C70>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:33:32,288 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000163A3818C70>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:33:32,289 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A3818C70>)
+[DEBUG] - 2024-12-11 17:33:32,290 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000163A3818C70>) completed
+[DEBUG] - 2024-12-11 17:33:32,290 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A3811440>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:33:32,291 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000163A3811440>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:33:32,292 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A3811440>)
+[DEBUG] - 2024-12-11 17:33:32,293 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000163A3811440>) completed
+[DEBUG] - 2024-12-11 17:33:32,293 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A3811440>)
+[DEBUG] - 2024-12-11 17:33:32,294 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000163A3811440>) completed
+[DEBUG] - 2024-12-11 17:33:32,295 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A3818C70>)
+[DEBUG] - 2024-12-11 17:33:32,296 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A3818C70>) completed
+[DEBUG] - 2024-12-11 17:33:32,296 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A3818C70>)
+[DEBUG] - 2024-12-11 17:33:32,297 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000163A3818C70>) completed
+[DEBUG] - 2024-12-11 17:33:32,297 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x00000163A3818C70>)
+[DEBUG] - 2024-12-11 17:33:32,298 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x00000163A3818C70>) completed
+[INFO] - 2024-12-11 17:33:32,300 - root - {'req_id': 'a649bb02-1bf9-4c80-8611-35fdaff7d771', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': {}, 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'ce27e8f7-0c8b-424d-827b-3e2f0ea7a43d', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[DEBUG] - 2024-12-11 17:34:31,444 - aiosqlite - executing <function connect.<locals>.connector at 0x00000221831ED120>
+[DEBUG] - 2024-12-11 17:34:31,444 - aiosqlite - operation <function connect.<locals>.connector at 0x00000221831ED120> completed
+[DEBUG] - 2024-12-11 17:34:31,445 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000221831CE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000022182F320C0>, deterministic=True)
+[DEBUG] - 2024-12-11 17:34:31,446 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000221831CE4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000022182F320C0>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:34:31,447 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000221831CE4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:34:31,447 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x00000221831CE4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:34:31,448 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000221831CE4D0>)
+[DEBUG] - 2024-12-11 17:34:31,449 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000221831CE4D0>) completed
+[DEBUG] - 2024-12-11 17:34:31,449 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000221831A5FC0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:34:31,450 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000221831A5FC0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:34:31,450 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000221831A5FC0>)
+[DEBUG] - 2024-12-11 17:34:31,451 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000221831A5FC0>) completed
+[DEBUG] - 2024-12-11 17:34:31,452 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000221831A5FC0>)
+[DEBUG] - 2024-12-11 17:34:31,452 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000221831A5FC0>) completed
+[DEBUG] - 2024-12-11 17:34:31,453 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000221831CE4D0>)
+[DEBUG] - 2024-12-11 17:34:31,453 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000221831CE4D0>) completed
+[DEBUG] - 2024-12-11 17:34:31,458 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000221831CE4D0>)
+[DEBUG] - 2024-12-11 17:34:31,459 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x00000221831CE4D0>) completed
+[DEBUG] - 2024-12-11 17:34:31,460 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000221832189C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:34:31,461 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x00000221832189C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:34:31,462 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000221832189C0>)
+[DEBUG] - 2024-12-11 17:34:31,462 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x00000221832189C0>) completed
+[DEBUG] - 2024-12-11 17:34:31,462 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000221832189C0>)
+[DEBUG] - 2024-12-11 17:34:31,463 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x00000221832189C0>) completed
+[DEBUG] - 2024-12-11 17:34:31,464 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000221831CE4D0>)
+[DEBUG] - 2024-12-11 17:34:31,464 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000221831CE4D0>) completed
+[DEBUG] - 2024-12-11 17:34:31,465 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000221831CE4D0>)
+[DEBUG] - 2024-12-11 17:34:31,465 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x00000221831CE4D0>) completed
+[DEBUG] - 2024-12-11 17:34:31,466 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x00000221831CE4D0>)
+[DEBUG] - 2024-12-11 17:34:31,467 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x00000221831CE4D0>) completed
+[ERROR] - 2024-12-11 17:34:31,468 - root - bade1d5a-61b9-47bc-bfee-b1eeaa7eec97 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:35:38,516 - root - d6f7b550-8d7f-45c9-bcc7-6e66c7e55396 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:37:41,907 - root - cdde2404-b1f3-48cb-af16-b2ab000c3cbf Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:38:39,880 - root - 11642269-6886-434e-b02c-1c789cdbdd03 the JSON object must be str, bytes or bytearray, not coroutine
+[ERROR] - 2024-12-11 17:41:01,847 - root - 13496f8a-315a-4a27-98c8-d0a9bbe60915 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:41:25,197 - root - 13496f8a-315a-4a27-98c8-d0a9bbe60915 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:44:28,681 - root - 1f66b30f-3f48-4c78-b651-b21c1a9538f2 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:45:21,940 - root - 1f66b30f-3f48-4c78-b651-b21c1a9538f2 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:45:27,793 - root - 34aa36c3-0412-4344-a545-6756402d8460 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:46:10,201 - root - 34aa36c3-0412-4344-a545-6756402d8460 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:46:15,472 - root - 34aa36c3-0412-4344-a545-6756402d8460 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:47:10,715 - root - 4d71fa37-9316-47df-a8e3-ae03acfd6121 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:47:39,990 - root - 4d71fa37-9316-47df-a8e3-ae03acfd6121 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:47:43,927 - root - 89039eb6-5c59-4cf6-81a9-f4ad28fa6359 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:48:41,714 - root - 89039eb6-5c59-4cf6-81a9-f4ad28fa6359 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:48:51,591 - root - 673a2370-2cce-473b-b6af-72b321e8def3 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:50:54,776 - root - 73e738f8-4b48-496f-8fe3-cb5cd95da5f5 Expecting value: line 1 column 1 (char 0)
+[ERROR] - 2024-12-11 17:51:14,019 - root - 73e738f8-4b48-496f-8fe3-cb5cd95da5f5 Expecting value: line 1 column 1 (char 0)
+[INFO] - 2024-12-11 17:51:17,608 - root - {'req_id': '8ba03ab2-9caa-46ec-9795-d0590a4f7e33', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': "b''", 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '975be71c-a8b3-45c1-9f59-251a71970fd2', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[DEBUG] - 2024-12-11 17:51:17,610 - aiosqlite - executing <function connect.<locals>.connector at 0x000001759A62D1C0>
+[DEBUG] - 2024-12-11 17:51:17,611 - aiosqlite - operation <function connect.<locals>.connector at 0x000001759A62D1C0> completed
+[DEBUG] - 2024-12-11 17:51:17,612 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001759A60E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001759A36E020>, deterministic=True)
+[DEBUG] - 2024-12-11 17:51:17,612 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001759A60E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001759A36E020>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:51:17,612 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001759A60E4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:51:17,613 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001759A60E4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:51:17,614 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001759A60E4D0>)
+[DEBUG] - 2024-12-11 17:51:17,614 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001759A60E4D0>) completed
+[DEBUG] - 2024-12-11 17:51:17,614 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001759A5E5E40>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:51:17,615 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001759A5E5E40>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:51:17,615 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001759A5E5E40>)
+[DEBUG] - 2024-12-11 17:51:17,615 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001759A5E5E40>) completed
+[DEBUG] - 2024-12-11 17:51:17,616 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001759A5E5E40>)
+[DEBUG] - 2024-12-11 17:51:17,616 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001759A5E5E40>) completed
+[DEBUG] - 2024-12-11 17:51:17,617 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A60E4D0>)
+[DEBUG] - 2024-12-11 17:51:17,617 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A60E4D0>) completed
+[DEBUG] - 2024-12-11 17:51:17,622 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001759A60E4D0>)
+[DEBUG] - 2024-12-11 17:51:17,622 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001759A60E4D0>) completed
+[DEBUG] - 2024-12-11 17:51:17,623 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001759A658840>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:51:17,624 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001759A658840>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:51:17,624 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001759A658840>)
+[DEBUG] - 2024-12-11 17:51:17,625 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001759A658840>) completed
+[DEBUG] - 2024-12-11 17:51:17,625 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001759A658840>)
+[DEBUG] - 2024-12-11 17:51:17,625 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001759A658840>) completed
+[DEBUG] - 2024-12-11 17:51:17,627 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A60E4D0>)
+[DEBUG] - 2024-12-11 17:51:17,627 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A60E4D0>) completed
+[DEBUG] - 2024-12-11 17:51:17,627 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A60E4D0>)
+[DEBUG] - 2024-12-11 17:51:17,628 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A60E4D0>) completed
+[DEBUG] - 2024-12-11 17:51:17,628 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x000001759A60E4D0>)
+[DEBUG] - 2024-12-11 17:51:17,628 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x000001759A60E4D0>) completed
+[INFO] - 2024-12-11 17:53:16,115 - root - {'req_id': '8ba03ab2-9caa-46ec-9795-d0590a4f7e33', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': "b''", 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '2a7eccaf-d4be-4395-a4c6-92297a3bd4bf', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[DEBUG] - 2024-12-11 17:53:16,117 - aiosqlite - executing <function connect.<locals>.connector at 0x000001759A62D580>
+[DEBUG] - 2024-12-11 17:53:16,117 - aiosqlite - operation <function connect.<locals>.connector at 0x000001759A62D580> completed
+[DEBUG] - 2024-12-11 17:53:16,118 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001759A635990>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001759A36E020>, deterministic=True)
+[DEBUG] - 2024-12-11 17:53:16,118 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001759A635990>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x000001759A36E020>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:53:16,119 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001759A635990>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:53:16,119 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x000001759A635990>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:53:16,120 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001759A635990>)
+[DEBUG] - 2024-12-11 17:53:16,120 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x000001759A635990>) completed
+[DEBUG] - 2024-12-11 17:53:16,120 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001759A659540>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:53:16,121 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001759A659540>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:53:16,121 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001759A659540>)
+[DEBUG] - 2024-12-11 17:53:16,122 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x000001759A659540>) completed
+[DEBUG] - 2024-12-11 17:53:16,122 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001759A659540>)
+[DEBUG] - 2024-12-11 17:53:16,122 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x000001759A659540>) completed
+[DEBUG] - 2024-12-11 17:53:16,123 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A635990>)
+[DEBUG] - 2024-12-11 17:53:16,123 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A635990>) completed
+[DEBUG] - 2024-12-11 17:53:16,124 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A635990>)
+[DEBUG] - 2024-12-11 17:53:16,124 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x000001759A635990>) completed
+[DEBUG] - 2024-12-11 17:53:16,125 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x000001759A635990>)
+[DEBUG] - 2024-12-11 17:53:16,125 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x000001759A635990>) completed
+[ERROR] - 2024-12-11 17:54:41,879 - root - a02958ba-6e18-4f53-806d-9b2c873609a4 1 validation error for RequestLog
+body
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/string_type
+[INFO] - 2024-12-11 17:55:31,592 - root - {'req_id': '518a7352-cfcf-4877-aa0b-38924e7b9e24', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '70d6f0c7-d9e2-49e7-a0dc-913eebb6a038', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[DEBUG] - 2024-12-11 17:55:31,595 - aiosqlite - executing <function connect.<locals>.connector at 0x0000027A1AE5D1C0>
+[DEBUG] - 2024-12-11 17:55:31,597 - aiosqlite - operation <function connect.<locals>.connector at 0x0000027A1AE5D1C0> completed
+[DEBUG] - 2024-12-11 17:55:31,598 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000027A1AE3E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000027A1AB9E020>, deterministic=True)
+[DEBUG] - 2024-12-11 17:55:31,598 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000027A1AE3E4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000027A1AB9E020>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:55:31,599 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000027A1AE3E4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:55:31,600 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000027A1AE3E4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:55:31,601 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027A1AE3E4D0>)
+[DEBUG] - 2024-12-11 17:55:31,602 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027A1AE3E4D0>) completed
+[DEBUG] - 2024-12-11 17:55:31,602 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027A1AE0DDC0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:55:31,603 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027A1AE0DDC0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:55:31,604 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000027A1AE0DDC0>)
+[DEBUG] - 2024-12-11 17:55:31,604 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000027A1AE0DDC0>) completed
+[DEBUG] - 2024-12-11 17:55:31,605 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027A1AE0DDC0>)
+[DEBUG] - 2024-12-11 17:55:31,605 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027A1AE0DDC0>) completed
+[DEBUG] - 2024-12-11 17:55:31,606 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000027A1AE3E4D0>)
+[DEBUG] - 2024-12-11 17:55:31,606 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000027A1AE3E4D0>) completed
+[DEBUG] - 2024-12-11 17:55:31,612 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027A1AE3E4D0>)
+[DEBUG] - 2024-12-11 17:55:31,612 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000027A1AE3E4D0>) completed
+[DEBUG] - 2024-12-11 17:55:31,613 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027A1AE847C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:55:31,613 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000027A1AE847C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:55:31,614 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000027A1AE847C0>)
+[DEBUG] - 2024-12-11 17:55:31,614 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000027A1AE847C0>) completed
+[DEBUG] - 2024-12-11 17:55:31,615 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027A1AE847C0>)
+[DEBUG] - 2024-12-11 17:55:31,615 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000027A1AE847C0>) completed
+[DEBUG] - 2024-12-11 17:55:31,616 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000027A1AE3E4D0>)
+[DEBUG] - 2024-12-11 17:55:31,617 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000027A1AE3E4D0>) completed
+[DEBUG] - 2024-12-11 17:55:31,617 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000027A1AE3E4D0>)
+[DEBUG] - 2024-12-11 17:55:31,618 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000027A1AE3E4D0>) completed
+[DEBUG] - 2024-12-11 17:55:31,618 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027A1AE3E4D0>)
+[DEBUG] - 2024-12-11 17:55:31,619 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000027A1AE3E4D0>) completed
+[INFO] - 2024-12-11 17:56:02,711 - root - {'req_id': 'de5f53a7-78b2-4d73-a8a6-ba4414992688', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '6b291c8a-ac48-4f24-ad3d-622f5dcb4fee', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[DEBUG] - 2024-12-11 17:56:02,713 - aiosqlite - executing <function connect.<locals>.connector at 0x0000018DD14CD1C0>
+[DEBUG] - 2024-12-11 17:56:02,714 - aiosqlite - operation <function connect.<locals>.connector at 0x0000018DD14CD1C0> completed
+[DEBUG] - 2024-12-11 17:56:02,715 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000018DD14AA4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000018DD1212020>, deterministic=True)
+[DEBUG] - 2024-12-11 17:56:02,715 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000018DD14AA4D0>, 'regexp', 2, <function SQLiteDialect_pysqlite.on_connect.<locals>.regexp at 0x0000018DD1212020>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:56:02,715 - aiosqlite - executing functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000018DD14AA4D0>, 'floor', 1, <built-in function floor>, deterministic=True)
+[DEBUG] - 2024-12-11 17:56:02,716 - aiosqlite - operation functools.partial(<built-in method create_function of sqlite3.Connection object at 0x0000018DD14AA4D0>, 'floor', 1, <built-in function floor>, deterministic=True) completed
+[DEBUG] - 2024-12-11 17:56:02,716 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000018DD14AA4D0>)
+[DEBUG] - 2024-12-11 17:56:02,717 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000018DD14AA4D0>) completed
+[DEBUG] - 2024-12-11 17:56:02,717 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000018DD147DDC0>, 'PRAGMA read_uncommitted', [])
+[DEBUG] - 2024-12-11 17:56:02,718 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000018DD147DDC0>, 'PRAGMA read_uncommitted', []) completed
+[DEBUG] - 2024-12-11 17:56:02,718 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000018DD147DDC0>)
+[DEBUG] - 2024-12-11 17:56:02,719 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000018DD147DDC0>) completed
+[DEBUG] - 2024-12-11 17:56:02,719 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000018DD147DDC0>)
+[DEBUG] - 2024-12-11 17:56:02,719 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000018DD147DDC0>) completed
+[DEBUG] - 2024-12-11 17:56:02,720 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000018DD14AA4D0>)
+[DEBUG] - 2024-12-11 17:56:02,721 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000018DD14AA4D0>) completed
+[DEBUG] - 2024-12-11 17:56:02,726 - aiosqlite - executing functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000018DD14AA4D0>)
+[DEBUG] - 2024-12-11 17:56:02,726 - aiosqlite - operation functools.partial(<built-in method cursor of sqlite3.Connection object at 0x0000018DD14AA4D0>) completed
+[DEBUG] - 2024-12-11 17:56:02,727 - aiosqlite - executing functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000018DD14F47C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ())
+[DEBUG] - 2024-12-11 17:56:02,727 - aiosqlite - operation functools.partial(<built-in method execute of sqlite3.Cursor object at 0x0000018DD14F47C0>, 'SELECT comment.id, comment.uid, comment.title, comment.content, comment.topic_id, comment.is_deleted, comment.created_at, comment.created_by, comment.modified_at, comment.modified_by, comment.deleted_at, comment.deleted_by \nFROM comment', ()) completed
+[DEBUG] - 2024-12-11 17:56:02,728 - aiosqlite - executing functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000018DD14F47C0>)
+[DEBUG] - 2024-12-11 17:56:02,728 - aiosqlite - operation functools.partial(<built-in method fetchall of sqlite3.Cursor object at 0x0000018DD14F47C0>) completed
+[DEBUG] - 2024-12-11 17:56:02,729 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000018DD14F47C0>)
+[DEBUG] - 2024-12-11 17:56:02,729 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Cursor object at 0x0000018DD14F47C0>) completed
+[DEBUG] - 2024-12-11 17:56:02,730 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000018DD14AA4D0>)
+[DEBUG] - 2024-12-11 17:56:02,731 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000018DD14AA4D0>) completed
+[DEBUG] - 2024-12-11 17:56:02,731 - aiosqlite - executing functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000018DD14AA4D0>)
+[DEBUG] - 2024-12-11 17:56:02,731 - aiosqlite - operation functools.partial(<built-in method rollback of sqlite3.Connection object at 0x0000018DD14AA4D0>) completed
+[DEBUG] - 2024-12-11 17:56:02,732 - aiosqlite - executing functools.partial(<built-in method close of sqlite3.Connection object at 0x0000018DD14AA4D0>)
+[DEBUG] - 2024-12-11 17:56:02,732 - aiosqlite - operation functools.partial(<built-in method close of sqlite3.Connection object at 0x0000018DD14AA4D0>) completed
+[INFO] - 2024-12-11 17:57:36,820 - root - {'req_id': '2cffaaef-6b6d-4bfc-9ad4-a2e3d9e68d25', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '94d419bf-b2b0-4feb-9568-6d11ee3574f8', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 17:58:04,882 - root - {'req_id': '836a4907-bc73-4d75-8696-4b181801fdd4', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'a5fbad3c-c768-4015-89ea-053c893a1db3', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 17:59:01,591 - root - {'req_id': '836a4907-bc73-4d75-8696-4b181801fdd4', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '64cb1a7b-e3d6-4458-8a33-bbc5ba99e54f', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:01:29,179 - root - {'req_id': '3edc98ff-a7de-4c10-b247-dbcabad8cae2', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '05e3256a-16f7-4349-85fc-b1fdd1244ce2', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:02:26,807 - root - {'req_id': '3edc98ff-a7de-4c10-b247-dbcabad8cae2', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '9c10de7e-895a-42da-9f00-cfb49c05c21b', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:05:50,558 - root - {'req_id': '65149413-8a7e-4fd6-96cb-9c7f8e94c096', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '7321194e-0e2d-4257-b733-4b5e64c9a3fe', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:06:14,690 - root - {'req_id': 'd2f58e33-0e24-42f2-aec3-6a2bb828f282', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '5874bd21-bd64-4b13-8fc8-19a182dc64e6', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:07:05,047 - root - {'req_id': 'd55ad0c4-26e8-41f6-acf3-ceebe3c45eff', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'fc9f9973-d356-48b3-9b07-0afb5b88f3f1', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:08:05,118 - root - {'req_id': 'b149de8a-d76b-40ff-b21e-7824c59fd818', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'be298300-b526-430c-af58-ee58d2b2036e', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:12:46,366 - root - {'req_id': 'd8e04b66-2b40-49b8-a556-5fa91af0ae2c', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '7fd2091c-08c2-4128-b3f2-6126880c4e3b', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:14:12,852 - root - {'req_id': '4ebd2f03-b5a2-400b-aebd-c77c5522fdb2', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'c6018995-240a-4b48-9b2f-1a995e8be48b', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:16:46,189 - root - {'req_id': '014de552-d048-4e0a-a60c-4acb9c38c3d6', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '25f2b721-289e-4073-9c85-75e4a7a7faa4', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:19:14,314 - root - {'req_id': 'ef0e7fd0-1d76-44c3-8eea-0a3796e362f0', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '74e913a1-86fe-45dc-a133-42027c876c86', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-11 18:20:46,626 - root - {'req_id': 'dd1e58df-fca1-4b69-b3a8-5c0ddef660a6', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'ca2e7d1b-f459-4f9d-bd6d-5c6f03830aa1', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}

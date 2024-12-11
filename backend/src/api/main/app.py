@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import logging
+import logging.config
 
 from config.provider import ConfigProvider
 from api.main.routes.user import router as user_router
@@ -8,15 +9,26 @@ from api.main.routes.topic import router as topic_router
 from api.main.routes.authentication import router as authentication_router
 from api.main.routes.comment import router as comment_router
 from api.main.middleware.logging import LoggingMiddleware
+from contextlib import asynccontextmanager
     
 app_settings = ConfigProvider.main_app_settings()
 app_metadata = ConfigProvider.metadata()
+logging_settings = ConfigProvider.logging_settings()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    
 
+    logging.config.dictConfig(logging_settings)
+
+    yield
+    
 app = FastAPI(root_path="/api",
               title=app_metadata.NAME,
               description=app_metadata.DESCRIPTION,
               version=app_metadata.VERSION,
-              responses={404: {"description": "Not found"}})
+              responses={404: {"description": "Not found"}},
+              lifespan=lifespan
+              )
 
 if app_settings.ALLOWED_ORIGINS:
     app.add_middleware(
