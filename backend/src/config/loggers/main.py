@@ -46,9 +46,9 @@ class LoggingSettings(BaseSettings):
         "file": FileHandler().model_dump(by_alias=True)
     }
     loggers: Dict[str, Logger] = {
-        "main_logger": Logger(
+        "custom_logger": Logger(
             handlers=["console", "file"],
-            level="info",
+            level="DEBUG",
             propagate=False
         ).model_dump(by_alias=True)
     }

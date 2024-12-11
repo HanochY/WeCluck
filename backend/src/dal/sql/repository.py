@@ -17,7 +17,6 @@ class SQLModelRepository(BaseRepository):
         entity.modified_at = datetime.now()
         entity.modified_by = author_id
         await session.add(entity)
-        print('aa')
         return entity
         
     async def read(self, 
@@ -26,7 +25,6 @@ class SQLModelRepository(BaseRepository):
                    offset: int | None = None, 
                    limit: int | None = None) -> list[SQLModelCommon | tuple[SQLModelCommon]]:
         statement = select(self.Model)
-        print(statement)
         if filter:
             statement = statement.where(filter)
         if offset:

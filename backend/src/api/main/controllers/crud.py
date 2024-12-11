@@ -25,7 +25,6 @@ class Controller:
             async with get_db_session() as session:
                 object = await self.repository.read(id==id, session=session)
         except TypeError as e:
-            print(e)
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Item not found")
         return object or None
     
@@ -34,9 +33,7 @@ class Controller:
             async with get_db_session() as session:
                 objects = await self.repository.read(session=session)
         except TypeError as e:
-            print(e)
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Item not found")
-        print(objects)
         return objects
     
     async def update(self, id, **new_data):
