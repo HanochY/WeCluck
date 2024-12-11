@@ -6,7 +6,6 @@ from pydantic import AnyUrl, Field
 from pydantic_settings import SettingsConfigDict
 from config.apps._schema import AppSettings
 from utils.enums.environments import Environment
-from config.loggers.main import LoggingSettings
 
 
 

@@ -14,7 +14,6 @@ def run_server():
         port=main_settings.PORT,
         reload=(main_settings.ENVIRONMENT == Environment.DEVELOPMENT),
         workers=main_settings.THREAD_COUNT,
-        log_level = "DEBUG" if main_settings.DEBUG else "WARNING"
     )
 
 if __name__ == "__main__":
