@@ -9,6 +9,7 @@ from dal.sql.forum.tables.user import User
 
 forum_db_settings = ConfigProvider.forum_db_settings(production=False)
 DATABASE_URL = forum_db_settings.URI.replace("sqlite://", "sqlite+aiosqlite://")
+
 engine = create_async_engine(DATABASE_URL)
 
 AsyncSessionLocal = sessionmaker(bind=engine, 
@@ -19,5 +20,5 @@ async def get_db_session():
     async with AsyncSessionLocal() as session: 
         yield session
 
-def create_db():
+def init_db():
     SQLModel.metadata.create_all(engine)

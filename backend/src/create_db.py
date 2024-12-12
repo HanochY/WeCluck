@@ -1,3 +1,3 @@
-from dal.sql.forum.db_manager import create_db
+from dal.sql.forum.db_manager import init_db
 
-create_db()
+init_db()

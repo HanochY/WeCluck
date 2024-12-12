@@ -5,7 +5,7 @@ from fastapi import HTTPException, status
 from sqlmodel import SQLModel
 
 class Controller:
-    def __init__(self, Model: SQLModel):
+    def __init__(self, Model: type[SQLModel]):
         self.repository = SQLModelRepository(Model=Model)
     
     async def create(self, **new_data):

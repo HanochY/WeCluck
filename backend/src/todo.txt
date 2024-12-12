@@ -10,14 +10,15 @@ if type checking - saves memory X
 fix async (use yeild) V
 rsa X
 fix the config structure V
-add logging
+add logging V
 
-??merge db specific with db generic??
+??merge db specific with db generic?? X
 ??pass typeddicts as init args to repo??
 
-add permissions
 switch ID to UUID
+add permissions
 add input validaion
+enable strict typing and fix
 
 ideas from https://fastapi.tiangolo.com/tutorial, https://sqlmodel.tiangolo.com/tutorial
 ideas from Shahar https://github.com/ShaharBand/sentinel/blob/main/backend/src
