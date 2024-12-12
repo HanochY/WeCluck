@@ -19,21 +19,21 @@ LOGGING_CONFIG = {
         "console": {
             "class": "logging.StreamHandler",
             "formatter": "default",
-            "level": "DEBUG",
+            "level": "INFO",
             "stream": "ext://sys.stdout",
             "filters": ["sensitive_data_filter"],
         },
         "file": {
             "formatter": "default",
             "class": "logging.handlers.RotatingFileHandler",
-            "level": "DEBUG",
+            "level": "ERROR",
             "filename": "my_log.log",
             "mode": "a",
         },
     },
     "loggers": {
         "": {
-            "handlers": ["file", "console"],
+            "handlers": ["file"],
             "level": "INFO",
             "propagate": False,
         }

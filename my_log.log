@@ -715,3 +715,30 @@ body
 [INFO] - 2024-12-11 18:19:14,314 - root - {'req_id': 'ef0e7fd0-1d76-44c3-8eea-0a3796e362f0', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '74e913a1-86fe-45dc-a133-42027c876c86', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
 [INFO] - 2024-12-11 18:20:46,626 - root - {'req_id': 'dd1e58df-fca1-4b69-b3a8-5c0ddef660a6', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'ca2e7d1b-f459-4f9d-bd6d-5c6f03830aa1', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
 [INFO] - 2024-12-11 18:21:36,079 - root - {'req_id': '23d9d6b4-2074-4d1c-a940-8dbb7dc5f413', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'a66fde9a-fea6-4617-a7ea-6104137e8b1c', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-12 13:50:13,833 - root - {'req_id': '571454be-72b1-4961-b6a1-efcc40230c5d', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'a7f4ad3b-9778-40f5-9cd1-b3d5ca7c9254', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-12 13:50:41,267 - root - {'req_id': '571454be-72b1-4961-b6a1-efcc40230c5d', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '2d82b191-8ba7-4d20-a73f-5f964fff0de1', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-12 13:50:44,249 - root - {'req_id': 'ac3a7a1b-a559-4eba-a77c-bbc369a0242a', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '44ab560a-0ea6-4b2f-b1c4-fa106fbab2e3', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[INFO] - 2024-12-12 13:51:58,779 - root - {'req_id': 'ac3a7a1b-a559-4eba-a77c-bbc369a0242a', 'method': 'GET', 'route': '/comment/all', 'ip': '127.0.0.1', 'url': 'http://localhost:5000/comment/all', 'host': 'localhost', 'body': '', 'headers': {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA', 'user-agent': 'PostmanRuntime/7.39.1', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': '5e618ff1-ea51-4c85-a338-41533a97aeee', 'host': 'localhost:5000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive'}}
+[ERROR] - 2024-12-12 13:52:04,356 - root - 591ec75a-5b54-4532-a504-b13367532f90 Logger.info() missing 1 required positional argument: 'msg'
+[ERROR] - 2024-12-12 13:53:17,535 - root - 591ec75a-5b54-4532-a504-b13367532f90 Logger.info() missing 1 required positional argument: 'msg'
+[INFO] - 2024-12-12 13:53:20,307 - root - {
+  "req_id": "bf3ad816-c86b-43ec-8677-fa7512578056",
+  "method": "GET",
+  "route": "/comment/all",
+  "ip": "127.0.0.1",
+  "url": "http://localhost:5000/comment/all",
+  "host": "localhost",
+  "body": "",
+  "headers": {
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA",
+    "user-agent": "PostmanRuntime/7.39.1",
+    "accept": "*/*",
+    "cache-control": "no-cache",
+    "postman-token": "82dfd5dd-a361-497f-adf2-a264d8727002",
+    "host": "localhost:5000",
+    "accept-encoding": "gzip, deflate, br",
+    "connection": "keep-alive"
+  }
+}
+[INFO] - 2024-12-12 13:58:59,857 - root - {"req_id":"556608b8-3df3-447b-bc2b-df69fde463f1","method":"GET","route":"/comment/all","ip":"127.0.0.1","url":"http://localhost:5000/comment/all","host":"localhost","body":"","headers":{"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA","user-agent":"PostmanRuntime/7.39.1","accept":"*/*","cache-control":"no-cache","postman-token":"750b3660-cd92-4609-993f-6839b4bdba83","host":"localhost:5000","accept-encoding":"gzip, deflate, br","connection":"keep-alive"}}
+[ERROR] - 2024-12-12 13:58:59,857 - root - 548efc50-de72-42af-bf70-cb54eb4a0d27 the JSON object must be str, bytes or bytearray, not LogRecord

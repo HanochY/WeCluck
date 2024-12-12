@@ -31,9 +31,7 @@ class LoggingMiddleware(BaseHTTPMiddleware):
         try:
 
             log = await generate_fastapi_request_log(request)
-            print('a')
             logger.info(json.loads(log.model_dump_json()))
-            print(log.model_dump())
             response = await call_next(request)
             
             

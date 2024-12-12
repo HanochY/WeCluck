@@ -15,8 +15,6 @@ BEARER_TOKEN_PATTERN = rf"Bearer\s+([a-zA-Z0-9\-._~+/]+=*)"
 class SensitiveDataFilter(logging.Filter):
     def filter(self, record):
         try:
-            print(record.__dict__)
-            print('saaasasasas')
             for sensitive_key in SENSITIVE_KEYS:
                 for key, value in record.msg.items():
                     if isinstance(value, dict):
@@ -26,7 +24,6 @@ class SensitiveDataFilter(logging.Filter):
                     else:
                         if sensitive_key in key.lower():
                             record.msg[key] = "******"
-            print(record.__dict__)
             return True
         except Exception as e:
             return True
