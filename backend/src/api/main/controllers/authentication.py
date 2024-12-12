@@ -15,7 +15,7 @@ from dal.sql.forum.tables.user import User
 from dal.sql.repository import SQLModelRepository, Session
 from dal.sql.forum.db_manager import get_db_session
 from config.provider import ConfigProvider
-
+from uuid import UUID
 
 app_settings = ConfigProvider.main_app_settings()
 
@@ -23,7 +23,7 @@ class AuthenticationController:
     
     repository = SQLModelRepository(Model=User)
     
-    async def get_user(self, uid: int, session: Session) -> UserModels.Public:
+    async def get_user(self, uid: UUID, session: Session) -> UserModels.Public:
         user = await self.repository.find(User.id == uid, session=session)[0]
         return user or None
 

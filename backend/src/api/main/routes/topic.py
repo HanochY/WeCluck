@@ -3,6 +3,7 @@ from api.main.controllers.crud import Controller
 from utils.exceptions import *
 from dal.sql.forum.tables.topic import TopicModels, Topic
 from typing_extensions import Annotated
+from uuid import UUID
 
 router = APIRouter(prefix="/topic", tags=["topic"])
 
@@ -24,6 +25,6 @@ async def update_topic(update: Annotated[TopicModels.Update, Depends]):
     return response
 
 @router.delete('/', status_code=204)
-async def delete_topic(id: int):
+async def delete_topic(id: UUID):
     response = await controller.delete(id)
     return response

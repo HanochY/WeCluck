@@ -2,14 +2,15 @@ from dal._schema.resources._validator import validate
 from utils.field_injection import inject_fields
 from pydantic import BaseModel
 from typing import TypedDict
+from uuid import uuid4, UUID
 
 class TypedDicts:
     class Public:
-        id: int
+        id: UUID
         name: str
 
     class Private:
-        id: int
+        id: UUID
         name: str
         password: str
 

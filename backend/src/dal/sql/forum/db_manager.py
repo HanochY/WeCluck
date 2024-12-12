@@ -3,6 +3,7 @@ from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
 from config.provider import ConfigProvider
 from contextlib import asynccontextmanager
+from dal.sql.forum.tables._common import SQLModelCommon
 from dal.sql.forum.tables.comment import Comment
 from dal.sql.forum.tables.topic import Topic
 from dal.sql.forum.tables.user import User
@@ -20,5 +21,6 @@ async def get_db_session():
     async with AsyncSessionLocal() as session: 
         yield session
 
-def init_db():
-    SQLModel.metadata.create_all(engine)
+async def init_db(): 
+    async with engine.begin() as conn: 
+        await conn.run_sync(SQLModelCommon.metadata.create_all)

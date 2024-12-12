@@ -17,7 +17,7 @@ app_metadata = ConfigProvider.metadata()
 logging_settings = ConfigProvider.logging_settings()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    init_db()
+    await init_db()
     logging.config.dictConfig(logging_settings)
     yield
     

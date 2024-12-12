@@ -3,7 +3,7 @@ from api.main.controllers.crud import Controller
 from utils.exceptions import *
 from dal.sql.forum.tables.user import UserModels, User
 from typing_extensions import Annotated
-
+from uuid import UUID
 
 router = APIRouter(prefix="/user", tags=["user"])
 
@@ -25,6 +25,6 @@ async def update_user(update: Annotated[UserModels.Update, Depends]):
     return response
 
 @router.delete('/', status_code=204)
-async def delete_user(id: int):
+async def delete_user(id: UUID):
     response = await controller.delete(id)
     return response

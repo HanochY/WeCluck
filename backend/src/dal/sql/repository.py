@@ -4,13 +4,14 @@ from sqlalchemy import ColumnExpressionArgument
 from dal.sql.forum.tables._common import SQLModelCommon
 from typing import Type
 from datetime import datetime
+from uuid import UUID
 class SQLModelRepository(BaseRepository):
     Model: Type[SQLModelCommon]
     
     def __init__(self, Model: Type[SQLModelCommon]):
         self.Model = Model
         
-    async def create(self, session: Session, author_id: int, **data) -> SQLModelCommon:
+    async def create(self, session: Session, author_id: UUID, **data) -> SQLModelCommon:
         entity = self.Model(**data)
         entity.created_at = datetime.now()
         entity.created_by = author_id
@@ -34,7 +35,7 @@ class SQLModelRepository(BaseRepository):
         entities = await session.execute(statement)
         return entities.scalars().all()
     
-    async def update(self, session: Session, author_id: int, **new_data) -> SQLModelCommon:
+    async def update(self, session: Session, author_id: UUID, **new_data) -> SQLModelCommon:
         statement = select(self.Model).where(self.Model.id == id)
         result = await session.exec(statement)
         entity = result.one()
@@ -44,7 +45,7 @@ class SQLModelRepository(BaseRepository):
         entity.modified_by = author_id
         await session.add(entity)
 
-    async def delete(self, session: Session, author_id: int, id: int) -> SQLModelCommon:
+    async def delete(self, session: Session, author_id: UUID, id: UUID) -> SQLModelCommon:
         statement = select(self.Model).where(self.Model.id == id)
         result = await session.exec(statement)
         entity = result.one()
@@ -55,7 +56,7 @@ class SQLModelRepository(BaseRepository):
             await session.add(entity)
         return entity
             
-    async def hard_delete(self, session: Session, id: int) -> None:
+    async def hard_delete(self, session: Session, id: UUID) -> None:
         statement = select(self.Model).where(self.Model.id == id)
         result = await session.exec(statement)
         entity = result.one()

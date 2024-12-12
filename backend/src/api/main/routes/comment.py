@@ -3,6 +3,7 @@ from api.main.controllers.crud import Controller
 from utils.exceptions import *
 from dal.sql.forum.tables.comment import CommentModels, Comment
 from typing_extensions import Annotated
+from uuid import UUID
 
 router = APIRouter(prefix="/comment", tags=["comment"])
 
@@ -24,6 +25,6 @@ async def update_comment(update: Annotated[CommentModels.Update, Depends]):
     return response
 
 @router.delete('/', status_code=204)
-async def delete_comment(id: int):
+async def delete_comment(id: UUID):
     response = await controller.delete(id)
     return response
