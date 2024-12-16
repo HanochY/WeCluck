@@ -1,6 +1,6 @@
 from collections.abc import Sequence
 from uuid import UUID
-from backend.src.dal.sql.forum.tables._common import SQLModelCommon
+from dal.sql.forum.tables._common import SQLModelCommon
 from utils.exceptions import *
 from dal.sql.repository import SQLModelRepository
 from dal.sql.forum.db_manager import get_db_session
@@ -9,7 +9,7 @@ from api.main.controllers._crud import Controller
 from dal.sql.forum.tables.comment import CommentModels, Comment
 
 class CommentController(Controller[Comment, CommentModels.Create, CommentModels.Update, CommentModels.Public]):
-    db_model = type[Comment]
+    db_model = Comment
     
     def __init__(self) -> None:
         self.repository = SQLModelRepository(Model=self.db_model)
@@ -40,9 +40,13 @@ class CommentController(Controller[Comment, CommentModels.Create, CommentModels.
     async def read_all(self) -> list[CommentModels.Public] | None:
         try:
             async for session in get_db_session():
+                print('a')
                 results: Sequence[Comment] | None = await self.repository.read(session=session)
         except TypeError as e:
+            print(e)
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Item not found")
+        except Exception as e:
+            print(e)
         if results: return [CommentModels.Public(object) for object in results]
         else: return None
     

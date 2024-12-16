@@ -1,8 +1,7 @@
 from fastapi import APIRouter, Depends
-from backend.src.api.main.controllers.comment import CommentController
-from backend.src.dal._schema.resources.comment import Public
+from api.main.controllers.comment import CommentController
 from utils.exceptions import *
-from dal.sql.forum.tables.comment import CommentModels, Comment
+from dal.sql.forum.tables.comment import CommentModels
 from typing_extensions import Annotated
 from uuid import UUID
 
@@ -17,8 +16,11 @@ async def create_comment(comment: Annotated[CommentModels.Create, Depends]) -> U
         
 @router.get('/all', status_code=200, response_model=list[CommentModels.Public])
 async def read_all_comments() -> list[CommentModels.Public] | None:
-    response: list[CommentModels.Public] | None = await controller.read_all()
-    return response
+    try:
+        response: list[CommentModels.Public] | None = await controller.read_all()
+        return response
+    except Exception as e:
+        print(e)
 
 @router.put('/', status_code=200)
 async def update_comment(id: UUID, comment_update: Annotated[CommentModels.Update, Depends]) -> None:

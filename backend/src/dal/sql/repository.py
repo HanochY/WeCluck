@@ -27,12 +27,14 @@ class SQLModelRepository(BaseRepository):
                    offset: int | None = None, 
                    limit: int | None = None) -> Sequence[SQLModelCommon]:
         statement = select(self.Model)
+        print('b')
         if filter:
             statement = statement.where(filter)
         if offset:
             statement = statement.offset(offset)
         if limit: 
             statement = statement.limit(limit)
+        print('c')
         entities = await session.execute(statement)
         return entities.scalars().all()
     

@@ -2,7 +2,7 @@
 from uuid import UUID
 from utils.exceptions import *
 from dal.sql.forum.tables._common import SQLModelCommon
-from backend.src.dal._schema.resources._generic import GenericOutput, GenericCreate, GenericUpdate
+from dal._schema.resources._generic import GenericOutput, GenericCreate, GenericUpdate
 from abc import ABC, abstractmethod
 from typing import TypeVar, Generic
 

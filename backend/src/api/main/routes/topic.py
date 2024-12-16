@@ -1,8 +1,7 @@
 from fastapi import APIRouter, Depends
-from backend.src.api.main.controllers.topic import TopicController
-from backend.src.dal._schema.resources.topic import Public
+from api.main.controllers.topic import TopicController
 from utils.exceptions import *
-from dal.sql.forum.tables.topic import TopicModels, Topic
+from dal.sql.forum.tables.topic import TopicModels
 from typing_extensions import Annotated
 from uuid import UUID
 

@@ -1,4 +1,4 @@
-from backend.src.dal._schema.resources._generic import GenericPublic, GenericPrivate, GenericCreate, GenericUpdate 
+from dal._schema.resources._generic import GenericPublic, GenericPrivate, GenericCreate, GenericUpdate 
 from pydantic import BaseModel
 from uuid import uuid4, UUID
 

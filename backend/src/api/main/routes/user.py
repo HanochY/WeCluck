@@ -1,9 +1,8 @@
 from fastapi import APIRouter, Depends, Security
-from backend.src.api.main.controllers.user import UserController
+from api.main.controllers.user import UserController
 from api.main.controllers.authentication import AuthenticationController
-from backend.src.dal._schema.resources.user import Public
 from utils.exceptions import *
-from dal.sql.forum.tables.user import UserModels, User
+from dal.sql.forum.tables.user import UserModels
 from typing_extensions import Annotated
 from uuid import UUID
 

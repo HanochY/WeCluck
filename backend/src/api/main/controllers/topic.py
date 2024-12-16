@@ -1,6 +1,6 @@
 from collections.abc import Sequence
 from uuid import UUID
-from backend.src.dal.sql.forum.tables._common import SQLModelCommon
+from dal.sql.forum.tables._common import SQLModelCommon
 from utils.exceptions import *
 from dal.sql.repository import SQLModelRepository
 from dal.sql.forum.db_manager import get_db_session
