@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from api.main.controllers.crud import Controller
+from backend.src.api.main.controllers.comment import CommentController
 from utils.exceptions import *
 from dal.sql.forum.tables.comment import CommentModels, Comment
 from typing_extensions import Annotated
@@ -7,7 +7,7 @@ from uuid import UUID
 
 router = APIRouter(prefix="/comment", tags=["comment"])
 
-controller = Controller(Comment)
+controller = CommentController()
 
 @router.post('/', status_code=201)
 async def create_comment(comment: Annotated[CommentModels.Create, Depends]):
@@ -20,8 +20,8 @@ async def read_all_comments():
     return response
 
 @router.put('/', status_code=200)
-async def update_comment(update: Annotated[CommentModels.Update, Depends]):
-    response = await controller.update(**dict(update))
+async def update_comment(id: UUID, update: Annotated[CommentModels.Update, Depends]):
+    response = await controller.update(id=id, **dict(update))
     return response
 
 @router.delete('/', status_code=204)

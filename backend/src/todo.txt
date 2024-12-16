@@ -12,13 +12,18 @@ rsa X
 fix the config structure V
 add logging V
 
-??merge db specific with db generic?? X
-??pass typeddicts as init args to repo??
 
-switch ID to UUID
+
+switch ID to UUID V
+relocate init db
 add permissions
-add input validaion
+username primary key
+add input validaion (redesign the controller layer)
 enable strict typing and fix
+
+if type checking cooperates:
+reorg entities to generic types? 
+pass typeddicts as init args to repo?
 
 ideas from https://fastapi.tiangolo.com/tutorial, https://sqlmodel.tiangolo.com/tutorial
 ideas from Shahar https://github.com/ShaharBand/sentinel/blob/main/backend/src

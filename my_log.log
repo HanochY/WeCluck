@@ -742,3 +742,67 @@ body
 }
 [INFO] - 2024-12-12 13:58:59,857 - root - {"req_id":"556608b8-3df3-447b-bc2b-df69fde463f1","method":"GET","route":"/comment/all","ip":"127.0.0.1","url":"http://localhost:5000/comment/all","host":"localhost","body":"","headers":{"authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxfQ.kU4MPLIYm-B_cWXk5kI6ROevz8ARfocq_MDSX4Dx2XA","user-agent":"PostmanRuntime/7.39.1","accept":"*/*","cache-control":"no-cache","postman-token":"750b3660-cd92-4609-993f-6839b4bdba83","host":"localhost:5000","accept-encoding":"gzip, deflate, br","connection":"keep-alive"}}
 [ERROR] - 2024-12-12 13:58:59,857 - root - 548efc50-de72-42af-bf70-cb54eb4a0d27 the JSON object must be str, bytes or bytearray, not LogRecord
+[ERROR] - 2024-12-15 16:43:44,710 - root - 4e8d52ff-652e-47c2-8b61-800085c311e3 object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:45:50,373 - root - 4e8d52ff-652e-47c2-8b61-800085c311e3 object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:45:55,052 - root - a95f602d-cfb9-49a6-a9c3-90bacbc700fa object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:46:30,687 - root - a95f602d-cfb9-49a6-a9c3-90bacbc700fa object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:47:15,676 - root - a95f602d-cfb9-49a6-a9c3-90bacbc700fa object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:47:26,903 - root - fd13de8f-c27a-4c46-9f29-888028e050b7 object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:48:37,365 - root - 2acdf9f9-2412-4ca4-984a-89911bb38ef9 object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:50:05,360 - root - 46a0775e-149b-4e08-98df-ba531b9cfafc object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:51:59,262 - root - 7cd0e24b-3c94-460c-bb8b-0ff00a390060 object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:52:02,950 - root - 8364db0e-5dcf-4f09-97e2-74ce1dd2189e object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:52:22,793 - root - 5c7a9c8a-b3f0-4967-a1d1-4f8255fe7a68 object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:53:22,590 - root - 5c7a9c8a-b3f0-4967-a1d1-4f8255fe7a68 object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:53:30,261 - root - e5651e2b-8bca-4aa9-a057-9035beb0a7c1 object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:54:08,381 - root - 49079e17-7af2-4978-9e54-8d1e76fe534b object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:55:56,969 - root - 18142f04-cdb2-4748-93ff-63c6521101de object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:57:03,678 - root - 18142f04-cdb2-4748-93ff-63c6521101de object _AsyncGeneratorContextManager can't be used in 'await' expression
+[ERROR] - 2024-12-15 16:57:07,687 - root - 8d621e1f-0c8b-4f4d-a302-7e2eb8d96772 'coroutine' object is not subscriptable
+[ERROR] - 2024-12-15 16:57:09,647 - root - 8d621e1f-0c8b-4f4d-a302-7e2eb8d96772 'coroutine' object is not subscriptable
+[ERROR] - 2024-12-15 16:59:03,201 - root - 8d621e1f-0c8b-4f4d-a302-7e2eb8d96772 'coroutine' object is not subscriptable
+[ERROR] - 2024-12-15 17:00:45,003 - root - b1b8dd68-9b14-4779-a639-97a937a44b7a 'coroutine' object is not subscriptable
+[ERROR] - 2024-12-15 17:00:48,182 - root - b4bfc886-a996-4bb0-a936-33d0d4d35e99 'coroutine' object is not subscriptable
+[ERROR] - 2024-12-15 17:19:12,158 - root - a6c03880-1aa4-40a7-ac5a-46955a34615c list index out of range
+[ERROR] - 2024-12-15 17:29:55,905 - root - 9ca1c539-207f-47c5-b366-7c28b1a78594 list index out of range
+[ERROR] - 2024-12-15 17:40:56,644 - root - 6cbc1f68-5b1f-4076-b91c-b03e44d19337 (builtins.AttributeError) 'int' object has no attribute 'hex'
+[SQL: INSERT INTO topic (uid, name, id, is_deleted, created_at, created_by, modified_at, modified_by, deleted_at, deleted_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'id': UUID('027403eb-144a-4d9b-9f61-83c441b3bfb8'), 'uid': 0, 'modified_by': 0, 'created_by': 0, 'is_deleted': False, 'modified_at': datetime.datetim ... (12 characters truncated) ... 15, 17, 40, 56, 637956), 'created_at': datetime.datetime(2024, 12, 15, 17, 40, 56, 637956), 'name': 'dwordis', 'deleted_by': None, 'deleted_at': None}]]
+[ERROR] - 2024-12-15 17:59:07,035 - root - 70ec9f66-fa6e-4074-88e7-ceac75173c57 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:00:45,415 - root - 70ec9f66-fa6e-4074-88e7-ceac75173c57 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:00:50,313 - root - 13adf21f-8811-4bd4-85c2-aba1e21628e6 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:02:10,120 - root - 13adf21f-8811-4bd4-85c2-aba1e21628e6 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:02:12,438 - root - fd3d4914-a040-49b6-bb19-cd7f716089d2 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:02:21,567 - root - fd3d4914-a040-49b6-bb19-cd7f716089d2 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:02:41,618 - root - fd3d4914-a040-49b6-bb19-cd7f716089d2 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:02:46,043 - root - ab36c679-eab7-49ff-97f2-f70184231e5b 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:02:59,650 - root - ab36c679-eab7-49ff-97f2-f70184231e5b 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:03:04,957 - root - ab36c679-eab7-49ff-97f2-f70184231e5b 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:03:53,485 - root - ec52e675-cd87-40da-8b90-87a2bac1d728 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:04:50,814 - root - ec52e675-cd87-40da-8b90-87a2bac1d728 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:04:54,490 - root - a2e1f6f9-15f5-480f-bec0-e7a225f9829d 'list' object has no attribute 'password'
+[ERROR] - 2024-12-15 18:06:59,327 - root - 6460857b-28e2-4107-8fd3-3783152be966 hash could not be identified
+[ERROR] - 2024-12-15 18:11:29,620 - root - 6460857b-28e2-4107-8fd3-3783152be966 hash could not be identified
+[ERROR] - 2024-12-15 18:11:33,920 - root - f31586ba-0aa8-48f9-a83d-3302e8de546c hash could not be identified
+[ERROR] - 2024-12-15 18:12:34,514 - root - f31586ba-0aa8-48f9-a83d-3302e8de546c hash could not be identified
+[ERROR] - 2024-12-15 18:12:38,218 - root - 190112e8-c10a-44f8-9b29-bd244a695c76 hash could not be identified
+[ERROR] - 2024-12-15 18:14:05,415 - root - 190112e8-c10a-44f8-9b29-bd244a695c76 hash could not be identified
+[ERROR] - 2024-12-15 18:14:09,538 - root - bb6503c6-ff42-47f5-9fc6-ec9927496e86 hash could not be identified
+[ERROR] - 2024-12-15 18:14:46,986 - root - bb6503c6-ff42-47f5-9fc6-ec9927496e86 hash could not be identified
+[ERROR] - 2024-12-15 18:14:51,348 - root - f64c4af8-125d-4bf7-860c-65cc7f3a2ca3 hash could not be identified
+[ERROR] - 2024-12-15 18:16:07,203 - root - f64c4af8-125d-4bf7-860c-65cc7f3a2ca3 hash could not be identified
+[ERROR] - 2024-12-15 18:16:13,094 - root - a8d9da89-20ba-4bdc-ac6f-ff449da92c2e 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/model_attributes_type'}
+
+[ERROR] - 2024-12-16 13:27:17,789 - root - 8bc79c4c-2bad-4e78-8a59-0af2ccec3dbc 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/model_attributes_type'}
+
+[ERROR] - 2024-12-16 13:29:07,199 - root - 8bc79c4c-2bad-4e78-8a59-0af2ccec3dbc 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/model_attributes_type'}
+
+[ERROR] - 2024-12-16 13:29:10,561 - root - 802331c1-6349-44a8-a1d0-c00b356c6e76 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/model_attributes_type'}
+
+[ERROR] - 2024-12-16 13:30:16,792 - root - b67cea26-bf7f-4799-aa4f-9c828be1e4f7 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/model_attributes_type'}
+

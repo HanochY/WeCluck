@@ -4,7 +4,7 @@ import logging
 import logging.config
 
 from config.provider import ConfigProvider
-from dal.sql.forum.db_manager import init_db
+from dal.sql.forum.db_manager import session_manager
 from api.main.routes.user import router as user_router
 from api.main.routes.topic import router as topic_router
 from api.main.routes.authentication import router as authentication_router
@@ -17,7 +17,7 @@ app_metadata = ConfigProvider.metadata()
 logging_settings = ConfigProvider.logging_settings()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await init_db()
+    await session_manager.init_db()
     logging.config.dictConfig(logging_settings)
     yield
     

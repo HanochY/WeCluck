@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from api.main.controllers.crud import Controller
+from backend.src.api.main.controllers.topic import TopicController
 from utils.exceptions import *
 from dal.sql.forum.tables.topic import TopicModels, Topic
 from typing_extensions import Annotated
@@ -7,7 +7,7 @@ from uuid import UUID
 
 router = APIRouter(prefix="/topic", tags=["topic"])
 
-controller = Controller(Topic)
+controller = TopicController()
 
 @router.post('/', status_code=201)
 async def create_topic(topic: Annotated[TopicModels.Create, Depends]):
@@ -20,8 +20,8 @@ async def read_all_topics():
     return response
 
 @router.put('/', status_code=200)
-async def update_topic(update: Annotated[TopicModels.Update, Depends]):
-    response = await controller.update(**dict(update))
+async def update_topic(id: UUID, update: Annotated[TopicModels.Update, Depends]):
+    response = await controller.update(id=id, **dict(update))
     return response
 
 @router.delete('/', status_code=204)

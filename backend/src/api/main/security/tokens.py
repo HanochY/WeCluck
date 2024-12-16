@@ -1,8 +1,9 @@
-from jwt import DecodeError, InvalidTokenError
+from jwt import DecodeError, InvalidTokenError, encode, decode
 from pydantic import BaseModel
-from utils.jwts import encode_jwt, decode_jwt
 from config.provider import ConfigProvider
 from fastapi.security import OAuth2PasswordBearer
+from uuid import UUID
+from datetime import datetime, timezone, timedelta
 
 app_settings = ConfigProvider.main_app_settings(production=False)
 SECRET_KEY = app_settings.SECRET_KEY
@@ -10,24 +11,38 @@ ACCESS_TOKEN_EXPIRE_MINUTES = app_settings.ACCESS_TOKEN_EXPIRE_MINUTES
 ALGORITHM = app_settings.ACCESS_TOKEN_ALGORITHM
 TOKEN_TYPE_BEARER = "bearer"
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token",
+                                    scopes={
+                                        "self:read": "Read information about the current user.",
+                                        "items:read": "Read items.",
+                                        "items": "CRUD items.",
+                                        "users:read": "Read users.",
+                                        "users": "CRUD users.",
+                                        }
+                                    )  
+class TokenData(BaseModel):
+    sub: UUID
+    scopes: list[str] = []
+    exp: datetime = datetime.now(timezone.utc) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    
 class FastAPIToken(BaseModel):
-    token_value: str
+    data: str
     token_type: str
+    
     def __init__(self, value):
-        self.token_value = value
+        self.data = value
 
 class FastAPIBearerToken(FastAPIToken):
     token_type: str = TOKEN_TYPE_BEARER
     
-def encode_access_token(data: dict, expires_minutes: int = ACCESS_TOKEN_EXPIRE_MINUTES) -> str:
-    return(encode_jwt(data, expires_minutes, SECRET_KEY))
+def encode_access_token(data: TokenData) -> str:
+    print(data.model_dump())
+    return(encode(data.model_dump(), SECRET_KEY, ALGORITHM))
 
 
-async def decode_access_token(token: str) -> str:
-    data = decode_jwt(token, SECRET_KEY, ALGORITHM)
-    uid: str = data.get("sub")
-    if uid is None:
-        raise DecodeError("UID is missing in token payload")
-    return uid
+async def decode_access_token(token: str) -> TokenData | None:
+    try:
+        data: TokenData = await decode(token, SECRET_KEY, ALGORITHM)
+        return TokenData(data)
+    except TypeError:
+        raise DecodeError
