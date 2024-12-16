@@ -1,4 +1,4 @@
-from typing import Sequence
+from collections.abc import Sequence
 from uuid import UUID
 from backend.src.dal.sql.forum.tables._common import SQLModelCommon
 from utils.exceptions import *
@@ -14,7 +14,7 @@ class CommentController(Controller[Comment, CommentModels.Create, CommentModels.
     def __init__(self) -> None:
         self.repository = SQLModelRepository(Model=self.db_model)
     
-    async def create(self, data: CommentModels.Create) -> UUID:
+    async def create(self, data: CommentModels.Create) -> UUID | None:
         try:
             async for session in get_db_session():
                 object: Comment = await self.repository.create(session=session, author_id=0, **data)

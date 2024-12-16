@@ -1,4 +1,4 @@
-from typing import Sequence
+from collections.abc import Sequence
 from uuid import UUID
 from backend.src.dal.sql.forum.tables._common import SQLModelCommon
 from utils.exceptions import *
@@ -14,7 +14,7 @@ class TopicController(Controller[Topic, TopicModels.Create, TopicModels.Update, 
     def __init__(self) -> None:
         self.repository = SQLModelRepository(Model=self.db_model)
     
-    async def create(self, data: TopicModels.Create) -> UUID:
+    async def create(self, data: TopicModels.Create) -> UUID | None:
         try:
             async for session in get_db_session():
                 object: Topic = await self.repository.create(session=session, author_id=0, **data)
