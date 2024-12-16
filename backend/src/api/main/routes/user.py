@@ -14,7 +14,7 @@ auth_controller = AuthenticationController() # to be moved
 
 @router.post('/', status_code=201)
 async def create_user(user: Annotated[UserModels.Create, Depends]) -> UUID | None:
-    response = await controller.create(**dict(user))
+    response = await controller.create(data=user)
     return response
 
 @router.get('/me', status_code=200, response_model=UserModels.Public)
@@ -29,8 +29,8 @@ async def read_all_users() -> list[UserModels.Public] | None:
     return response
 
 @router.put('/', status_code=200)
-async def update_user(id: UUID, update: Annotated[UserModels.Update, Depends]) -> None:
-    await controller.update(id=id, **dict(update))
+async def update_user(id: UUID, user_update: Annotated[UserModels.Update, Depends]) -> None:
+    await controller.update(id=id, new_data=user_update)
  
 
 @router.delete('/', status_code=204)
