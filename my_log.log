@@ -850,3 +850,6 @@ body
 [ERROR] - 2024-12-16 16:24:32,870 - root - 545991c5-48fd-4ef8-9a97-6a300efc11fc 1 validation errors:
   {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
 
+[ERROR] - 2024-12-16 16:24:36,572 - root - a5fd34f1-58ed-41de-91a1-17f38aef1ce0 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
