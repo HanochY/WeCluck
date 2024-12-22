@@ -1,9 +1,9 @@
 
 from config.provider import ConfigProvider
-from dal.sql.forum.tables._common import SQLModelCommon
-from dal.sql.forum.tables.comment import Comment
-from dal.sql.forum.tables.topic import Topic
-from dal.sql.forum.tables.user import User
+from dal.sql.forum.resources._common import SQLModelCommon
+from dal.sql.forum.resources.comment import DBComment
+from dal.sql.forum.resources.topic import DBTopic
+from dal.sql.forum.resources.user import DBUser
 
 import contextlib
 from typing import Any, AsyncIterator

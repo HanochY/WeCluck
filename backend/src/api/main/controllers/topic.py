@@ -1,23 +1,24 @@
 from collections.abc import Sequence
 from uuid import UUID
-from dal.sql.forum.tables._common import SQLModelCommon
+from dal.sql.forum.resources._common import SQLModelCommon
 from utils.exceptions import *
 from dal.sql.repository import SQLModelRepository
 from dal.sql.forum.db_manager import get_db_session
 from fastapi import HTTPException, status
 from api.main.controllers._crud import Controller
-from dal.sql.forum.tables.topic import TopicModels, Topic
+from dal.schema.resources.topic import TopicPublic, TopicFullInput, TopicPartialInput
+from dal.sql.forum.resources.topic import DBTopic
 
-class TopicController(Controller[Topic, TopicModels.Create, TopicModels.Update, TopicModels.Public]):
-    db_model = type[Topic]
+class TopicController(Controller[DBTopic, TopicFullInput, TopicPartialInput, TopicPublic]):
+    db_model = type[DBTopic]
     
     def __init__(self) -> None:
         self.repository = SQLModelRepository(Model=self.db_model)
     
-    async def create(self, data: TopicModels.Create) -> UUID | None:
+    async def create(self, data: TopicFullInput) -> UUID | None:
         try:
             async for session in get_db_session():
-                object: Topic = await self.repository.create(session=session, author_id=0, **data)
+                object: DBTopic = await self.repository.create(session=session, author_id=0, **data)
                 await session.commit()
                 await session.refresh(object)
                 
@@ -28,25 +29,20 @@ class TopicController(Controller[Topic, TopicModels.Create, TopicModels.Update, 
         if object: return object.id 
         else: return None
     
-    async def read_by_id(self, id: UUID) -> TopicModels.Public | None:
-        try:
-            async for session in get_db_session():
-                results: Sequence[SQLModelCommon] | None = await self.repository.read(filter=id==id, session=session)
-        except TypeError:
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Item not found")
-        if results: return TopicModels.Public(results[0])
-        else: return None
+    async def read_by_id(self, id: UUID) -> TopicPublic | None:
+        async for session in get_db_session():
+            results: Sequence[SQLModelCommon] | None = await self.repository.read(filter=id==id, session=session)
+        if results: return TopicPublic(results[0])
+        else: raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Item not found")
     
-    async def read_all(self) -> list[TopicModels.Public] | None:
-        try:
-            async for session in get_db_session():
-                results: Sequence[Topic] | None = await self.repository.read(session=session)
-        except TypeError as e:
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Item not found")
-        if results: return [TopicModels.Public(object) for object in results]
-        else: return None
+    async def read_all(self) -> list[TopicPublic] | None:
+        async for session in get_db_session():
+            results: Sequence[DBTopic] | None = await self.repository.read(session=session)
+        if results: return [TopicPublic(object) for object in results]
+        else: raise HTTPException(status_code=status.HTTP_204_NO_CONTENT)
+
     
-    async def update(self, id: UUID, new_data: TopicModels.Update) -> None:
+    async def update(self, id: UUID, new_data: TopicPartialInput) -> None:
         try:
             async for session in get_db_session():
                 await self.repository.update(id=id, session=session, **new_data)

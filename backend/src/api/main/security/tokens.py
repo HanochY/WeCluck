@@ -36,7 +36,6 @@ class FastAPIBearerToken(FastAPIToken):
     token_type: str = TOKEN_TYPE_BEARER
     
 def encode_access_token(data: TokenData) -> str:
-    print(data.model_dump())
     return(encode(data.model_dump(), SECRET_KEY, ALGORITHM))
 
 

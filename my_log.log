@@ -853,3 +853,36 @@ body
 [ERROR] - 2024-12-16 16:24:36,572 - root - a5fd34f1-58ed-41de-91a1-17f38aef1ce0 1 validation errors:
   {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
 
+[ERROR] - 2024-12-17 12:03:09,302 - root - 17f07be9-8321-4931-876c-8e9dcdb17dd4 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-17 12:03:45,139 - root - b0d336d6-509c-4eab-b222-df1370caa602 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-17 12:04:21,022 - root - 90deaf29-2d37-4cfe-8003-a03615e1a117 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-17 12:05:11,529 - root - 90deaf29-2d37-4cfe-8003-a03615e1a117 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-17 12:05:19,691 - root - 04a0b9e1-ba9c-4378-83e3-c63f336b5298 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-17 12:05:52,816 - root - 698d85a5-6eb3-4037-aa69-0429a26ef693 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-22 16:25:10,934 - root - a2685935-a3cf-4c36-8a57-9ca34127b445 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-22 16:26:48,365 - root - a2685935-a3cf-4c36-8a57-9ca34127b445 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-22 16:26:52,869 - root - f5e2f94e-9e89-452e-a571-3782fe4d778e 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-22 16:28:30,678 - root - f5e2f94e-9e89-452e-a571-3782fe4d778e 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+
+[ERROR] - 2024-12-22 16:55:16,083 - root - 78eabd92-3ee1-4e8c-aebd-a89371dce6cf 1 validation errors:
+  {'type': 'list_type', 'loc': ('response',), 'msg': 'Input should be a valid list', 'input': None, 'url': 'https://errors.pydantic.dev/2.7/v/list_type'}
+

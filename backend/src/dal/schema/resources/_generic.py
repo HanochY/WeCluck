@@ -10,8 +10,8 @@ class GenericPublic(GenericOutput):
 class GenericPrivate(GenericOutput):
     pass
 
-class GenericCreate(GenericInput):
+class GenericFullInput(GenericInput):
     pass
 
-class GenericUpdate(GenericInput):
+class GenericPartialInput(GenericInput):
     pass

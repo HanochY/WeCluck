@@ -1,6 +1,6 @@
 from sqlmodel import SQLModel, Field
 from datetime import datetime
-from dal._schema.metadata import Metadata as MetadataGlobal
+from dal.schema.metadata import Metadata as MetadataGlobal
 from uuid import uuid4, UUID
 
 

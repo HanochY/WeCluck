@@ -15,11 +15,12 @@ add logging V
 
 
 switch ID to UUID V
+add input validaion (redesign the controller layer) V
 resolve router return issue
+add patch and properly separate from put
 relocate init db
 add permissions
 username primary key
-add input validaion (redesign the controller layer)
 enable strict typing and fix
 
 if type checking cooperates:
