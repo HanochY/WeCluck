@@ -44,8 +44,9 @@ class CommentController(Controller[DBComment, CommentFullInput, CommentPartialIn
     async def update(self, id: UUID, new_data: CommentPartialInput) -> None:
         try:
             async for session in get_db_session():
-                await self.repository.update(id=id, session=session, **new_data)
-            return None
+                results = await self.repository.update(id=id, session=session, **new_data)
+            if results: return CommentPublic(results[0])
+            else: raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
         except TypeError:
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Unprocessable entity!")
     

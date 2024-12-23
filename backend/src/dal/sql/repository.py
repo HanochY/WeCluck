@@ -1,3 +1,4 @@
+from backend.src.utils.exceptions import ObjectNotFoundError
 from dal.schema.repository import BaseRepository
 from sqlmodel import select
 from sqlalchemy.ext.asyncio import AsyncSession 
@@ -27,53 +28,51 @@ class SQLModelRepository(BaseRepository):
                    offset: int | None = None, 
                    limit: int | None = None) -> Sequence[SQLModelCommon]:
         statement = select(self.Model)
-        print('b')
         if filter:
             statement = statement.where(filter)
         if offset:
             statement = statement.offset(offset)
         if limit: 
             statement = statement.limit(limit)
-        print('c')
         entities = await session.execute(statement)
         return entities.scalars().all()
     
     async def update(self, session: AsyncSession, author_id: UUID, **new_data) -> SQLModelCommon:
         statement = select(self.Model).where(self.Model.id == id)
-        result = await session.exec(statement)
-        entity = result.one()
+        result = await session.execute(statement)
+        entity: SQLModelCommon = result.scalars().one()
         for attribute, value in new_data.items():
             setattr(entity, attribute, value)
         entity.modified_at = datetime.now()
         entity.modified_by = author_id
         session.add(entity)
+        session.refresh(entity)
+        return entity
 
     async def delete(self, session: AsyncSession, author_id: UUID, id: UUID) -> SQLModelCommon:
         statement = select(self.Model).where(self.Model.id == id)
-        result = await session.exec(statement)
-        entity = result.one()
-        if entity:
-            if not entity.is_deleted:
-                entity.deleted_at = datetime.now()
-                entity.deleted_by = author_id
-                entity.is_deleted = True
-                session.add(entity)
+        result = await session.execute(statement)
+        entity = result.scalars().one()
+        if not entity.is_deleted:
+            entity.deleted_at = datetime.now()
+            entity.deleted_by = author_id
+            entity.is_deleted = True
+            session.add(entity)
         return entity
     
     async def undelete(self, session: AsyncSession, author_id: UUID, id: UUID) -> SQLModelCommon:
         statement = select(self.Model).where(self.Model.id == id)
-        result = await session.exec(statement)
-        entity = result.one()
-        if entity:
-            if entity.is_deleted:
-                entity.is_deleted = False
-                session.add(entity)
+        result = await session.execute(statement)
+        entity = result.scalars().one()
+        if entity.is_deleted:
+            entity.is_deleted = False
+            session.add(entity)
         return entity
     
     async def hard_delete(self, session: AsyncSession, id: UUID) -> None:
         statement = select(self.Model).where(self.Model.id == id)
-        result = await session.exec(statement)
-        entity = result.one()
+        result = await session.execute(statement)
+        entity = result.scalars().one()
         if entity:
             session.delete(result)
     
