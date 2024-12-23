@@ -16,12 +16,13 @@ add logging V
 
 switch ID to UUID V
 add input validaion (redesign the controller layer) V
-resolve router return issue
-add patch and properly separate from put
+resolve router return issue V
+add patch and properly separate from put V
 relocate init db
 add permissions
 username primary key
-enable strict typing and fix
+enable strict typing and fix annotation
+import on type checking
 
 if type checking cooperates:
 reorg entities to generic types? 
@@ -30,7 +31,7 @@ pass typeddicts as init args to repo?
 ideas from https://fastapi.tiangolo.com/tutorial, https://sqlmodel.tiangolo.com/tutorial
 ideas from Shahar https://github.com/ShaharBand/sentinel/blob/main/backend/src
 
-clean code, annotation
+clean code, pep8
 
 add beanie/mongoengine
 add graphql app

@@ -25,14 +25,14 @@ async def read_current_user(current_user: Annotated[UserPublic,
 @router.get('/all', status_code=status.HTTP_200_OK, response_model=UserPublic)
 async def read_all_users() -> list[UserPublic] | None:
     response: list[UserPublic] | None = await controller.read_all()
-    if response: return response
-    else: return Response(status_code=status.HTTP_204_NO_CONTENT)
+    return response
 
 @router.patch('/{id}', status_code=status.HTTP_200_OK)
-async def update_user(id: UUID, user_update: Annotated[UserPartialInput, Depends]) -> None:
-    await controller.update(id=id, new_data=user_update)
- 
+async def partial_update_user(id: UUID, user_update: Annotated[UserPartialInput, Depends]) -> UserPublic:
+    response: UserPublic = await controller.partial_update(id=id, new_data=user_update)
+    return response
 
 @router.delete('/{id}', status_code=status.HTTP_204_NO_CONTENT)
 async def delete_user(id: UUID) -> None:
     await controller.delete(id=id)
+    return Response(status_code=status.HTTP_204_NO_CONTENT)

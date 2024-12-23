@@ -14,22 +14,25 @@ class Controller(ABC, Generic[T, C, U, O]):
     db_model: type[T]
     
     @abstractmethod
-    async def create(self, data: C) -> O | None:        
+    async def create(self, data: C) -> UUID:        
         pass
     @abstractmethod
-    async def read_by_id(self, id: UUID) -> O | None:
+    async def read_by_id(self, id: UUID) -> O:
         pass
     @abstractmethod
-    async def read_all(self) -> list[O] | None:
+    async def read_all(self) -> list[O]:
         pass
     @abstractmethod
-    async def update(self, id: UUID, new_data: U) -> O | None:
+    async def update(self, id: UUID, new_data: U) -> None:
+        pass
+    @abstractmethod
+    async def partial_update(self, id: UUID, new_data: U) -> O:
         pass
     @abstractmethod
     async def delete(self, id: UUID) -> None:
         pass
     @abstractmethod
-    async def undelete(self, id: UUID) -> O | None:
+    async def undelete(self, id: UUID) -> O:
         pass
     @abstractmethod
     async def hard_delete(self, id: UUID) -> None:

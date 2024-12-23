@@ -1,4 +1,3 @@
-from backend.src.utils.exceptions import ObjectNotFoundError
 from dal.schema.repository import BaseRepository
 from sqlmodel import select
 from sqlalchemy.ext.asyncio import AsyncSession 
@@ -46,7 +45,6 @@ class SQLModelRepository(BaseRepository):
         entity.modified_at = datetime.now()
         entity.modified_by = author_id
         session.add(entity)
-        session.refresh(entity)
         return entity
 
     async def delete(self, session: AsyncSession, author_id: UUID, id: UUID) -> SQLModelCommon:
@@ -60,7 +58,7 @@ class SQLModelRepository(BaseRepository):
             session.add(entity)
         return entity
     
-    async def undelete(self, session: AsyncSession, author_id: UUID, id: UUID) -> SQLModelCommon:
+    async def undelete(self, session: AsyncSession, id: UUID) -> SQLModelCommon:
         statement = select(self.Model).where(self.Model.id == id)
         result = await session.execute(statement)
         entity = result.scalars().one()
