@@ -19,6 +19,7 @@ add input validaion (redesign the controller layer) V
 resolve router return issue V
 add patch and properly separate from put V
 relocate init db
+add async uri generation + change from util to legit model
 add permissions
 username primary key
 enable strict typing and fix annotation
