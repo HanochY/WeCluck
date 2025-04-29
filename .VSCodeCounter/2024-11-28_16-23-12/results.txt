@@ -1,0 +1,83 @@
+Date : 2024-11-28 16:23:12
+Directory : c:\Users\Administrator\Desktop\WeCluck\backend\src
+Total : 37 files,  707 codes, 1 comments, 153 blanks, all 861 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Python   |         35 |        655 |          1 |        153 |        809 |
+| SQL      |          2 |         52 |          0 |          0 |         52 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                        | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                           |         37 |        707 |          1 |        153 |        861 |
+| . (Files)                                                                                   |          2 |         19 |          1 |          5 |         25 |
+| api                                                                                         |          9 |        227 |          0 |         55 |        282 |
+| api (Files)                                                                                 |          1 |          0 |          0 |          1 |          1 |
+| api\main                                                                                    |          8 |        227 |          0 |         54 |        281 |
+| api\main (Files)                                                                            |          1 |         29 |          0 |          6 |         35 |
+| api\main\controllers                                                                        |          2 |         85 |          0 |         19 |        104 |
+| api\main\routes                                                                             |          4 |         87 |          0 |         22 |        109 |
+| api\main\security                                                                           |          1 |         26 |          0 |          7 |         33 |
+| config                                                                                      |          5 |        110 |          0 |         24 |        134 |
+| dal                                                                                         |         14 |        293 |          0 |         49 |        342 |
+| dal\_schema                                                                                 |          6 |        127 |          0 |         28 |        155 |
+| dal\_schema (Files)                                                                         |          2 |         39 |          0 |          7 |         46 |
+| dal\_schema\entities                                                                        |          4 |         88 |          0 |         21 |        109 |
+| dal\sql                                                                                     |          8 |        166 |          0 |         21 |        187 |
+| dal\sql (Files)                                                                             |          1 |         64 |          0 |         12 |         76 |
+| dal\sql\forum                                                                               |          7 |        102 |          0 |          9 |        111 |
+| dal\sql\forum (Files)                                                                       |          3 |         63 |          0 |          4 |         67 |
+| dal\sql\forum\models                                                                        |          4 |         39 |          0 |          5 |         44 |
+| utils                                                                                       |          7 |         58 |          0 |         20 |         78 |
+| utils (Files)                                                                               |          4 |         37 |          0 |         15 |         52 |
+| utils\enums                                                                                 |          3 |         21 |          0 |          5 |         26 |
++---------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                    | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\api\__init__.py                          | Python   |          0 |          0 |          1 |          1 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\api\main\app.py                          | Python   |         29 |          0 |          6 |         35 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\api\main\controllers\authentication.py   | Python   |         56 |          0 |         11 |         67 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\api\main\controllers\crud.py             | Python   |         29 |          0 |          8 |         37 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\api\main\routes\authentication.py        | Python   |          9 |          0 |          4 |         13 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\api\main\routes\comment.py               | Python   |         26 |          0 |          6 |         32 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\api\main\routes\topic.py                 | Python   |         26 |          0 |          6 |         32 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\api\main\routes\user.py                  | Python   |         26 |          0 |          6 |         32 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\api\main\security\tokens.py              | Python   |         26 |          0 |          7 |         33 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\config\__init__.py                       | Python   |          0 |          0 |          1 |          1 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\config\app.py                            | Python   |         56 |          0 |          9 |         65 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\config\db.py                             | Python   |         27 |          0 |          7 |         34 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\config\metadata.py                       | Python   |         10 |          0 |          2 |         12 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\config\provider.py                       | Python   |         17 |          0 |          5 |         22 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\create_db.py                             | Python   |          2 |          0 |          1 |          3 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\_schema\entities\_base.py            | Python   |         10 |          0 |          1 |         11 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\_schema\entities\comment.py          | Python   |         29 |          0 |          8 |         37 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\_schema\entities\topic.py            | Python   |         23 |          0 |          5 |         28 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\_schema\entities\user.py             | Python   |         26 |          0 |          7 |         33 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\_schema\metadata.py                  | Python   |         11 |          0 |          1 |         12 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\_schema\repository.py                | Python   |         28 |          0 |          6 |         34 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\sql\forum\db_manager.py              | Python   |         11 |          0 |          4 |         15 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\sql\forum\development-forum2.sqlite3 | SQL      |         26 |          0 |          0 |         26 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\sql\forum\models\_common.py          | Python   |         11 |          0 |          1 |         12 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\sql\forum\models\comment.py          | Python   |         10 |          0 |          1 |         11 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\sql\forum\models\topic.py            | Python   |          9 |          0 |          2 |         11 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\sql\forum\models\user.py             | Python   |          9 |          0 |          1 |         10 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\sql\forum\production-forum.sqlite3   | SQL      |         26 |          0 |          0 |         26 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\dal\sql\repository.py                    | Python   |         64 |          0 |         12 |         76 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\run_server.py                            | Python   |         17 |          1 |          4 |         22 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\utils\basemodel_to_typeddict.py          | Python   |          4 |          0 |          1 |          5 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\utils\enums\db_vendors.py                | Python   |          4 |          0 |          1 |          5 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\utils\enums\environments.py              | Python   |          5 |          0 |          2 |          7 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\utils\enums\http_methods.py              | Python   |         12 |          0 |          2 |         14 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\utils\exceptions.py                      | Python   |         12 |          0 |          4 |         16 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\utils\jwts.py                            | Python   |         15 |          0 |          5 |         20 |
+| c:\Users\Administrator\Desktop\WeCluck\backend\src\utils\passwords.py                       | Python   |          6 |          0 |          5 |         11 |
+| Total                                                                                       |          |        707 |          1 |        153 |        861 |
++---------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
